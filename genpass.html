@@ -4,13 +4,13 @@
  <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/t360RfY/image-removebg-preview.png" />
 </head>
 <body>
-
-<input type="number" id="length" name="quantity">
+<input type="text" id="Password">
+<input type="number" id="length" name="quantity" min="1">
 <script>
 var result = '';
+
   
 function Main() {
-     
      result = ''
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;
@@ -19,7 +19,7 @@ function Main() {
       result += characters.charAt(Math.floor(Math.random() * 
  charactersLength));
    }
-  textbox.textContent = result
+  textbox.value = result
    return result;
 }
 
@@ -28,7 +28,7 @@ function Main() {
 </script>
 
 <button id="Main" onclick="Main()">Create</button>
-<code id="Password">???</code>
+
 
 
 
