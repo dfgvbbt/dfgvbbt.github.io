@@ -8,22 +8,36 @@ Pass will here => <input type="text" id="Password">
 <div></div>
 <input type="number" id="length" name="quantity" min="1">
 <script>
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+  
+ 
+ 
 var result = '';
-var Uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var Lowercase = "abcdefghijklmnopqrstuvwxyz";
-var Number = "0123456789"
-var Symbol = "~!@#$%^&*()"
+var Uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+var Lowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var Number = ["0","1","2","3","4","5","6","7","8","9"]
+var Symbol = ["~","!","@","#","$","%","^","&","*","(",")"]
+var Epik = eval("function lo(){"+httpGet('https://raw.githubusercontent.com/dfgvbbt/My-Game/main/Random%20Strings/Epik%20Texts').replace("{","[").replace("}","]")+"} lo()")
+
+
 
 var IsUppercase = false
 var IsLowercase = false
 var IsNumber = false
 var IsSymbol = false
+var IsEpik = false
 
 function Main() {
      result = ''
     var characters = '';
     if (IsUppercase) {
-      characters += Uppercase
+      characters += characters.concat(Uppercase)
     }
     if (IsLowercase) {
       characters += Lowercase
