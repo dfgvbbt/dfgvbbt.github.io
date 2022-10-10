@@ -11,14 +11,15 @@
 var result           = '';
   
 function Main() {
-  
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    result = ''
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;
+    var textbox = document.getElementById("Password")
     for ( var i = 0; i < length; i++ ) {
       result += characters.charAt(Math.floor(Math.random() * 
  charactersLength));
    }
-  
+  textbox.value = result
    return result;
 }
 
