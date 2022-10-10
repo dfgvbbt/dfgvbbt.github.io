@@ -12,10 +12,12 @@ var result = '';
 var Uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var Lowercase = "abcdefghijklmnopqrstuvwxyz";
 var Number = "0123456789"
+var Symbol = "~!@#$%^&*()"
 
 var IsUppercase = false
 var IsLowercase = false
 var IsNumber = false
+var IsSymbol = false
 
 function Main() {
      result = ''
@@ -76,6 +78,17 @@ function ToggleNumber() {
      box.textContent = "Number:true"
     }
 }
+ 
+function ToggleSymbol() {
+    var box = document.getElementById("Symbol")
+    if (IsSymbol) {
+      IsSymbol = false
+      box.textContent = "Symbol:false"
+    } else {
+      IsSymbol = true
+     box.textContent = "Symbol:true"
+    }
+}
 
 </script>
 
@@ -88,7 +101,7 @@ function ToggleNumber() {
 <button id="Uppercase" onclick="ToggleUppercase()">Uppercase:false</button>
 <button id="Lowercase" onclick="ToggleLowercase()">Lowercase:false</button>
 <button id="Number" onclick="ToggleNumber()">Number:false</button>
-
+<button id="Symbol" onclick="ToggleSymbol()">Symbol:false</button>
 
 
 
