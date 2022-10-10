@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/t360RfY/image-removebg-preview.png" />
+</head>
+<body>
+
+<input type="text" id="Password" />
+
+<script>
+var result           = '';
+  
+function Main() {
+  
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+  
+   return result;
+}
+
+
+
+</script>
+
+<button id="Main" onclick="Main()">Create</button>
+
+
+
+
+
+</body>
+</html>
