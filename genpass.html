@@ -4,13 +4,19 @@
  <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/t360RfY/image-removebg-preview.png" />
 </head>
 <body>
-<input type="text" id="Password">
+Pass will here => <input type="text" id="Password">
 <div></div>
 <input type="number" id="length" name="quantity" min="1">
 <script>
 var result = '';
+var Uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var Lowercase = "abcdefghijklmnopqrstuvwxyz";
+var Number = "0123456789"
 
-  
+var IsUppercase = false
+var IsLowercase = false
+var IsNumber = false
+
 function Main() {
      result = ''
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -23,14 +29,23 @@ function Main() {
   textbox.value = result
    return result;
 }
-
+function ToggleUppercase() {
+    var box = document.getElementById("Uppercase")
+    if (IsUppercase) {
+      IsUppercase = false
+      box.textContent = "Uppercase:false"
+    } else {
+      IsUppercase = true
+     box.textContent = "Uppercase:true"
+    }
+}
 
 
 </script>
 
 <button id="Main" onclick="Main()">Create</button>
 
-
+<button id="Uppercase" onclick="ToggleUppercase()">Uppercase:false</button>
 
 
 
