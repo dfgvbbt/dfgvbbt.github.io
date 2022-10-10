@@ -8,18 +8,18 @@
 <code id="Password">???</code>
 
 <script>
-var result           = '';
+var result = '';
   
 function Main() {
-    result = ''
+     result = ''
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;
     var textbox = document.getElementById("Password")
-    for ( var i = 0; i < length; i++ ) {
+    for ( var i = 0; i < 100; i++ ) {
       result += characters.charAt(Math.floor(Math.random() * 
  charactersLength));
    }
-  textbox.innerHTML = result
+  textbox.textContent = result
    return result;
 }
 
