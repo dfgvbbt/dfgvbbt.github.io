@@ -43,7 +43,13 @@ function Main() {
       characters = characters.concat(Lowercase)
     }
     if (IsNumber) {
-      characters += Number
+      characters = characters.concat(Number)
+    }
+    if (IsSymbol) {
+      characters = characters.concat(Symbol)
+    }
+    if (IsEpik) {
+      characters = characters.concat(Epik)
     }
     
     var charactersLength = characters.length;
