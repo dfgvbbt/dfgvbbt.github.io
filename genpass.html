@@ -19,7 +19,17 @@ var IsNumber = false
 
 function Main() {
      result = ''
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var characters = '';
+    if (IsUppercase) {
+      characters += Uppercase
+    }
+    if (IsLowercase) {
+      characters += Lowercase
+    }
+    if (IsNumber) {
+      characters += Number
+    }
+    
     var charactersLength = characters.length;
     var textbox = document.getElementById("Password")
     for ( var i = 0; i < document.getElementById("length").value; i++ ) {
@@ -29,6 +39,10 @@ function Main() {
   textbox.value = result
    return result;
 }
+ 
+ 
+ 
+ 
 function ToggleUppercase() {
     var box = document.getElementById("Uppercase")
     if (IsUppercase) {
@@ -40,12 +54,40 @@ function ToggleUppercase() {
     }
 }
 
+function ToggleLowercase() {
+    var box = document.getElementById("Lowercase")
+    if (IsLowercase) {
+      IsLowercase = false
+      box.textContent = "Lowercase:false"
+    } else {
+      IsLowercase = true
+     box.textContent = "Lowercase:true"
+    }
+}
+ 
+ 
+function ToggleNumber() {
+    var box = document.getElementById("Number")
+    if (IsNumber) {
+      IsNumber = false
+      box.textContent = "Number:false"
+    } else {
+      IsNumber = true
+     box.textContent = "Number:true"
+    }
+}
 
 </script>
 
 <button id="Main" onclick="Main()">Create</button>
 
+ 
+<div></div>
+
+ 
 <button id="Uppercase" onclick="ToggleUppercase()">Uppercase:false</button>
+<button id="Lowercase" onclick="ToggleLowercase()">Lowercase:false</button>
+<button id="Number" onclick="ToggleNumber()">Number:false</button>
 
 
 
