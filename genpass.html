@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<code type="text" id="Password" />
+<code id="Password">???</code>
 
 <script>
 var result           = '';
@@ -19,7 +19,7 @@ function Main() {
       result += characters.charAt(Math.floor(Math.random() * 
  charactersLength));
    }
-  textbox.value = result
+  textbox.innerHTML = result
    return result;
 }
 
