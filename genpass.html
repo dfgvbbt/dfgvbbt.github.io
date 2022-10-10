@@ -37,10 +37,10 @@ function Main() {
      result = ''
     var characters = '';
     if (IsUppercase) {
-      characters += characters.concat(Uppercase)
+      characters = characters.concat(Uppercase)
     }
     if (IsLowercase) {
-      characters += Lowercase
+      characters = characters.concat(Lowercase)
     }
     if (IsNumber) {
       characters += Number
@@ -49,8 +49,7 @@ function Main() {
     var charactersLength = characters.length;
     var textbox = document.getElementById("Password")
     for ( var i = 0; i < document.getElementById("length").value; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * 
- charactersLength));
+      result += characters[Math.floor(Math.random() * charactersLength)];
    }
   textbox.value = result
    return result;
