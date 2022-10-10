@@ -109,6 +109,17 @@ function ToggleSymbol() {
     }
 }
 
+ function ToggleEpik() {
+    var box = document.getElementById("Epik")
+    if (IsEpik) {
+      IsEpik = false
+      box.textContent = "Epik:false"
+    } else {
+      IsEpik = true
+     box.textContent = "Epik:true"
+    }
+}
+ 
 </script>
 
 <button id="Main" onclick="Main()">Create</button>
@@ -121,7 +132,9 @@ function ToggleSymbol() {
 <button id="Lowercase" onclick="ToggleLowercase()">Lowercase:false</button>
 <button id="Number" onclick="ToggleNumber()">Number:false</button>
 <button id="Symbol" onclick="ToggleSymbol()">Symbol:false</button>
+<button id="Epik" onclick="ToggleEpik()">Epik:false</button>
 
+ 
 
 
 </body>
