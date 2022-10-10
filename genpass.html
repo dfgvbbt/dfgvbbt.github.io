@@ -5,17 +5,17 @@
 </head>
 <body>
 
-<code id="Password">???</code>
-
+<input type="number" id="length" name="quantity">
 <script>
 var result = '';
   
 function Main() {
+     
      result = ''
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;
     var textbox = document.getElementById("Password")
-    for ( var i = 0; i < 100; i++ ) {
+    for ( var i = 0; i < document.getElementById("length").value; i++ ) {
       result += characters.charAt(Math.floor(Math.random() * 
  charactersLength));
    }
@@ -28,6 +28,7 @@ function Main() {
 </script>
 
 <button id="Main" onclick="Main()">Create</button>
+<code id="Password">???</code>
 
 
 
