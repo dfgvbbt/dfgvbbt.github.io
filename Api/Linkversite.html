@@ -9,22 +9,14 @@
     <h1 id="path"></h1>
 
     <script>
-        var markup = function(href) {
-            var link = document.createElement("a");
-            link.href = href;
-            var c = link.href;
-            if (c.substring(c.length - 1) == "/")
-                c = c.substring(0, c.length - 1);
-            return c;
-        };
+        
         
         var path = window.location.href.split("/")
         var Text = path[path.length - 1].split('?')
         var Real = Text[Text.length - 1]
         function Linkversite(url) {
-            url = markup(url)
           var base_url = "https://link-to.net/" + "420202" + '/' + Math.random() * 1000 + "/dynamic/";
-           var href = base_url + "?r=" + btoa(encodeURI(toString(url)));
+           var href = base_url + "?r=" + btoa(encodeURI(url));
             return href
         }
         document.getElementById('path').innerHTML = Linkversite(Real)
