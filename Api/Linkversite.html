@@ -14,7 +14,7 @@
         const Real = Text[Text.length - 1]
         function Linkversite(url) {
           var base_url = "https://link-to.net/" + "420202" + "/" + Math.random() * 1000 + "/dynamic/";
-           var href = base_url + "?r=" + btoa(encodeURI(Real));
+           var href = base_url + "?r=" + btoa(encodeURI(url));
             return href
         }
         document.getElementById('path').innerHTML = Linkversite(Real)
