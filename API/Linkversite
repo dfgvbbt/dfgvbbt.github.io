@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Linkversite</title>
+</head>
+
+<body>
+    <h1 id="path"></h1>
+
+    <script>
+        const path = window.location.href.split("/")
+        const Text = path[path.length - 1].split('?')
+        const Real = Text[Text.length - 1]
+        function Linkversite(url) {
+          var base_url = "https://link-to.net/" + "420202" + "/" + Math.random() * 1000 + "/dynamic/";
+           var href = base_url + "?r=" + btoa(encodeURI(url));
+            return href
+        }
+        document.getElementById('path').innerHTML = Linkversite(Real)
+    </script>
+</body>
+
+   
+</html>
