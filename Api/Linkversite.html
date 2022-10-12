@@ -15,7 +15,7 @@
         var Text = path[path.length - 1].split('?')
         var Real = Text[Text.length - 1]
         function Linkversite(url) {
-          var base_url = "https://link-to.net/" + "420202" + '/' + Math.random() * 1000 + "/dynamic/";
+          var base_url = "https://link-to.net/" + "420202" + "/" + Math.random() * 1000 + "/dynamic/";
            var href = base_url + "?r=" + btoa(encodeURI(url));
             return href
         }
