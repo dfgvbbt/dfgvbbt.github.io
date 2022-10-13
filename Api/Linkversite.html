@@ -6,7 +6,6 @@
 </head>
 
 <body>
-    <h1 id="path"></h1>
 
     <script>
         var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Linkversite?","")
@@ -15,7 +14,7 @@
            var href = base_url + "?r=" + btoa(encodeURI(url));
             return href
         }
-        document.getElementById('path').innerHTML = Linkversite(Real)
+        document.write(Linkversite(Real))
     </script>
 </body>
 
