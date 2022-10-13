@@ -10,11 +10,11 @@
 
     <script>
         var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Linkversite?","")
-        function Encode(url) {
-           var href = btoa(encodeURI(url));
+        function Encode(Any) {
+           var href = btoa(encodeURI(Any));
             return href
         }
-        document.getElementById('path').innerHTML = Linkversite(Real)
+        document.getElementById('path').innerHTML = Encode(Real)
     </script>
 </body>
 
