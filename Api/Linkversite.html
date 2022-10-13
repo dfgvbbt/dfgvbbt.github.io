@@ -5,10 +5,12 @@
 
 <body>
 <script>
-
+    
 var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Linkversite?","")
-lel.style="word-wrap: break-word; white-space: pre-wrap;"
-lel.innerHTML = Linkversite(Real)
-document.body.appendChild(lel)
-document.body.removeChild(self)
+function Linkversite(url) {
+    var base_url = "https://link-to.net/" + "420202" + "/" + Math.random() * 1000 + "/dynamic/";
+    var href = base_url + "?r=" + btoa(encodeURI(url));
+    return href
+}
+document.write(Linkversite(Real))
 </script>
