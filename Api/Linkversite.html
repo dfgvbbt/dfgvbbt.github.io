@@ -1,7 +1,9 @@
 <html>
 <head>
 <meta name="color-scheme" content="light dark">
+</head>
 
+<body>
 <script>
     
 var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Linkversite?","")
@@ -14,6 +16,7 @@ var lel = document.createElement("pre")
 lel.style="word-wrap: break-word; white-space: pre-wrap;"
 lel.innerHTML = Linkversite(Real)
 document.body.appendChild(lel)
+document.body.removeChild(self)
 </script>
-</head>
-<body>
+
+
