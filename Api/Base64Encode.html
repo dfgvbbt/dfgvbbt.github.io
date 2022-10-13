@@ -11,7 +11,7 @@
     <script>
         var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Base64Encode?","")
         function Encode(Any) {
-           var href = btoa(encodeURI(Any));
+           var href = btoa(Any);
             return href
         }
         document.getElementById('path').innerHTML = Encode(Real)
