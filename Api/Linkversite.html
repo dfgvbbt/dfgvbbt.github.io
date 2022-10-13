@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>API Linkversite</title>
-</head>
-
-<body>
-
-    <script>
+<script>
+    window.onload = function() {
         var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Linkversite?","")
         function Linkversite(url) {
-          var base_url = "https://link-to.net/" + "420202" + "/" + Math.random() * 1000 + "/dynamic/";
-           var href = base_url + "?r=" + btoa(encodeURI(url));
-            return href
-        }
+            var base_url = "https://link-to.net/" + "420202" + "/" + Math.random() * 1000 + "/dynamic/";
+            var href = base_url + "?r=" + btoa(encodeURI(url));
+                return href
+            }
         document.write(Linkversite(Real))
-    </script>
-</body>
-
-   
-</html>
+    }
+</script>
