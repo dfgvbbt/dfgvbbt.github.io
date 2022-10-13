@@ -1,13 +1,16 @@
 <meta name="color-scheme" content="light dark">
 
 <script>
-    window.onload = function() {
-        var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Linkversite?","")
-        function Linkversite(url) {
-            var base_url = "https://link-to.net/" + "420202" + "/" + Math.random() * 1000 + "/dynamic/";
-            var href = base_url + "?r=" + btoa(encodeURI(url));
-                return href
-            }
-        document.write(Linkversite(Real))
-    }
+    
+var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Linkversite?","")
+function Linkversite(url) {
+    var base_url = "https://link-to.net/" + "420202" + "/" + Math.random() * 1000 + "/dynamic/";
+    var href = base_url + "?r=" + btoa(encodeURI(url));
+    return href
+}
+var lel = document.createElement("pre")
+lel.style="word-wrap: break-word; white-space: pre-wrap;"
+lel.innerHTML = Linkversite(Real)
+
+
 </script>
