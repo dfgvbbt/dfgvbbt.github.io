@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Linkversite</title>
+</head>
+
+<body>
+    <h1 id="path"></h1>
+
+    <script>
+        var Real = window.location.href.replace("https://dfgvbbt.github.io/Api/Linkversite?","")
+        function Encode(url) {
+           var href = btoa(encodeURI(url));
+            return href
+        }
+        document.getElementById('path').innerHTML = Linkversite(Real)
+    </script>
+</body>
+
+   
+</html>
