@@ -52,16 +52,16 @@ function checkURLchange(){
     if (win.closed) {
         IsCheck = false
         return clearInterval(loop)
-                    }
-    if(win.location.href != oldURL && IsCheck){
-        if (win.location.href.startsWith("https://linkvertise.download/download")) {
-            win.close()
-        }
-        oldURL = win.location.href;
     }
+    
+    if (win.location.href.startsWith("https://linkvertise.download/download") && IsCheck) {
+         win.close()
+    }
+    
+    
 }
 
-var oldURL = win.location.href;
+
 loop = setInterval(checkURLchange, 2000);
     }
 </script>
