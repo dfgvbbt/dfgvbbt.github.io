@@ -33,7 +33,7 @@ if (getCookie("Current") >= 3) {
     setCookie("Current",0,_.toUTCString())
     console.log(">4")
 }
-else if (getCookie("Current") <= 0) {
+else if (getCookie("Current") < 0) {
     setCookie("Current",0,_.toUTCString())
     console.log("No <0")
 }
@@ -46,23 +46,7 @@ var ne = Number(getCookie("Current"))+1
 setCookie("Current",ne,_.toUTCString())
 
 var win = window.open("https://dfgvbbt.github.io/Ads/"+ne);
-var loop
-var IsCheck = true
-function checkURLchange(){
-    if (win.closed) {
-        IsCheck = false
-        return clearInterval(loop)
-    }
-    
-    if (win.location.href.startsWith("https://linkvertise.download/download") && IsCheck) {
-         win.close()
-    }
-    
-    
-}
 
-
-loop = setInterval(checkURLchange, 2000);
     }
 </script>
 <button id = "1" onclick="Ow()">Go</button>
