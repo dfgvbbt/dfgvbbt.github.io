@@ -1,37 +1,14 @@
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Ads</title>
-    <link rel="preload" as="script" href="https://www.google.com/recaptcha/api.js">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 
 
 <body>
-    <main id="main">
-        <section id="choice" class="why-us">
-            <div class="container">
-                <div class="row h-100 justify-content-center align-items-center">
-                    <form>
-                        <br>
-                        <div class="form-group" style="margin-top: 50%; transform: translateY(-50%);">
-			<br>
-			<form action='/Ads/0' method='GET'>
-				<div class='g-recaptcha' data-sitekey='6LeaooUiAAAAANGD1P_KfnZqsPWsdx0x52q8ThIY'></div>
-				<br/>
-				<input type='submit' value='Submit'>
-			</form>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script>
-    document.getElementsByTagName("input")[0].addEventListener("click",function () {
-if (grecaptcha.getResponse().length !== 0) {
+<script>
+    function Ow() {
     function setCookie(cname, cvalue, exdays) {
     console.log(exdays,new Date(Date.now()).toUTCString())
   document.cookie = cname + "=" + cvalue + ";expires=" + exdays + ";path=/";
@@ -78,5 +55,8 @@ setCookie("Current",ne,_.toUTCString())
 
 var win = window.open("https://dfgvbbt.github.io/Ads/"+ne);
 
-    }})
-    </script>
+    }
+</script>
+
+<button id = "1" onclick="Ow()">Go</button>
+</body>
