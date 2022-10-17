@@ -88,6 +88,7 @@ var win = window.open("https://dfgvbbt.github.io/Ads/"+ne);
     </main>
     <script>
     document.getElementsByTagName("input")[0].addEventListener("click",function () {
+if (grecaptcha.getResponse().length !== 0) {
     function setCookie(cname, cvalue, exdays) {
     console.log(exdays,new Date(Date.now()).toUTCString())
   document.cookie = cname + "=" + cvalue + ";expires=" + exdays + ";path=/";
@@ -134,5 +135,5 @@ setCookie("Current",ne,_.toUTCString())
 
 var win = window.open("https://dfgvbbt.github.io/Ads/"+ne);
 
-    })
+    })}
     </script>
