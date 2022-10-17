@@ -8,6 +8,17 @@ body {
   background-attachment: fixed; 
   background-size: 100% 100%;
 }
+#button {
+  position: fixed;
+  border: 0px solid blue;
+  background-color: rgba(153,206,232,0);  
+  display: auto;
+  width: auto;
+  height: 10%;
+  bottom: -2.5%;
+  left: auto;
+  right: 0;
+}
 </style>
 <audio src="???" loop=""  autoplay=""></audio>
 </head>
@@ -16,6 +27,25 @@ body {
 <h2>This path is...</h2>
 
 <p>Empty???</p>
+  
+<script>
+  function doo(){
+  	document.write('Any worlds for me?\n')
+  	let i = document.createElement("button")
+    let i1 = document.createElement("input")
+    i.innerHTML = "Submit"
+    i1.type="text"
+    function clicked() {
+    	alert('Thanks you :3')
+		  window.close()
+    }
+    i.onclick = clicked
+  	document.body.appendChild(i1)
+    document.body.appendChild(i)
+  }
+  </script>
+  
 
+<button id="button" onclick="doo()">Send This Path To Me!</button>
 </body>
 </html>
