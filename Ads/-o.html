@@ -1,65 +1,25 @@
 <html>
-  <head>
-    <title>reCAPTCHA demo: Simple page</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
+<head>
+<style>
+
+#parent4 {
+  position: fixed;
+  border: 1px solid blue;
+  background-color: rgba(100,200,200,0.5);  
+  width: 30%;
+  height: 10%;
+  bottom: 0;
+  left: 1;
+  right: 0;
+}
+</style>
+</head>
 <body>
-<script>
-    function Ow() {
-    function setCookie(cname, cvalue, exdays) {
-    console.log(exdays,new Date(Date.now()).toUTCString())
-  document.cookie = cname + "=" + cvalue + ";expires=" + exdays + ";path=/";
-}
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-var _ = new Date()
-    _.setTime(_.getTime()+(60*10000))
-
-if (getCookie("Current") == "") {
 
 
-setCookie("Current",0,_.toUTCString())
-} 
+<button id="parent4" onclick="function(){document.write('???')}()">Parent4: position: fixed, bottom: 0, left: 0, right: 0.
 
-if (getCookie("Current") >= 3) {
-    setCookie("Current",0,_.toUTCString())
-    console.log(">4")
-}
-else if (getCookie("Current") < 0) {
-    setCookie("Current",0,_.toUTCString())
-    console.log("No <0")
-}
+</button>
 
-
-
-var ne = Number(getCookie("Current"))+1
-
-
-setCookie("Current",ne,_.toUTCString())
-
-var win = window.open("https://dfgvbbt.github.io/Ads/"+ne);
-
-    }
-</script>
-
-<form action="?" method="POST">
-    <div class="g-recaptcha" data-sitekey="???"></div>
-    <br/>
-    <button id = "1" onclick="Ow()">Go</button>
-
-</form>
 </body>
 </html>
