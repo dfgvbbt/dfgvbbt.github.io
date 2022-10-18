@@ -10,7 +10,7 @@
 
 <body>
 <script>
-    function Ow() {
+    function Ow(StartNum,MaxNum) {
     function setCookie(cname, cvalue, exdays) {
     console.log(exdays,new Date(Date.now()).toUTCString())
   document.cookie = cname + "=" + cvalue + ";expires=" + exdays + ";path=/";
@@ -36,15 +36,15 @@ var _ = new Date()
 if (getCookie("Current") == "") {
 
 
-setCookie("Current",0,_.toUTCString())
+setCookie("Current",StartNum,_.toUTCString())
 } 
 
-if (getCookie("Current") >= 3) {
-    setCookie("Current",0,_.toUTCString())
-    console.log(">4")
+if (getCookie("Current") >= MaxNum) {
+    setCookie("Current",StartNum,_.toUTCString())
+    console.log(">")
 }
 else if (getCookie("Current") < 0) {
-    setCookie("Current",0,_.toUTCString())
+    setCookie("Current",StartNum,_.toUTCString())
     console.log("No <0")
 }
 
@@ -60,5 +60,6 @@ var win = window.open("https://dfgvbbt.github.io/Ads/"+ne);
     }
 </script>
 im not sure about this
-<button id = "1" onclick="Ow()">Go</button>
+<button id = "1" onclick="Ow(1,3)">Go</button>
+<button id = "2" onclick="Ow(4,6)">Go</button>
 </body>
