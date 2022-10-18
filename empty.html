@@ -2,16 +2,15 @@
 <html>
 
 <head>
-    <title>Get Key</title>
+    <title>Get Something</title>
 </head>
 
 <body>
     <h1 id="path"></h1>
 
     <script>
-        const path = window.location.href.split("/")
-        const Text = path[path.length - 1].split('?')
-        document.getElementById('path').innerHTML = Text[Text.length - 1]
+        const Text = window.location.href.replace("https://dfgvbbt.github.io/empty?","")
+        document.getElementById('path').innerHTML = Text
     </script>
 </body>
 
