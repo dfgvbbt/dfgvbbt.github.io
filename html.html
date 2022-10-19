@@ -6,11 +6,9 @@
 <body>
 
 <input type="text" id="html" />
+<input type="text" id="htmlurl" /> 
 <script>
 
-function Main() {
-  window.location.href = ("https://dfgvbbt.github.io/")
-}
 
 document.getElementById("html")
     .addEventListener("keyup", function(event) {
@@ -26,6 +24,27 @@ document.getElementById("html")
     }
 });
 
+document.getElementById("htmlurl")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+     function httpGet(theUrl)
+    {
+     var xmlHttp = new XMLHttpRequest();
+     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+     xmlHttp.send( null );
+     return xmlHttp.responseText;
+    }
+      var iframe = document.createElement('iframe');
+      var html = httpGet(document.getElementById("htmlurl").value);
+      iframe.width="70%"
+      iframe.height="70%"
+      iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+      document.body.appendChild(iframe);
+      console.log('iframe.contentWindow =', iframe.contentWindow);
+    }
+});
+ 
 </script>
 
 
