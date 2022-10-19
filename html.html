@@ -38,7 +38,7 @@ document.getElementById("htmlurl")
       var iframe = document.createElement('iframe');
       var html = httpGet(document.getElementById("htmlurl").value);
       iframe.width="100%"
-      iframe.height="100%"
+      iframe.height="650px"
       iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
       document.body.appendChild(iframe);
       console.log('iframe.contentWindow =', iframe.contentWindow);
