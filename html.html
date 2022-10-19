@@ -16,8 +16,8 @@ document.getElementById("html").addEventListener("keyup", function(event) {
     if (event.keyCode === 13 && event.ctrlKey) {
       var iframe = document.createElement('iframe');
       var html = document.getElementById("html").value;
-      iframe.width="70%"
-      iframe.height="70%"
+      iframe.width="100%"
+      iframe.height="100%"
       iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
       document.body.appendChild(iframe);
       console.log('iframe.contentWindow =', iframe.contentWindow);
@@ -37,8 +37,8 @@ document.getElementById("htmlurl")
     }
       var iframe = document.createElement('iframe');
       var html = httpGet(document.getElementById("htmlurl").value);
-      iframe.width="70%"
-      iframe.height="70%"
+      iframe.width="100%"
+      iframe.height="100%"
       iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
       document.body.appendChild(iframe);
       console.log('iframe.contentWindow =', iframe.contentWindow);
