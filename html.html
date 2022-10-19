@@ -11,10 +11,9 @@
 <script>
 
 
-document.getElementById("html")
-    .addEventListener("keyup", function(event) {
+document.getElementById("html").addEventListener("keyup", function(event) {
     event.preventDefault();
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 && event.ctrlKey) {
       var iframe = document.createElement('iframe');
       var html = document.getElementById("html").value;
       iframe.width="70%"
