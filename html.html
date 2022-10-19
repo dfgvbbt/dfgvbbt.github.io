@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/t360RfY/image-removebg-preview.png" />
+</head>
+<body>
+
+<input type="text" id="html" />
+<script>
+
+function Main() {
+  window.location.href = ("https://dfgvbbt.github.io/")
+}
+
+document.getElementById("html")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      var iframe = document.createElement('iframe');
+      var html = document.getElementById("html").value;
+      iframe.width="70%"
+      iframe.height="70%"
+      iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+      document.body.appendChild(iframe);
+      console.log('iframe.contentWindow =', iframe.contentWindow);
+    }
+});
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
