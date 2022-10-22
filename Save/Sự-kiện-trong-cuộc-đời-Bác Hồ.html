@@ -1,34 +1,2684 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta content=
-  "initial-scale=1, minimum-scale=1, width=device-width" name=
-  "viewport">
-  <title>Error 404 (Not Found)!</title>
-  <style>
-  *{margin:0;padding:0}body{background:#fff;color:#222;margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px 15px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(
-          //www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png
-        ) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(
-            //www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png
-          ) no-repeat;-moz-border-image:url(
-            //www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png
-          ) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(
-            //www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png
-          ) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
-  </style>
-</head>
-<body>
-  <a href="//www.google.com/"><span aria-label="Google" id=
-  "logo"></span></a>
-  <p><b>404.</b> <ins>That’s an error.</ins></p>
-  <p>The requested URL was not found on this server. <ins>That’s
-  all we know.</ins></p>
-  <script>
-  (function(){var payload={reason:1};(function(){
-  var p=function(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}},r="function"==typeof Object.defineProperties?Object.defineProperty:function(a,c,f){if(a==Array.prototype||a==Object.prototype)return a;a[c]=f.value;return a},t=function(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var f=a[c];if(f&&f.Math==Math)return f}throw Error("Cannot find global object");},u=t(this),v=function(a,c){if(c)a:{var f=u;a=a.split(".");for(var h=0;h<a.length-1;h++){var e=a[h];if(!(e in f))break a;f=f[e]}a=a[a.length-1];h=f[a];c=c(h);c!=h&&null!=c&&r(f,a,{configurable:!0,writable:!0,value:c})}};v("Symbol",function(a){if(a)return a;var c=function(l,b){this.g=l;r(this,"description",{configurable:!0,writable:!0,value:b})};c.prototype.toString=function(){return this.g};var f="jscomp_symbol_"+(1E9*Math.random()>>>0)+"_",h=0,e=function(l){if(this instanceof e)throw new TypeError("Symbol is not a constructor");return new c(f+(l||"")+"_"+h++,l)};return e});v("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");for(var c="Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "),f=0;f<c.length;f++){var h=u[c[f]];"function"===typeof h&&"function"!=typeof h.prototype[a]&&r(h.prototype,a,{configurable:!0,writable:!0,value:function(){return w(p(this))}})}return a});var w=function(a){a={next:a};a[Symbol.iterator]=function(){return this};return a},x=function(a){var c="undefined"!=typeof Symbol&&Symbol.iterator&&a[Symbol.iterator];return c?c.call(a):{next:p(a)}},y=function(){this.j=!1;this.g=null;this.o=void 0;this.h=1;this.m=0;this.i=null},z=function(a){if(a.j)throw new TypeError("Generator is already running");a.j=!0};y.prototype.l=function(a){this.o=a};var D=function(a,c){a.i={F:c,G:!0};a.h=a.m};y.prototype.return=function(a){this.i={return:a};this.h=this.m};var E=function(a){this.g=new y;this.h=a},H=function(a,c){z(a.g);var f=a.g.g;if(f)return F(a,"return"in f?f["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return G(a)},F=function(a,c,f,h){try{var e=c.call(a.g.g,f);if(!(e instanceof Object))throw new TypeError("Iterator result "+e+" is not an object");if(!e.done)return a.g.j=!1,e;var l=e.value}catch(b){return a.g.g=null,D(a.g,b),G(a)}a.g.g=null;h.call(a.g,l);return G(a)},G=function(a){for(;a.g.h;)try{var c=a.h(a.g);if(c)return a.g.j=
-  !1,{value:c.value,done:!1}}catch(f){a.g.o=void 0,D(a.g,f)}a.g.j=!1;if(a.g.i){c=a.g.i;a.g.i=null;if(c.G)throw c.F;return{value:c.return,done:!0}}return{value:void 0,done:!0}},I=function(a){this.next=function(c){z(a.g);a.g.g?c=F(a,a.g.g.next,c,a.g.l):(a.g.l(c),c=G(a));return c};this.throw=function(c){z(a.g);a.g.g?c=F(a,a.g.g["throw"],c,a.g.l):(D(a.g,c),c=G(a));return c};this.return=function(c){return H(a,c)};this[Symbol.iterator]=function(){return this}},J=function(a){function c(h){return a.next(h)}
-  function f(h){return a.throw(h)}return new Promise(function(h,e){function l(b){b.done?h(b.value):Promise.resolve(b.value).then(c,f).then(l,e)}l(a.next())})};v("Promise",function(a){function c(){this.g=null}function f(b){return b instanceof e?b:new e(function(d){d(b)})}if(a)return a;c.prototype.h=function(b){if(null==this.g){this.g=[];var d=this;this.i(function(){d.l()})}this.g.push(b)};var h=u.setTimeout;c.prototype.i=function(b){h(b,0)};c.prototype.l=function(){for(;this.g&&this.g.length;){var b=this.g;this.g=[];for(var d=0;d<b.length;++d){var g=b[d];b[d]=null;try{g()}catch(k){this.j(k)}}}this.g=null};c.prototype.j=function(b){this.i(function(){throw b;})};var e=function(b){this.g=0;this.i=void 0;this.h=[];this.o=!1;var d=this.j();try{b(d.resolve,d.reject)}catch(g){d.reject(g)}};e.prototype.j=function(){function b(k){return function(m){g||(g=!0,k.call(d,m))}}var d=this,g=!1;return{resolve:b(this.A),reject:b(this.l)}};e.prototype.A=function(b){if(b===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(b instanceof e)this.C(b);else{a:switch(typeof b){case "object":var d=null!=b;break a;case "function":d=!0;break a;default:d=!1}d?this.v(b):this.m(b)}};e.prototype.v=function(b){var d=void 0;try{d=b.then}catch(g){this.l(g);return}"function"==typeof d?this.D(d,b):this.m(b)};e.prototype.l=function(b){this.u(2,b)};e.prototype.m=function(b){this.u(1,b)};e.prototype.u=function(b,d){if(0!=this.g)throw Error("Cannot settle("+b+", "+d+"): Promise already settled in state"+this.g);this.g=b;this.i=d;2===this.g&&this.B();this.H()};e.prototype.B=function(){var b=this;h(function(){if(b.I()){var d=u.console;"undefined"!==typeof d&&d.error(b.i)}},1)};e.prototype.I=function(){if(this.o)return!1;var b=u.CustomEvent,d=u.Event,g=u.dispatchEvent;if("undefined"===typeof g)return!0;"function"===typeof b?b=new b("unhandledrejection",{cancelable:!0}):"function"===typeof d?b=new d("unhandledrejection",{cancelable:!0}):(b=u.document.createEvent("CustomEvent"),b.initCustomEvent("unhandledrejection",!1,!0,b));b.promise=this;b.reason=this.i;return g(b)};e.prototype.H=function(){if(null!=this.h){for(var b=0;b<this.h.length;++b)l.h(this.h[b]);this.h=null}};var l=new c;e.prototype.C=function(b){var d=this.j();b.s(d.resolve,d.reject)};e.prototype.D=function(b,d){var g=this.j();try{b.call(d,g.resolve,g.reject)}catch(k){g.reject(k)}};e.prototype.then=function(b,d){function g(n,q){return"function"==typeof n?function(A){try{k(n(A))}catch(B){m(B)}}:q}var k,m,C=new e(function(n,q){k=n;m=q});this.s(g(b,k),g(d,m));return C};e.prototype.catch=function(b){return this.then(void 0,b)};e.prototype.s=function(b,d){function g(){switch(k.g){case 1:b(k.i);break;case 2:d(k.i);break;default:throw Error("Unexpected state: "+k.g);}}var k=this;null==this.h?l.h(g):this.h.push(g);this.o=!0};e.resolve=f;e.reject=function(b){return new e(function(d,g){g(b)})};e.race=function(b){return new e(function(d,g){for(var k=x(b),m=k.next();!m.done;m=k.next())f(m.value).s(d,g)})};e.all=function(b){var d=x(b),g=d.next();return g.done?f([]):new e(function(k,m){function C(A){return function(B){n[A]=B;q--;0==q&&k(n)}}var n=[],q=0;do n.push(void 0),q++,f(g.value).s(C(n.length-1),m),g=d.next();while(!g.done)})};return e});var K=null;function L(){return new Promise(function(a){K=function(c){(c=c.data)&&"__AMPHTML__"===c.app&&"handshake-poll"===c.name&&(K&&window.removeEventListener("message",K),K=null,a())};window.addEventListener("message",K)})}(function(a){return J(new I(new E(function(c){if(1==c.h){var f=L();c.h=2;return{value:f}}window.parent.postMessage({app:"__AMPHTML__",name:"loadFailed",data:a,type:"q"},"*");c.h=0})))})(payload);}).call(this);})();
-  </script>
-</body>
+<!doctype html>
+<html i-amphtml-layout i-amphtml-no-boilerplate style="padding-top:32px !important;" transformed="google;v=8" ⚡>
+    <head>
+        <meta charset=utf-8>
+        <meta content="width=device-width,minimum-scale=1,initial-scale=1" name=viewport>
+        <style amp-runtime i-amphtml-version=012210010655000>
+            html {
+                overflow-x: hidden!important
+            }
+
+            html.i-amphtml-fie {
+                height: 100%!important;
+                width: 100%!important
+            }
+
+            html:not([amp4ads]),html:not([amp4ads]) body {
+                height: auto!important
+            }
+
+            html:not([amp4ads]) body {
+                margin: 0!important
+            }
+
+            body {
+                -webkit-text-size-adjust: 100%;
+                -moz-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                text-size-adjust: 100%
+            }
+
+            html.i-amphtml-singledoc.i-amphtml-embedded {
+                -ms-touch-action: pan-y pinch-zoom;
+                touch-action: pan-y pinch-zoom
+            }
+
+            html.i-amphtml-fie>body,html.i-amphtml-singledoc>body {
+                overflow: visible!important
+            }
+
+            html.i-amphtml-fie:not(.i-amphtml-inabox)>body,html.i-amphtml-singledoc:not(.i-amphtml-inabox)>body {
+                position: relative!important
+            }
+
+            html.i-amphtml-ios-embed-legacy>body {
+                overflow-x: hidden!important;
+                overflow-y: auto!important;
+                position: absolute!important
+            }
+
+            html.i-amphtml-ios-embed {
+                overflow-y: auto!important;
+                position: static
+            }
+
+            #i-amphtml-wrapper {
+                overflow-x: hidden!important;
+                overflow-y: auto!important;
+                position: absolute!important;
+                top: 0!important;
+                left: 0!important;
+                right: 0!important;
+                bottom: 0!important;
+                margin: 0!important;
+                display: block!important
+            }
+
+            html.i-amphtml-ios-embed.i-amphtml-ios-overscroll,html.i-amphtml-ios-embed.i-amphtml-ios-overscroll>#i-amphtml-wrapper {
+                -webkit-overflow-scrolling: touch!important
+            }
+
+            #i-amphtml-wrapper>body {
+                position: relative!important;
+                border-top: 1px solid transparent!important
+            }
+
+            #i-amphtml-wrapper+body {
+                visibility: visible
+            }
+
+            #i-amphtml-wrapper+body .i-amphtml-lightbox-element,#i-amphtml-wrapper+body[i-amphtml-lightbox] {
+                visibility: hidden
+            }
+
+            #i-amphtml-wrapper+body[i-amphtml-lightbox] .i-amphtml-lightbox-element {
+                visibility: visible
+            }
+
+            #i-amphtml-wrapper.i-amphtml-scroll-disabled,.i-amphtml-scroll-disabled {
+                overflow-x: hidden!important;
+                overflow-y: hidden!important
+            }
+
+            amp-instagram {
+                padding: 54px 0px 0px!important;
+                background-color: #fff
+            }
+
+            amp-iframe iframe {
+                box-sizing: border-box!important
+            }
+
+            [amp-access][amp-access-hide] {
+                display: none
+            }
+
+            [subscriptions-dialog],body:not(.i-amphtml-subs-ready) [subscriptions-action],body:not(.i-amphtml-subs-ready) [subscriptions-section] {
+                display: none!important
+            }
+
+            amp-experiment,amp-live-list>[update] {
+                display: none
+            }
+
+            amp-list[resizable-children]>.i-amphtml-loading-container.amp-hidden {
+                display: none!important
+            }
+
+            amp-list [fetch-error],amp-list[load-more] [load-more-button],amp-list[load-more] [load-more-end],amp-list[load-more] [load-more-failed],amp-list[load-more] [load-more-loading] {
+                display: none
+            }
+
+            amp-list[diffable] div[role=list] {
+                display: block
+            }
+
+            amp-story-page,amp-story[standalone] {
+                min-height: 1px!important;
+                display: block!important;
+                height: 100%!important;
+                margin: 0!important;
+                padding: 0!important;
+                overflow: hidden!important;
+                width: 100%!important
+            }
+
+            amp-story[standalone] {
+                background-color: #000!important;
+                position: relative!important
+            }
+
+            amp-story-page {
+                background-color: #757575
+            }
+
+            amp-story .amp-active>div,amp-story .i-amphtml-loader-background {
+                display: none!important
+            }
+
+            amp-story-page:not(:first-of-type):not([distance]):not([active]) {
+                transform: translateY(1000vh)!important
+            }
+
+            amp-autocomplete {
+                position: relative!important;
+                display: inline-block!important
+            }
+
+            amp-autocomplete>input,amp-autocomplete>textarea {
+                padding: 0.5rem;
+                border: 1px solid rgba(0,0,0,0.33)
+            }
+
+            .i-amphtml-autocomplete-results,amp-autocomplete>input,amp-autocomplete>textarea {
+                font-size: 1rem;
+                line-height: 1.5rem
+            }
+
+            [amp-fx^=fly-in] {
+                visibility: hidden
+            }
+
+            amp-script[nodom],amp-script[sandboxed] {
+                position: fixed!important;
+                top: 0!important;
+                width: 1px!important;
+                height: 1px!important;
+                overflow: hidden!important;
+                visibility: hidden
+            }
+
+            /*# sourceURL=/css/ampdoc.css*/
+            [hidden] {
+                display: none!important
+            }
+
+            .i-amphtml-element {
+                display: inline-block
+            }
+
+            .i-amphtml-blurry-placeholder {
+                transition: opacity 0.3s cubic-bezier(0.0,0.0,0.2,1)!important;
+                pointer-events: none
+            }
+
+            [layout=nodisplay]:not(.i-amphtml-element) {
+                display: none!important
+            }
+
+            .i-amphtml-layout-fixed,[layout=fixed][width][height]:not(.i-amphtml-layout-fixed) {
+                display: inline-block;
+                position: relative
+            }
+
+            .i-amphtml-layout-responsive,[layout=responsive][width][height]:not(.i-amphtml-layout-responsive),[width][height][heights]:not([layout]):not(.i-amphtml-layout-responsive),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-layout-responsive) {
+                display: block;
+                position: relative
+            }
+
+            .i-amphtml-layout-intrinsic,[layout=intrinsic][width][height]:not(.i-amphtml-layout-intrinsic) {
+                display: inline-block;
+                position: relative;
+                max-width: 100%
+            }
+
+            .i-amphtml-layout-intrinsic .i-amphtml-sizer {
+                max-width: 100%
+            }
+
+            .i-amphtml-intrinsic-sizer {
+                max-width: 100%;
+                display: block!important
+            }
+
+            .i-amphtml-layout-container,.i-amphtml-layout-fixed-height,[layout=container],[layout=fixed-height][height]:not(.i-amphtml-layout-fixed-height) {
+                display: block;
+                position: relative
+            }
+
+            .i-amphtml-layout-fill,.i-amphtml-layout-fill.i-amphtml-notbuilt,[layout=fill]:not(.i-amphtml-layout-fill),body noscript>* {
+                display: block;
+                overflow: hidden!important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0
+            }
+
+            body noscript>* {
+                position: absolute!important;
+                width: 100%;
+                height: 100%;
+                z-index: 2
+            }
+
+            body noscript {
+                display: inline!important
+            }
+
+            .i-amphtml-layout-flex-item,[layout=flex-item]:not(.i-amphtml-layout-flex-item) {
+                display: block;
+                position: relative;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto
+            }
+
+            .i-amphtml-layout-fluid {
+                position: relative
+            }
+
+            .i-amphtml-layout-size-defined {
+                overflow: hidden!important
+            }
+
+            .i-amphtml-layout-awaiting-size {
+                position: absolute!important;
+                top: auto!important;
+                bottom: auto!important
+            }
+
+            i-amphtml-sizer {
+                display: block!important
+            }
+
+            @supports (aspect-ratio: 1/1) {
+                i-amphtml-sizer.i-amphtml-disable-ar {
+                    display:none!important
+                }
+            }
+
+            .i-amphtml-blurry-placeholder,.i-amphtml-fill-content {
+                display: block;
+                height: 0;
+                max-height: 100%;
+                max-width: 100%;
+                min-height: 100%;
+                min-width: 100%;
+                width: 0;
+                margin: auto
+            }
+
+            .i-amphtml-layout-size-defined .i-amphtml-fill-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0
+            }
+
+            .i-amphtml-replaced-content,.i-amphtml-screen-reader {
+                padding: 0!important;
+                border: none!important
+            }
+
+            .i-amphtml-screen-reader {
+                position: fixed!important;
+                top: 0px!important;
+                left: 0px!important;
+                width: 4px!important;
+                height: 4px!important;
+                opacity: 0!important;
+                overflow: hidden!important;
+                margin: 0!important;
+                display: block!important;
+                visibility: visible!important
+            }
+
+            .i-amphtml-screen-reader~.i-amphtml-screen-reader {
+                left: 8px!important
+            }
+
+            .i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader {
+                left: 12px!important
+            }
+
+            .i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader {
+                left: 16px!important
+            }
+
+            .i-amphtml-unresolved {
+                position: relative;
+                overflow: hidden!important
+            }
+
+            .i-amphtml-select-disabled {
+                -webkit-user-select: none!important;
+                -ms-user-select: none!important;
+                user-select: none!important
+            }
+
+            .i-amphtml-notbuilt,[layout]:not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element) {
+                position: relative;
+                overflow: hidden!important;
+                color: transparent!important
+            }
+
+            .i-amphtml-notbuilt:not(.i-amphtml-layout-container)>*,[layout]:not([layout=container]):not(.i-amphtml-element)>*,[width][height][heights]:not([layout]):not(.i-amphtml-element)>*,[width][height][sizes]:not([layout]):not(.i-amphtml-element)>* {
+                display: none
+            }
+
+            amp-img:not(.i-amphtml-element)[i-amphtml-ssr]>img.i-amphtml-fill-content {
+                display: block
+            }
+
+            .i-amphtml-notbuilt:not(.i-amphtml-layout-container),[layout]:not([layout=container]):not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element) {
+                color: transparent!important;
+                line-height: 0!important
+            }
+
+            .i-amphtml-ghost {
+                visibility: hidden!important
+            }
+
+            .i-amphtml-element>[placeholder],[layout]:not(.i-amphtml-element)>[placeholder],[width][height][heights]:not([layout]):not(.i-amphtml-element)>[placeholder],[width][height][sizes]:not([layout]):not(.i-amphtml-element)>[placeholder] {
+                display: block;
+                line-height: normal
+            }
+
+            .i-amphtml-element>[placeholder].amp-hidden,.i-amphtml-element>[placeholder].hidden {
+                visibility: hidden
+            }
+
+            .i-amphtml-element:not(.amp-notsupported)>[fallback],.i-amphtml-layout-container>[placeholder].amp-hidden,.i-amphtml-layout-container>[placeholder].hidden {
+                display: none
+            }
+
+            .i-amphtml-layout-size-defined>[fallback],.i-amphtml-layout-size-defined>[placeholder] {
+                position: absolute!important;
+                top: 0!important;
+                left: 0!important;
+                right: 0!important;
+                bottom: 0!important;
+                z-index: 1
+            }
+
+            amp-img[i-amphtml-ssr]:not(.i-amphtml-element)>[placeholder] {
+                z-index: auto
+            }
+
+            .i-amphtml-notbuilt>[placeholder] {
+                display: block!important
+            }
+
+            .i-amphtml-hidden-by-media-query {
+                display: none!important
+            }
+
+            .i-amphtml-element-error {
+                background: red!important;
+                color: #fff!important;
+                position: relative!important
+            }
+
+            .i-amphtml-element-error:before {
+                content: attr(error-message)
+            }
+
+            i-amp-scroll-container,i-amphtml-scroll-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: block
+            }
+
+            i-amp-scroll-container.amp-active,i-amphtml-scroll-container.amp-active {
+                overflow: auto;
+                -webkit-overflow-scrolling: touch
+            }
+
+            .i-amphtml-loading-container {
+                display: block!important;
+                pointer-events: none;
+                z-index: 1
+            }
+
+            .i-amphtml-notbuilt>.i-amphtml-loading-container {
+                display: block!important
+            }
+
+            .i-amphtml-loading-container.amp-hidden {
+                visibility: hidden
+            }
+
+            .i-amphtml-element>[overflow] {
+                cursor: pointer;
+                position: relative;
+                z-index: 2;
+                visibility: hidden;
+                display: initial;
+                line-height: normal
+            }
+
+            .i-amphtml-layout-size-defined>[overflow] {
+                position: absolute
+            }
+
+            .i-amphtml-element>[overflow].amp-visible {
+                visibility: visible
+            }
+
+            template {
+                display: none!important
+            }
+
+            .amp-border-box,.amp-border-box *,.amp-border-box :after,.amp-border-box :before {
+                box-sizing: border-box
+            }
+
+            amp-pixel {
+                display: none!important
+            }
+
+            amp-analytics,amp-auto-ads,amp-story-auto-ads {
+                position: fixed!important;
+                top: 0!important;
+                width: 1px!important;
+                height: 1px!important;
+                overflow: hidden!important;
+                visibility: hidden
+            }
+
+            amp-story {
+                visibility: hidden!important
+            }
+
+            html.i-amphtml-fie>amp-analytics {
+                position: initial!important
+            }
+
+            [visible-when-invalid]:not(.visible),form [submit-error],form [submit-success],form [submitting] {
+                display: none
+            }
+
+            amp-accordion {
+                display: block!important
+            }
+
+            @media (min-width: 1px) {
+                :where(amp-accordion>section)>:first-child {
+                    margin:0;
+                    background-color: #efefef;
+                    padding-right: 20px;
+                    border: 1px solid #dfdfdf
+                }
+
+                :where(amp-accordion>section)>:last-child {
+                    margin: 0
+                }
+            }
+
+            amp-accordion>section {
+                float: none!important
+            }
+
+            amp-accordion>section>* {
+                float: none!important;
+                display: block!important;
+                overflow: hidden!important;
+                position: relative!important
+            }
+
+            amp-accordion,amp-accordion>section {
+                margin: 0
+            }
+
+            amp-accordion:not(.i-amphtml-built)>section>:last-child {
+                display: none!important
+            }
+
+            amp-accordion:not(.i-amphtml-built)>section[expanded]>:last-child {
+                display: block!important
+            }
+
+            /*# sourceURL=/css/ampshared.css*/
+        </style>
+        <meta content=1562489507328808 property=fb:app_id>
+        <meta content=https://o.vdoc.vn/data/image/2020/06/01/su-kien-trong-cuoc-doi-va-su-nghiep-cua-bac-ho-ban-tam-dac-nhat-la-su-kien-nao-vi-sao.jpg property=og:image>
+        <meta content=article property=og:type>
+        <meta content="Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ bạn tâm đắc nhất là sự kiện nào? Vì sao" property=og:title>
+        <meta content=noindex name=robots>
+        <meta content=no-referrer-when-downgrade name=referrer>
+        <meta content=hoatieu.vn name=amp-cookie-scope>
+        <meta content="10=2,11=2" name=amp-usqp>
+        <script id=__AMP_EXP type=text/json>
+            {"flexible-bitrate":0.1,"amp-story-first-page-max-bitrate":0.3,"story-disable-animations-first-page":1,"story-load-first-page-only":1,"story-load-inactive-outside-viewport":1,"story-ad-page-outlink":0.02,"amp-geo-ssr":1,"story-remote-localization":1,"amp-story-subscriptions":1}
+        </script>
+        <script async nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0.js></script>
+        <script async crossorigin=anonymous src=https://cdn.ampproject.org/rtv/012210010655000/v0.mjs type=module></script>
+        <script async custom-element=amp-ad-network-adsense-impl nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-ad-network-adsense-impl-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-ad-network-adsense-impl src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-ad-network-adsense-impl-0.1.mjs type=module></script>
+        <script async src=https://cdn.ampproject.org/viewer/google/va9.js></script>
+        <script async custom-element=amp-accordion nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-accordion-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-accordion src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-accordion-0.1.mjs type=module></script>
+        <script async custom-element=amp-ad nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-ad-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-ad src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-ad-0.1.mjs type=module></script>
+        <script async custom-element=amp-analytics nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-analytics-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-analytics src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-analytics-0.1.mjs type=module></script>
+        <script async custom-element=amp-auto-ads nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-auto-ads-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-auto-ads src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-auto-ads-0.1.mjs type=module></script>
+        <script async custom-element=amp-bind nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-bind-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-bind src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-bind-0.1.mjs type=module></script>
+        <script async custom-element=amp-form nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-form-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-form src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-form-0.1.mjs type=module></script>
+        <script async custom-element=amp-image-lightbox nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-image-lightbox-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-image-lightbox src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-image-lightbox-0.1.mjs type=module></script>
+        <script async custom-element=amp-sidebar nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-sidebar-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-sidebar src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-sidebar-0.1.mjs type=module></script>
+        <script async custom-element=amp-social-share nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-social-share-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-social-share src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-social-share-0.1.mjs type=module></script>
+        <script async custom-element=amp-video nomodule src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-video-0.1.js></script>
+        <script async crossorigin=anonymous custom-element=amp-video src=https://cdn.ampproject.org/rtv/012210010655000/v0/amp-video-0.1.mjs type=module></script>
+        <link href=https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/favicon.ico rel=icon>
+        <link crossorigin href=https://fonts.gstatic.com / rel="dns-prefetch preconnect">
+        <link href=https://o-vdoc-vn.cdn.ampproject.org rel="dns-prefetch preconnect">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&amp;subset=vietnamese&amp;display=optional" rel=stylesheet>
+        <style amp-custom>
+            html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit
+            }
+
+            article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+                display: block
+            }
+
+            ol,ul {
+                list-style: none
+            }
+
+            q {
+                quotes: none
+            }
+
+            blockquote:before,blockquote:after,q:before,q:after {
+                content: '';
+                content: none
+            }
+
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                display: block;
+                overflow-x: auto;
+                word-break: keep-all
+            }
+
+            ins {
+                vertical-align: top
+            }
+
+            .clear {
+                clear: both;
+                display: block;
+                overflow: hidden;
+                visibility: hidden;
+                width: 0;
+                height: 0
+            }
+
+            .clearfix:after {
+                clear: both;
+                content: ' ';
+                display: block;
+                font-size: 0;
+                line-height: 0;
+                visibility: hidden;
+                width: 0;
+                height: 0
+            }
+
+            .clearfix {
+                display: inline-block
+            }
+
+            * html .clearfix {
+                height: 1%
+            }
+
+            .clearfix {
+                display: block
+            }
+
+            body {
+                font-family: 'Roboto',sans-serif;
+                line-height: 28px;
+                font-size: 18px;
+                background: #fff;
+                color: rgba(0,0,0,.87)
+            }
+
+            h1,h2,h3,h4,h5 {
+                font-size: 1em;
+                margin: 0;
+                line-height: 1.3em;
+                font-weight: 100
+            }
+
+            a {
+                text-decoration: none;
+                color: #111
+            }
+
+            a:hover {
+                color: #ff4500
+            }
+
+            ul,li,ol {
+                list-style: none;
+                padding: 0;
+                margin: 0
+            }
+
+            pre {
+                max-width: 100%;
+                display: block;
+                overflow: auto;
+                background: #fafad2;
+                padding: 8px;
+                border: 1px solid #eee
+            }
+
+            .fixed-height {
+                display: block;
+                height: 60px;
+                clear: both;
+                position: relative
+            }
+
+            .fixed-height amp-img.contain img {
+                object-fit: contain
+            }
+
+            .page {
+                padding: 16px
+            }
+
+            #header {
+                height: 50px;
+                background: #fff;
+                flex-direction: row;
+                width: 100%;
+                position: relative;
+                background: #bc5100;
+                border-bottom: solid 1px #bc5100
+            }
+
+            #header .toggle.menu {
+                margin-right: 16px;
+                height: 24px;
+                width: 24px;
+                padding: 16px;
+                filter: brightness(0) invert(1);
+                position: absolute;
+                border-radius: 3px;
+                cursor: pointer;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-appearance: none;
+                outline: none;
+                top: -1px;
+                text-align: center
+            }
+
+            #header #logo {
+                padding: 0 68px;
+                display: block;
+                align-self: center;
+                height: 50px;
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/default/images/logo.white.svg') left center no-repeat;
+                background-position: center;
+                background-size: auto 40px;
+                background-repeat: no-repeat
+            }
+
+            .toggle.search {
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/default/images/icon-zip.png') no-repeat center;
+                background-position: 7px -80px;
+                cursor: pointer;
+                height: 24px;
+                width: 24px;
+                top: 5px;
+                filter: brightness(0) invert(1);
+                padding: 8px;
+                position: absolute;
+                right: 8px;
+                display: block
+            }
+
+            .searchBox {
+                left: 48px;
+                right: 48px;
+                top: 0;
+                margin-top: 1px;
+                position: absolute;
+                visibility: hidden;
+                opacity: 0
+            }
+
+            .searchBox form {
+                position: relative;
+                text-align: center
+            }
+
+            input:focus {
+                outline: none;
+                border: 0;
+                -webkit-box-shadow: 0;
+                box-shadow: 0
+            }
+
+            .searchBox #q {
+                display: inline-block;
+                padding: 7px 0;
+                width: 100%;
+                font-size: 16px;
+                height: 34px;
+                text-indent: 28px;
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/Themes/Default/images/logo-1x.png') 5px center no-repeat #fff;
+                box-sizing: border-box;
+                background-size: 24px;
+                border-radius: 3px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                padding-left: 8px;
+                padding-right: 64px;
+                border: 0
+            }
+
+            .showsearch .toggle.search {
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/default/images/icon-zip.png') no-repeat center;
+                background-position: 8px -50px;
+                cursor: pointer;
+                height: 24px;
+                z-index: 59;
+                width: 24px;
+                top: 5px;
+                right: 8px
+            }
+
+            .imoreamp {
+                bottom: 0;
+                background: #fff;
+                width: 100%;
+                display: block;
+                text-align: center;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #eee;
+                border-radius: 3px;
+                box-shadow: 0 2px 4px #00000026
+            }
+
+            #header.showsearch #logo {
+                visibility: hidden
+            }
+
+            .searchBox .btnHeaderFind {
+                position: absolute;
+                top: 1px;
+                right: 1px;
+                z-index: 100;
+                opacity: .54;
+                height: 32px;
+                text-align: center;
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/default/images/icon-zip.png') no-repeat center;
+                background-position: 6px -85px;
+                color: rgba(0,0,0,.87);
+                width: 35px;
+                cursor: pointer;
+                display: inline-block;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: none;
+                text-indent: -100px
+            }
+
+            .showsearch .searchBox {
+                top: 8px;
+                margin-top: 1px;
+                left: 48px;
+                opacity: initial;
+                visibility: visible
+            }
+
+            .navbox {
+                background: #fff
+            }
+
+            .navbox .close {
+                float: right;
+                top: 12px;
+                margin-right: 12px;
+                cursor: pointer
+            }
+
+            .navbox .head {
+                padding: 16px;
+                font-size: 20px;
+                border-bottom: 1px solid #eee;
+                line-height: 24px
+            }
+
+            .navbox .hdnav {
+                min-width: 200px;
+                display: block;
+                padding-left: 16px;
+                font-weight: bold;
+                line-height: 48px;
+                background: #fff;
+                border: none;
+                color: rgba(0,0,0,.87);
+                position: relative
+            }
+
+            .navbox section {
+                border: none;
+                border-bottom: 1px solid #eee
+            }
+
+            .navbox .hdnav amp-img {
+                position: absolute;
+                bottom: 10px;
+                left: 16px
+            }
+
+            .navbox .hdnav:after {
+                content: "";
+                position: absolute;
+                top: 20px;
+                right: 16px;
+                width: 0;
+                height: 0;
+                border: 4px solid transparent;
+                border-top: 4px solid #d8d8d8
+            }
+
+            .navbox section[expanded] .hdnav:after {
+                border: 4px solid transparent;
+                border-bottom: 4px solid #d8d8d8
+            }
+
+            .navbox .hdnav a {
+                display: block
+            }
+
+            .navbox li a {
+                display: block;
+                position: relative;
+                padding-left: 52px;
+                padding-right: 16px;
+                min-height: 38px;
+                border-bottom: none;
+                line-height: 38px
+            }
+
+            .navbox li amp-img {
+                position: absolute;
+                bottom: 10px;
+                left: 16px
+            }
+
+            .article h1 {
+                font-size: 24px;
+                font-weight: bold;
+                padding: 0 16px 8px 0;
+                line-height: 38px
+            }
+
+            .article .infotip {
+                font-weight: normal;
+                font-style: normal;
+                display: block
+            }
+
+            .content {
+                clear: both;
+                letter-spacing: 0;
+                margin-bottom: 8px
+            }
+
+            .content blockquote {
+                display: block;
+                background: #fff;
+                padding: 15px 20px 15px 45px;
+                margin: 0 0 20px;
+                position: relative;
+                border-left: 15px solid #58257b;
+                border-right: 2px solid #58257b;
+                -moz-box-shadow: 2px 2px 15px #ccc;
+                -webkit-box-shadow: 2px 2px 15px #ccc;
+                box-shadow: 2px 2px 15px #ccc;
+                overflow-x: auto
+            }
+
+            .content blockquote::before {
+                content: "“";
+                font-family: Georgia,serif;
+                font-size: 60px;
+                font-weight: bold;
+                color: #999;
+                position: absolute;
+                left: 10px;
+                top: 30px
+            }
+
+            .content blockquote::after {
+                content: ""
+            }
+
+            .content a {
+                color: #039
+            }
+
+            .content a:hover {
+                color: #ff4500
+            }
+
+            .content ul li {
+                list-style-type: disc;
+                margin-left: 20px
+            }
+
+            .content ol li {
+                list-style-type: decimal;
+                margin-left: 30px
+            }
+
+            .content img {
+                box-shadow: 0 0 1px #eee;
+                border-radius: 3px;
+                max-width: 100%;
+                height: auto
+            }
+
+            .content img[align=left],.content table[align=left] {
+                margin-right: 8px
+            }
+
+            .content img[align=right],.content table[align=right] {
+                margin-left: 8px
+            }
+
+            .content table[align=center] {
+                margin: auto
+            }
+
+            .content iframe {
+                display: block;
+                max-width: 100%
+            }
+
+            .content h2 {
+                font-size: 22px;
+                line-height: 35px;
+                font-weight: bold;
+                margin-bottom: 8px
+            }
+
+            .content h3 {
+                font-size: 22px;
+                line-height: 35px;
+                margin-bottom: 8px
+            }
+
+            .content p {
+                margin: 8px 0
+            }
+
+            .content em {
+                font-style: italic
+            }
+
+            .content b,.content strong {
+                font-weight: bold
+            }
+
+            .downbox {
+                text-align: center;
+                padding: 16px 0;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #fff;
+                border-top: 1px solid #ccc;
+                z-index: 1
+            }
+
+            .downbox .btn.btn-down {
+                min-width: 180px;
+                border-radius: 3px;
+                font-size: 22px;
+                line-height: 38px;
+                display: inline-block;
+                font-weight: bold;
+                color: #fff;
+                background: #689f38
+            }
+
+            .listbox {
+                margin-bottom: 16px
+            }
+
+            .listbox .title {
+                font-size: 24px;
+                line-height: 34px;
+                border-bottom: 1px solid #eee;
+                padding: 8px 0
+            }
+
+            .listbox .item a {
+                display: block;
+                line-height: 24px;
+                padding: 12px 0;
+                border-bottom: 1px solid #eee
+            }
+
+            .listbox.tiles .item a {
+                padding-left: 96px;
+                height: 80px;
+                overflow: hidden;
+                position: relative
+            }
+
+            .listbox.tiles .item a span {
+                height: 75px;
+                display: block;
+                overflow: hidden
+            }
+
+            .listbox.tiles .item a amp-img {
+                position: absolute;
+                top: 12px;
+                left: 0
+            }
+
+            .listbox>ul {
+                -moz-columns: auto 280px;
+                -webkit-columns: auto 280px;
+                columns: auto 280px;
+                -moz-column-gap: 16px;
+                -webkit-column-gap: 16px;
+                column-gap: 16px
+            }
+
+            .listbox>ul>li {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid
+            }
+
+            .list-items {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between
+            }
+
+            .list-items li {
+                border-top: 1px solid #eee;
+                display: block;
+                padding: 8px 0;
+                width: 100%;
+                margin: 0;
+                position: relative
+            }
+
+            .list-items li:first-child {
+                border-top: 0
+            }
+
+            .list-items li a {
+                display: block;
+                margin: 0;
+                color: initial
+            }
+
+            .viewmore {
+                display: block;
+                text-align: right
+            }
+
+            .title.boxvb {
+                font-size: 24px;
+                line-height: 34px;
+                border-bottom: 1px solid #eee;
+                padding: 8px 0
+            }
+
+            .list-items .icon {
+                display: block;
+                position: absolute;
+                top: 16px;
+                left: 0;
+                max-height: 24px;
+                max-width: 24px
+            }
+
+            .list-items img {
+                vertical-align: middle;
+                max-height: 32px;
+                max-width: 32px;
+                padding-right: 5px
+            }
+
+            .list-items .name {
+                min-height: 48px;
+                display: block
+            }
+
+            .list-items li i {
+                color: #666;
+                font-size: 16px;
+                min-height: 26px;
+                line-height: 26px;
+                font-style: normal;
+                white-space: nowrap;
+                font-weight: normal;
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis
+            }
+
+            .navbar {
+                margin-bottom: 16px
+            }
+
+            .navbar .title {
+                font-weight: bold;
+                display: block;
+                position: relative;
+                padding: 12px 0 12px 40px;
+                line-height: 24px;
+                border-bottom: 1px solid #eee
+            }
+
+            .navbar .title amp-img {
+                position: absolute;
+                bottom: 12px;
+                left: 0
+            }
+
+            .navbar li {
+                border-bottom: 1px solid #eee
+            }
+
+            .navbar li a {
+                display: block;
+                position: relative;
+                padding: 12px 0 12px 40px;
+                line-height: 24px
+            }
+
+            .navbar li:last-child {
+                border-bottom: 0
+            }
+
+            .navbar li amp-img {
+                position: absolute;
+                bottom: 12px;
+                left: 0
+            }
+
+            .navbar>ul {
+                -moz-columns: auto 280px;
+                -webkit-columns: auto 280px;
+                columns: auto 280px;
+                -moz-column-gap: 16px;
+                -webkit-column-gap: 16px;
+                column-gap: 16px
+            }
+
+            .navbar>ul>li {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid
+            }
+
+            .summary {
+                color: rgba(0,0,0,.54)
+            }
+
+            .summary .author {
+                float: right
+            }
+
+            .input-post {
+                border: 1px solid #c5c5c5;
+                position: relative;
+                border-radius: 5px;
+                display: block;
+                padding: 8px
+            }
+
+            .title-header {
+                font-weight: bold;
+                position: relative;
+                padding: 8px 0;
+                line-height: 24px;
+                color: rgba(0,0,0,.87);
+                display: block;
+                border-bottom: solid 1px #eee
+            }
+
+            .title-header {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                border-top: solid 1px #eee
+            }
+
+            .post .title-header {
+                text-indent: 16px
+            }
+
+            .title-header img {
+                vertical-align: text-bottom;
+                height: 24px;
+                width: 24px;
+                vertical-align: top;
+                padding-right: 8px;
+                display: inline-block
+            }
+
+            .topbox .social-share {
+                position: absolute;
+                right: 0;
+                top: 8px;
+                line-height: 32px
+            }
+
+            amp-social-share {
+                border-radius: 8px
+            }
+
+            .amp-social-share-system {
+                width: 76px;
+                height: 36px;
+                padding-left: 42px;
+                background-position: 8px;
+                color: #fff;
+                background-size: 20px;
+                line-height: 36px;
+                background-color: #4caf50
+            }
+
+            .page .adbox {
+                margin-top: 16px;
+                margin-bottom: 16px;
+                margin-left: -16px;
+                margin-right: -16px;
+                text-align: center;
+                overflow: hidden
+            }
+
+            .taxonomy h1 {
+                font-size: 24px;
+                line-height: 34px;
+                font-weight: bold;
+                margin-bottom: 16px
+            }
+
+            .listview .listitem {
+                position: relative;
+                margin: 0 0 16px 0;
+                clear: both;
+                min-height: 116px;
+                border-bottom: 1px solid #eee
+            }
+
+            .listview .listitem .title {
+                font-size: 17px;
+                display: block;
+                margin-bottom: 10px;
+                float: right;
+                width: 66%;
+                line-height: 24px
+            }
+
+            .listview .listitem .thumb {
+                max-height: 150px;
+                min-height: 100px;
+                overflow: hidden;
+                display: block;
+                border-radius: 3px;
+                width: 30%;
+                margin-bottom: 16px;
+                position: relative;
+                float: left;
+                overflow: hidden
+            }
+
+            .listview .listitem .thumb img {
+                width: 100%;
+                height: auto;
+                display: block
+            }
+
+            .listview .listitem .desc {
+                line-height: 21px;
+                max-height: 84px;
+                overflow: hidden;
+                text-align: justify;
+                clear: right;
+                margin-bottom: 20px;
+                width: 66%;
+                float: right;
+                display: none
+            }
+
+            @media screen and (min-width: 480px) {
+                .listview .listitem .desc {
+                    display:inline-block
+                }
+            }
+
+            @media screen and (min-width: 640px) {
+                .listview .listitem .title {
+                    font-size:23px;
+                    line-height: 30px
+                }
+            }
+
+            .pagination {
+                text-align: center;
+                margin-bottom: 16px;
+                line-height: 32px
+            }
+
+            .footer {
+                padding: 24px 16px;
+                background-color: #f5f5f5;
+                text-align: center
+            }
+
+            .footer .bottomlinks li {
+                display: inline-block;
+                padding: 0 16px;
+                color: rgba(0,0,0,.87);
+                margin-bottom: 16px
+            }
+
+            .footer .info,.footer .copyright {
+                font-size: 14px;
+                line-height: 23px;
+                color: rgba(0,0,0,.54)
+            }
+
+            .btn-update {
+                background: #fff;
+                border: 1px solid #eee;
+                border-radius: 2px;
+                height: 36px;
+                min-width: 64px;
+                padding: 0 16px;
+                display: block;
+                font-family: Roboto,Helvetica,Arial,sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0;
+                will-change: box-shadow;
+                transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+                outline: 0;
+                text-align: center;
+                line-height: 36px;
+                margin: 0;
+                cursor: pointer;
+                color: #008000;
+                margin-bottom: 16px;
+                position: relative;
+                width: 99vw;
+                left: 0;
+                bottom: 0
+            }
+
+            .index .head {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 32px;
+                margin-bottom: 16px;
+                display: block;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 8px
+            }
+
+            .index .viewmore {
+                display: block;
+                clear: both;
+                margin-bottom: 32px;
+                line-height: 32px;
+                text-align: center;
+                color: rgba(0,0,0,.54)
+            }
+
+            .breadcrumbs {
+                padding: 4px 0;
+                border-bottom: 1px solid #eee;
+                background: #fff;
+                white-space: nowrap
+            }
+
+            .breadcrumbs .home-icon {
+                padding-left: 0
+            }
+
+            .breadcrumbs a.home-icon {
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/Themes/Default/images/home-black.png') -1px 0 no-repeat;
+                width: 24px;
+                text-indent: -3000px;
+                overflow: hidden;
+                display: inline-block;
+                opacity: .54;
+                vertical-align: middle
+            }
+
+            .breadcrumbs .breadcrumb {
+                display: inline-block
+            }
+
+            .breadcrumbs a {
+                white-space: nowrap;
+                color: rgba(0,0,0,.87);
+                padding: 0
+            }
+
+            .breadcrumbs .breadcrumb::after {
+                content: "❭";
+                font-family: Comic Sans MS;
+                padding: 0 5px;
+                vertical-align: top;
+                color: rgba(0,0,0,.54);
+                font-size: 11px
+            }
+
+            .breadcrumbs .breadcrumb:last-child:after {
+                display: none
+            }
+
+            .breadcrumbs a:hover {
+                color: #bc5100
+            }
+
+            .breadcrumbs {
+                overflow-x: auto;
+                overflow-y: hidden;
+                margin-bottom: 8px
+            }
+
+            .toolbox {
+                position: relative;
+                margin-bottom: 16px;
+                padding: 8px 0
+            }
+
+            .ratingbox {
+                display: inline-block;
+                min-height: 32px;
+                line-height: 32px;
+                margin-right: 16px
+            }
+
+            .rating {
+                display: inline-block;
+                vertical-align: middle;
+                min-width: 120px;
+                min-height: 24px
+            }
+
+            .fa {
+                display: inline-block;
+                height: 24px;
+                width: 24px;
+                background: center no-repeat
+            }
+
+            .fa-star {
+                background-image: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/default/images/star-on.png')
+            }
+
+            .fa-star-o {
+                background-image: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/default/images/star-off.png')
+            }
+
+            .views {
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/default/images/icon-view-24.png') no-repeat 0 center;
+                background-size: 16px;
+                opacity: .54;
+                margin-left: 16px;
+                padding-left: 20px;
+                display: inline-block
+            }
+
+            .votes {
+                display: inline-block;
+                opacity: .54;
+                position: relative;
+                margin-left: 16px;
+                padding-right: 20px
+            }
+
+            .votes::after {
+                content: " ";
+                display: block;
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/default/images/person.png') no-repeat;
+                background-size: 16px;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                right: 0;
+                top: 7px
+            }
+
+            .ratingbox.richsnipet .views {
+                display: none
+            }
+
+            .ratingbox.richsnipet .rating {
+                vertical-align: sub
+            }
+
+            .sharebox {
+                position: absolute;
+                right: 16px;
+                top: 0;
+                line-height: 32px
+            }
+
+            .sharebox.largebox {
+                position: relative;
+                overflow: hidden;
+                display: inline-block;
+                right: initial
+            }
+
+            @media all and (min-width: 728px) {
+                .sharebox {
+                    top:6px
+                }
+            }
+
+            .properties .table.table-bordered {
+                background: #fff;
+                border: 1px solid #eee
+            }
+
+            .properties {
+                margin-bottom: 16px
+            }
+
+            .properties .table-bordered,.properties .table-tk-boder {
+                border-collapse: collapse;
+                border-spacing: 0
+            }
+
+            .rows-signer {
+                text-transform: capitalize
+            }
+
+            .properties table {
+                width: 100%
+            }
+
+            .properties .row-tr {
+                border-bottom: 1px solid #eee
+            }
+
+            .properties .rows-td.col4.bgf9f9f9 {
+                font-weight: bold;
+                text-align: left
+            }
+
+            .properties .row-th,.properties .rows-td {
+                border-left: 1px solid #eee;
+                line-height: 27px;
+                padding: 6px 8px;
+                width: 25%
+            }
+
+            .properties-title {
+                margin-bottom: 4px;
+                font-weight: bold;
+                display: block
+            }
+
+            .properties .bgf9f9f9 {
+                background: #f9f9f9
+            }
+
+            .properties .text-green {
+                color: #1faa00
+            }
+
+            .properties .text-red {
+                color: #f44336
+            }
+
+            .comments {
+                position: relative
+            }
+
+            .comments .head {
+                border-bottom: 1px solid #e9ebee;
+                line-height: 25px;
+                margin-bottom: 16px;
+                padding: 8px 0
+            }
+
+            .comments .total-comments {
+                float: left;
+                padding: 0;
+                font-weight: bold
+            }
+
+            .comments .box-mes {
+                display: block;
+                background: #f0f2f5;
+                border-radius: 10px;
+                border-top-left-radius: 0;
+                padding: 8px;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch
+            }
+
+            .comments {
+                margin-bottom: 16px
+            }
+
+            .comments .avatar {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                left: 0;
+                border-radius: 50%;
+                top: 0;
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/Themes/Default/images/icon-comment.png') no-repeat
+            }
+
+            .comments .note-cmt {
+                color: rgba(0,0,0,.54);
+                font-size: 12px;
+                margin-top: 0
+            }
+
+            .comments .main-comments {
+                position: relative;
+                padding-left: 64px;
+                display: block;
+                margin-top: 8px;
+                padding-bottom: 8px;
+                margin-bottom: 16px;
+                border-bottom: 1px solid #bdc7d8
+            }
+
+            .comments .main-comments img {
+                border-radius: 50%;
+                box-shadow: initial;
+                max-width: 100%
+            }
+
+            .comments .input-post:empty:before {
+                content: attr(placeholder);
+                display: block;
+                color: #90949c;
+                font-size: 16px;
+                cursor: text
+            }
+
+            .comments a:hover {
+                color: initial
+            }
+
+            .comments .active .btn-post,.comments .active .btn-cancel {
+                display: inline-block
+            }
+
+            .comments .box-btn {
+                display: block;
+                height: 32px;
+                text-align: right
+            }
+
+            .noeven {
+                pointer-events: none
+            }
+
+            .comments .items-comment {
+                display: block;
+                position: relative
+            }
+
+            .comments .list-comment li {
+                position: relative;
+                padding-left: 48px
+            }
+
+            .comments .list-comment img {
+                border-radius: 50%;
+                box-shadow: initial;
+                max-width: 100%
+            }
+
+            .comments .list-comment .fullname {
+                color: #385898;
+                display: inline-block;
+                font-weight: bold;
+                cursor: pointer;
+                position: relative;
+                margin-bottom: 4px;
+                text-decoration: none
+            }
+
+            .post-detail .comments p {
+                margin: 0
+            }
+
+            .comments .list-comment .action {
+                display: block;
+                position: relative
+            }
+
+            .comments .list-comment .action span {
+                font-size: 14px;
+                color: #4267b2
+            }
+
+            .comments .list-comment .action span:hover {
+                text-decoration: underline;
+                cursor: pointer
+            }
+
+            .comments .list-comment .action .like:hover {
+                cursor: initial;
+                text-decoration: none
+            }
+
+            .comments .list-comment .icon-like {
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/Themes/Default/images/icon-like.png') no-repeat;
+                width: 14px;
+                height: 14px;
+                display: inline-block;
+                vertical-align: text-top
+            }
+
+            .comments .list-comment .action .date-custom {
+                color: #90949c;
+                text-decoration: none
+            }
+
+            .comments .list-comment li {
+                margin-top: 10px;
+                margin-left: 0
+            }
+
+            .comments .btn.reply.disabled {
+                pointer-events: none;
+                opacity: .87
+            }
+
+            .comments .btn-post.on-reply {
+                display: inline-block;
+                opacity: .87;
+                pointer-events: none
+            }
+
+            .comments .off-like {
+                display: none
+            }
+
+            .comments .name-reply {
+                color: #4267b2
+            }
+
+            .comments .action-like.disabled {
+                pointer-events: none
+            }
+
+            .comments .btn-post.iLoad {
+                pointer-events: none
+            }
+
+            .comments .name-reply:hover {
+                text-decoration: underline;
+                color: #4267b2
+            }
+
+            .comments .box-more {
+                text-align: center;
+                display: block;
+                text-align: center;
+                position: relative;
+                margin-top: 16px
+            }
+
+            .comments .viewmore-comment {
+                display: block;
+                cursor: pointer;
+                padding: 8px;
+                background: #3578e5;
+                color: #fff;
+                text-align: center;
+                font-weight: bold;
+                border-radius: 2px
+            }
+
+            .comments .viewmore-comment:hover {
+                background: #dddfe2;
+                color: #fff
+            }
+
+            .comments .viewmore-comment.loading {
+                border: 0;
+                text-indent: -99999px;
+                padding: 0;
+                background: #fff;
+                vertical-align: text-bottom;
+                display: inline-block
+            }
+
+            .comments .fullname[data-role="2"]:before {
+                content: "";
+                background: url('https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/Themes/Default/images/icon-verified.png') no-repeat;
+                width: 12px;
+                height: 12px;
+                display: block;
+                position: absolute;
+                right: -16px;
+                top: 2px
+            }
+
+            .comments .list-comment .message {
+                display: block;
+                color: initial;
+                margin-bottom: 4px
+            }
+
+            .comments .loading {
+                display: inline-block;
+                width: 24px;
+                height: 24px
+            }
+
+            @keyframes lds-dual-ring {
+                0% {
+                    transform: rotate(0deg)
+                }
+
+                100% {
+                    transform: rotate(360deg)
+                }
+            }
+
+            @media screen and (max-width: 640px) {
+                .main-comments>.avatar {
+                    display:none
+                }
+
+                .comments .orderby .option {
+                    font-size: 16px;
+                    padding: 1px 4px
+                }
+
+                .comments .viewmore-comment:hover {
+                    background: #3578e5;
+                    color: #fff
+                }
+
+                .comments .main-comments img {
+                    display: none
+                }
+
+                .comments .main-comments {
+                    padding-left: 0
+                }
+
+                .comments .list-comment .subtab img {
+                    max-width: 32px
+                }
+
+                .comments .list-comment .subtab li {
+                    padding-left: 48px
+                }
+
+                .comments .subtab .avatar {
+                    width: 32px;
+                    height: 32px;
+                    left: 8px;
+                    background-size: 32px
+                }
+
+                .comments .list-comment .fullname {
+                    line-height: 16px
+                }
+
+                .comments .list-comment .action {
+                    line-height: 18px;
+                    margin-top: 2px
+                }
+
+                .comments .total-comments {
+                    font-size: 16px
+                }
+
+                .comments .note-cmt {
+                    line-height: 19px
+                }
+            }
+        </style>
+        <title>Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ bạn tâm đắc nhất là sự kiện nào? Vì sao</title>
+        <link href=https://hoatieu.vn/bieu-mau/su-kien-trong-cuoc-doi-va-su-nghiep-cua-bac-ho-ban-tam-dac-nhat-la-su-kien-nao-vi-sao-200621 rel=canonical>
+        <script type=application/ld+json>
+            {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://hoatieu.vn/"},{"@type":"ListItem","position":"2","name":"Biểu mẫu","item":"https://hoatieu.vn/bieu-mau"},{"@type":"ListItem","position":"3","name":"Gi&#225;o dục - Đ&#224;o tạo","item":"https://hoatieu.vn/bieu-mau/bieu-mau-giao-duc"}]}
+        </script>
+        <script type=application/ld+json>
+            {"@context":"https://schema.org","@type":"AggregateRating","ratingValue":"4","ratingCount":"25","itemReviewed":{"@type":"CreativeWorkSeries","name":"C&#243; nhiều sự kiện trong cuộc đời v&#224; sự nghiệp của B&#225;c Hồ bạn t&#226;m đắc nhất l&#224; sự kiện n&#224;o? V&#236; sao","image":"https://o.vdoc.vn/data/image/2020/06/01/su-kien-trong-cuoc-doi-va-su-nghiep-cua-bac-ho-ban-tam-dac-nhat-la-su-kien-nao-vi-sao.jpg"}}
+        </script>
+        <meta content=2 name=runtime-type>
+    </head>
+    <body>
+        <amp-auto-ads class=i-amphtml-layout-container data-ad-client=ca-pub-9275417305531302 i-amphtml-layout=container type=adsense></amp-auto-ads>
+        <header [class]="visible ? &#39;showsearch&#39; : &#39;hidesearch&#39;" id=header>
+            <a class="toggle menu" on=tap:sidebar.toggle>
+                <amp-img alt=navigation class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=24 i-amphtml-layout=fixed srcset="https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/amp/ic_menu_black_24dp_1x.png 1x, https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/amp/ic_menu_black_24dp_2x.png 2x" style=width:24px;height:24px; width=24></amp-img>
+            </a>
+            <a class="toggle search" on="tap:AMP.setState({visible: !visible})"></a>
+            <a href=https://hoatieu.vn / id=logo target=_top></a>
+            <div class=searchBox>
+                <form action=https://hoatieu.vn/s method=get target=_top>
+                    <input id=q name=q placeholder="Tìm kiếm..." required type=text>
+                    <input class=btnHeaderFind type=submit>
+                </form>
+            </div>
+        </header>
+        <div class="page article clearfix">
+            <div class=breadcrumbs>
+                <span class="breadcrumb home-box">
+                    <a class=home-icon href=https://hoatieu.vn / target=_top>Hoatieu.vn</a>
+                </span>
+                <a class=breadcrumb href=https://hoatieu.vn/bieu-mau target=_top>Biểu mẫu</a>
+                <a class=breadcrumb href=https://hoatieu.vn/bieu-mau/bieu-mau-giao-duc target=_top>Giáo dục - Đào tạo</a>
+            </div>
+            <div class=main>
+                <h1>Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ bạn tâm đắc nhất là sự kiện nào? Vì sao</h1>
+                <div class=infotip>Sự kiện trong cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh bạn tâm đắc nhất</div>
+                <div class="toolbox topbox clearfix">
+                    <div class="ratingbox richsnipet">
+                        <div class=rating data-id=200621 data-rating=4>
+                            <a class="fa-star fa" href=#></a>
+                            <a class="fa-star fa" href=#></a>
+                            <a class="fa-star fa" href=#></a>
+                            <a class="fa-star fa" href=#></a>
+                            <a class="fa-star-o fa" href=#></a>
+                        </div>
+                    </div>
+                    <div class=social-share>
+                        <amp-social-share class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=36 i-amphtml-layout=fixed style=width:76px;height:36px; type=system width=76>Chia sẻ</amp-social-share>
+                    </div>
+                </div>
+                <div class=adbox id=adsposttop>
+                    <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=4845306108 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                        <div overflow></div>
+                    </amp-ad>
+                </div>
+                <div class=content>
+                    <p>
+                        Bác Hồ là một vị lãnh tụ vĩ đại, đáng kính mãi vĩnh hằng trong trái tim mỗi thế hệ người Việt Nam và cả bạn bè quốc tế. Có <a href=https://hoatieu.vn/bieu-mau/su-kien-trong-cuoc-doi-va-su-nghiep-cua-bac-ho-ban-tam-dac-nhat-la-su-kien-nao-vi-sao-200621 target=_top>nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ khiến chúng ta tâm đắc và có ấn tượng sâu sắc</a>
+                        . Mời các bạn tham khảo bài viết dưới đây.
+                    </p>
+                    <ul>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/dap-an-cuoc-thi-tim-hieu-ho-chi-minh-vi-dai-song-mai-voi-que-huong-va-con-nguoi-an-giang-200906 target=_top>Đáp án cuộc thi tìm hiểu Hồ Chí Minh vĩ đại - Sống mãi với Quê hương và Con người An Giang</a>
+                        </li>
+                    </ul>
+                    <div class=toc>
+                        <h2>Sự kiện trong cuộc đời và sự nghiệp của Bác Hồ bạn tâm đắc nhất</h2>
+                        <ul>
+                            <li>
+                                <a href=#mcetoc_1e9ng92nh0>I. Những sự kiện lớn tâm đắc trong cuộc đời và sự nghiệp của Bác Hồ</a>
+                                <ul>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q0>1. Bác Hồ ra đi tìm đường cứu nước</a>
+                                    </li>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q1>2. Lên án chủ nghĩa thực dân, thúc đẩy các phong trào giải phóng thuộc địa</a>
+                                    </li>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q2>3. Thoát khỏi nhà tù Victoria và chỉ đạo phong trào cách mạng trong nước</a>
+                                    </li>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q3>4. Tổ chức các điều kiện và sáng lập Đảng Cộng sản Việt Nam</a>
+                                    </li>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q4>5. Lãnh đạo toàn dân Tổng khởi nghĩa cách mạng tháng tám, lập nên nước Việt Nam Dân chủ Cộng hòa</a>
+                                    </li>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q5>6. Hoạch định đường lối kháng chiến, làm nên trận Điện Biên Phủ chấn động địa cầu</a>
+                                    </li>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q6>7. Đối phó với thù trong giặc ngoài, chuẩn bị cho cuộc kháng chiến trường kỳ</a>
+                                    </li>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q7>8. Dự đoán về Đại thắng mùa xuân 1975</a>
+                                    </li>
+                                    <li>
+                                        <a href=#mcetoc_1e9njsm2q8>9. Nhà tư tưởng lỗi lạc, nhà văn hóa kiệt xuất, tấm gương đạo đức sáng ngời</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=#mcetoc_1e9ng92nh1>II. Câu chuyện vui về Bác Hồ và bữa ăn thịt chó</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=adbox>
+                        <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=9981845034 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                            <div overflow></div>
+                        </amp-ad>
+                    </div>
+                    <h2 id=mcetoc_1e9ng92nh0>
+                        <strong>I. Những sự kiện lớn tâm đắc trong cuộc đời và sự nghiệp của Bác Hồ</strong>
+                    </h2>
+                    <h3 id=mcetoc_1e9njsm2q0>
+                        <strong>1. Bác Hồ ra đi tìm đường cứu nước</strong>
+                    </h3>
+                    <p>Chủ tịch Hồ Chí Minh sinh ngày 19/5/1890 trong một gia đình nhà nho, nguồn gốc nông dân, ở làng Hoàng Trù, xã Kim Liên, huyện Nam Đàn, tỉnh Nghệ An, nơi có truyền thống đấu tranh kiên cường chống ách thống trị của thực dân phong kiến.</p>
+                    <p>Tháng 6/1911, Người đi ra nước ngoài, suốt 30 năm hoạt động, Người đã đi đến nước Pháp và nhiều nước châu Âu, châu Á, châu Phi, châu Mỹ. Người hòa mình với những phong trào của công nhân và nhân dân các dân tộc thuộc địa, vừa lao động kiếm sống, vừa học tập, hoạt động cách mạng và nghiên cứu các học thuyết cách mạng. Năm 1917, thắng lợi của Cách mạng tháng Mười Nga và sự ra đời của Quốc tế Cộng sản đã đưa Người đến với chủ nghĩa Mác - Lênin. Từ đây, Người đã nhận rõ đó là con đường duy nhất đúng đắn để giải phóng dân tộc và giải phóng giai cấp.</p>
+                    <div class=adbox>
+                        <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=5579203235 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                            <div overflow></div>
+                        </amp-ad>
+                    </div>
+                    <p>Năm 1919, Người gia nhập Đảng Xã hội Pháp và hoạt động trong phong trào công nhân Pháp. Tháng 6 năm 1919, thay mặt Hội Những người Việt Nam yêu nước tại Pháp, Người gửi tới Hội nghị Versailles (Pháp) Bản yêu sách của nhân dân An Nam, yêu cầu Chính phủ Pháp thừa nhận các quyền tự do và quyền bình đẳng của dân tộc Việt Nam.</p>
+                    <p>Tháng 12 năm 1920, tại Đại hội lần thứ 18 của Đảng Xã hội Pháp tại thành phố Tours, Người bỏ phiếu tán thành gia nhập Quốc tế Cộng sản và tham gia thành lập Đảng Cộng sản Pháp.</p>
+                    <p>Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ khiến chúng ta tâm đắc và có ấn tượng sâu sắc, với bản thân tôi, đây là sự kiện mà bản thân ấn tượng nhất. Nó đánh dấu bước ngoặt quan trọng trong cuộc đời hoạt động cách mạng của Người, từ chủ nghĩa yêu nước chân chính đến chủ nghĩa cộng sản.</p>
+                    <h3 id=mcetoc_1e9njsm2q1>
+                        <strong>2. Lên án chủ nghĩa thực dân, thúc đẩy các phong trào giải phóng thuộc địa</strong>
+                    </h3>
+                    <p>Từ năm 1921 – 6/1923, Người tham gia nhiều hoạt động nhằm thúc đẩy phong trào giải phóng các dân tộc thuộc địa, Người tham gia sáng lập Hội Liên hiệp thuộc địa; Sử dụng báo chí Pháp tấn công chủ nghĩa thực dân – đáng chú ý Người là Chủ nhiệm kiêm chủ bút báo Le Paria (Người cùng khổ).</p>
+                    <div class=adbox>
+                        <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=3432941105 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                            <div overflow></div>
+                        </amp-ad>
+                    </div>
+                    <p>Điều rất thú vị là trong thời gian tham gia câu lạc bộ Phôbua, Người đã sáng tác vở kịch “Con rồng tre” nhằm đả kích vua bù nhìn Khải Định khi ông này sang Pháp dự Hội chợ thuộc địa Mác-xây vào tháng 6/1922.</p>
+                    <p>Trước đó vào năm 1921 tại Pháp, Người tham gia thành lập Hội Liên hiệp các dân tộc thuộc địa, nhằm tuyên truyền cách mạng trong nhân dân các nước thuộc địa. Người viết nhiều bài đăng trên các báo “Người cùng khổ”, “Đời sống thợ thuyền”, ... Đặc biệt, Người viết tác phẩm “Bản án chế độ thực dân Pháp” lên án mạnh mẽ chế độ thực dân, thức tỉnh lòng yêu nước của nhân dân các nước thuộc địa. Tất cả các bài viết của Người đều được bí mật chuyển về nước và lưu truyền trong mọi tầng lớp nhân dân.</p>
+                    <p>Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ nhưng đây là sự kiện khiến tôi tâm đắc và có ấn tượng sâu sắc vì tác phẩm &#34;Bản án chế độ thực dân Pháp” của Nguyễn Ái Quốc gồm 12 chương. Tác giả dành 11 chương tố cáo tội ác man rợ của chủ nghĩa thực dân đối với người bản xứ ở các thuộc địa. Chương cuối cùng, tác giả cổ vũ phong trào đấu tranh của nhân dân các dân tộc thuộc địa và làm rõ mối quan hệ giữa cách mạng Nga, quốc tế cộng sản, các tổ chức quốc tế khác với phong trào đấu tranh của các dân tộc thuộc địa.</p>
+                    <h3 id=mcetoc_1e9njsm2q2>
+                        <strong>3. Thoát khỏi nhà tù Victoria và chỉ đạo phong trào cách mạng trong nước</strong>
+                    </h3>
+                    <p>Ngày 30/6/1923, Người đến Liên Xô và bắt đầu một thời kỳ hoạt động, học tập và nghiên cứu về chủ nghĩa Mác – Lênin, về chế độ xã hội chủ nghĩa ngay trên đất nước Lênin vĩ đại. Tại Đại hội lần thứ I Quốc tế Nông dân (10/1923), Người được bầu vào Đoàn Chủ tịch Quốc tế Nông dân.</p>
+                    <div class=adbox>
+                        <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=9981845034 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                            <div overflow></div>
+                        </amp-ad>
+                    </div>
+                    <p>Năm 1924, Người dự Đại hội lần thứ V của Quốc tế Cộng sản và được cử làm cán bộ Ban phương Đông của Quốc tế Cộng sản, đồng thời là Ủy viên Đoàn chủ tịch Quốc tế Nông dân, Nguyễn Ái Quốc được giao theo dõi và chỉ đạo phong trào cách mạng ở một số nước Châu Á.</p>
+                    <p>Năm 1925, tại Quảng Châu (Trung Quốc), Người tham gia thành lập Hội Liên hiệp các dân tộc bị áp bức Á Đông, sáng lập tổ chức Hội Việt Nam Cách mạng Thanh niên, ra báo Thanh niên để truyền bá chủ nghĩa Mác – Lênin về trong nước, đồng thời mở lớp đào tạo cán bộ cho cách mạng Việt Nam.</p>
+                    <p>Năm 1931, Chủ tịch Hồ Chí Minh lúc đó có tên là Tống Văn Sơ bị chính quyền Anh bắt ở Hồng Kông và buộc tội là “một phần tử cộng sản nguy hiểm”, “phái viên của Đệ tam Quốc tế đến Hồng Kông để lật đổ chính quyền”.</p>
+                    <p>Tuy nhiên, chỉ qua một lần tiếp xúc với ông bà luật sư người Anh là Lôdơby (F.H. Loseby), bằng tình cảm, sự chân thành của mình, Người đã cảm hóa được họ. Mặc dù không cùng “chiến tuyến”, nhưng Người đã được ông bà luật sư nhận lời bào chữa và tận tình giúp đỡ Người thoát khỏi nhà tù Victoria.</p>
+                    <p>Sự cảm hóa kỳ diệu đó của Người, sau này được ông Lôdơby kể lại trong cuốn hồi ký của mình: “Sau 30 phút gặp gỡ, Người đã hoàn toàn chinh phục tôi. Ở Người toát ra một sức mạnh cảm hóa kỳ diệu”. Về phần mình, bà Lôdơby kể: “Chỉ sau 10 phút là tôi cảm phục Người. Tôi thúc nhà tôi làm gấp hồ sơ, còn tôi và con gái tôi ngày ngày vào thăm, săn sóc sức khỏe cho Người”.</p>
+                    <p>Nghị lực phi thường của Bác khiến tôi tâm đắc, đây cũng chính là sự kiện trong cuộc đời và sự nghiệp của Bác Hồ để lại ấn tượng với tôi sâu sắc.</p>
+                    <h3 id=mcetoc_1e9njsm2q3>
+                        <strong>4. Tổ chức các điều kiện và sáng lập Đảng Cộng sản Việt Nam</strong>
+                    </h3>
+                    <p>Ngày 27/10/1929, Quốc tế Cộng sản gửi những người Cộng sản Đông Dương tài liệu Về việc thành lập một Đảng Cộng sản Đông Dương, yêu cầu những người cộng sản Đông Dương phải khắc phục ngay sự chia rẽ giữa các nhóm cộng sản và thành lập một đảng giai cấp vô sản.</p>
+                    <p>Quốc tế Cộng sản chỉ rõ phương thức để tiến tới thành lập Đảng là phải bắt đầu từ việc xây dựng các chi bộ trong các nhà máy, xí nghiệp: chỉ rõ mối quan hệ giữa Đảng Cộng sản Đông Dương với phong trào cộng sản quốc tế.</p>
+                    <div class=adbox>
+                        <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=5579203235 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                            <div overflow></div>
+                        </amp-ad>
+                    </div>
+                    <p>Nhận được tin về sự chia rẽ của những người cộng sản ở Đông Dương, Nguyễn Ái Quốc rời Xiêm đến Trung Quốc. Người chủ trì Hội nghị hợp nhất Đảng, tại Hương Cảng, Trung Quốc. Trong Báo cáo gửi Quốc tế Cộng sản (18/2/1930). Nguyễn Ái Quốc viết: “Chúng tôi họp vào ngày 6-1… Các đại biểu trở về An Nam ngày 8-2”. Nghị quyết Đại hội đại biểu toàn quốc lần thứ III Đảng Lao Động Việt Nam (10/9/1960) quyết định lấy ngày 3-2 dương lịch hàng năm làm ngày kỉ niệm thành lập Đảng.</p>
+                    <p>Thành phần Hội nghị hợp nhất gồm: 1 đại biểu của Quốc tế Cộng sản; 2 đại biểu của Đông Dương Cộng sản Đảng; 2 đại biểu An Nam Cộng sản Đảng. Hội nghị thảo luận đề nghị của Nguyễn Ái Quốc gồm Năm điểm lớn, với nội dung:</p>
+                    <p>1. Bỏ mọi thành kiến xung đột cũ, thành thật hợp tác để thống nhất các nhóm cộng sản ở Đông Dương;</p>
+                    <p>2. Định tên Đảng là Đảng Cộng sản Việt Nam;</p>
+                    <p>3. Thảo Chính cương và Điều lệ sơ lược của Đảng;</p>
+                    <p>4. Định kế hoạnh thực hiện việc thống nhất trong nước;</p>
+                    <p>5. Cử một Ban Trung Ương lâm thời gồm chín người, trong đó có hai đại biểu chi bộ cộng sản Trung Quốc ở Đông Dương”. Hội nghị nhất trí với 5 điểm lớn theo đề nghị của Nguyễn Ái Quốc và quyết định hợp nhất các tổ chức cộng sản, lấy tên là Đảng Cộng sản Việt Nam.</p>
+                    <p>Hội nghị thảo luận và thông qua các văn kiện: Chánh cương vắn tắt, Sách lược vắn tắt, Chương trình tóm tắt và Điều lệ vắn tắt của Đảng Cộng sản Việt Nam.</p>
+                    <p>Ngày 3/2/1930, Người chủ tọa Hội nghị thành lập Đảng họp tại Cửu Long (gần Hương Cảng). Hội nghị đã thông qua Chính cương vắn tắt, Sách lược vắn tắt, Điều lệ Đảng do chính Người soạn thảo. Người ra lời kêu gọi nhân dịp thành lập Đảng Cộng sản Việt Nam (sau đổi là Đảng Cộng sản Đông Dương, rồi Đảng Lao động Việt Nam và nay là Đảng Cộng sản Việt Nam ).</p>
+                    <p>Hội nghị hợp nhất các tổ chức cộng sản ở Việt Nam đã quy tụ 3 tổ chức cộng sản thành một Đảng cộng sản duy nhất - Đảng Cộng sản Việt Nam - theo một đường lối chính trị đúng đắn, tạo nên sự thống nhất về tư tưởng, chính trị và hành động của phong trào cách mạng cả nước, hướng tới mục tiêu độc lập dân tộc và chủ nghĩa xã hội.</p>
+                    <p>Thành lập nên Đảng Cộng sản Việt Nam là sự kiện to lớn trong cuộc đời và sự nghiệp của Bác Hồ. Nó là sự kiện khiến tôi tâm đắc nhất và rất khâm phục Bác Hồ.</p>
+                    <h3 id=mcetoc_1e9njsm2q4>
+                        <strong>5. Lãnh đạo toàn dân Tổng khởi nghĩa cách mạng tháng tám, lập nên nước Việt Nam Dân chủ Cộng hòa</strong>
+                    </h3>
+                    <p>Năm 1941, Người về nước, triệu tập Hội nghị lần thứ 8 của Ban Chấp hành Trung ương Đảng Cộng sản Đông Dương, quyết định đường lối cứu nước, thành lập Việt Nam độc lập đồng minh Hội (Việt Minh), tổ chức lực lượng vũ trang giải phóng, chính sách căn cứ địa, lãnh đạo nhân dân khởi nghĩa từng phần và chuẩn bị tổng khởi nghĩa giành chính quyền trong cả nước.</p>
+                    <div class=adbox>
+                        <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=3432941105 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                            <div overflow></div>
+                        </amp-ad>
+                    </div>
+                    <p>Cách mạng Tháng Tám (1945) thắng lợi, ngày 2/9/1945, tại Quảng trường Ba Đình, Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập tuyên bố thành lập nước Việt Nam Dân chủ Cộng hòa; tổ chức Tổng tuyển cử tự do trong cả nước, bầu Quốc hội và thông qua Hiến pháp dân chủ đầu tiên của Việt Nam. Quốc hội khóa I đã bầu Người làm Chủ tịch nước Việt Nam Dân chủ Cộng hòa (1946).</p>
+                    <p>Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ khiến chúng ta tâm đắc và có ấn tượng sâu sắc, với bản thân tôi, đây là sự kiện mà bản thân tôi ấn tượng nhất.</p>
+                    <h3 id=mcetoc_1e9njsm2q5>
+                        <strong>6. Hoạch định đường lối kháng chiến, làm nên trận Điện Biên Phủ chấn động địa cầu</strong>
+                    </h3>
+                    <p>Cùng với Trung ương Đảng, Chủ tịch Hồ Chí Minh lãnh đạo toàn Đảng, toàn quân, toàn dân Việt Nam phá tan âm mưu của đế quốc, giữ vững và củng cố chính quyền cách mạng.</p>
+                    <p>Ngày 19-12-1946, Người kêu gọi cả nước kháng chiến chống thực dân Pháp xâm lược, bảo vệ độc lập, tự do của Tổ quốc, bảo vệ và phát triển những thành quả của Cách mạng Tháng Tám.</p>
+                    <p>Trong “Lời kêu gọi toàn quốc kháng chiến”, Chủ tịch Hồ Chí Minh viết: “Hỡi đồng bào toàn quốc. Chúng ta phải nhân nhượng. Nhưng chúng ta càng nhân nhượng, thực dân Pháp càng lấn tới, vì chúng quyết tâm cướp nước ta lần nữa! Không! Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ…”.</p>
+                    <p>Cuộc kháng chiến chống thực dân Pháp của nhân dân Việt Nam dưới sự lãnh đạo của Chủ tịch Hồ Chí Minh và Đảng Cộng sản kéo dài 9 năm, và kết thúc bằng chiến thắng Điện Biên Phủ 1954.</p>
+                    <p>Chiến thắng này không chỉ có ý nghĩa đối với dân tộc Việt Nam, mà còn cổ vũ các dân tộc thuộc địa vùng lên giành độc lập, đánh đổ chế độ thực dân, đế quốc.</p>
+                    <p>Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ khiến chúng ta tâm đắc và nhớ mãi, với bản thân tôi, đây là sự kiện mà bản thân yêu thích nhất.</p>
+                    <h3 id=mcetoc_1e9njsm2q6>
+                        <strong>7. Đối phó với thù trong giặc ngoài, chuẩn bị cho cuộc kháng chiến trường kỳ</strong>
+                    </h3>
+                    <p>Sau khi lập ra nước Việt Nam Dân chủ Cộng hòa, chúng ta ngay lập tức phải đối diện với các thế lực đế quốc, phản động quốc tế đã câu kết, bao vây, chống phá quyết liệt, hòng thủ tiêu mọi thành quả cách mạng, tái dựng ách thống trị đối với đất nước ta.</p>
+                    <p>Dưới danh nghĩa quân Đồng minh, gần 20 vạn quân Tưởng Giới Thạch kéo vào miền Bắc thực hiện “nhiệm vụ” giải giáp quân Nhật; nhưng thực chất là thực hiện âm mưu tiêu diệt Đảng ta, phá tan Việt Minh, giúp bọn phản động trong nước lật đổ chính quyền nhân dân, lập chính phủ tay sai cho chúng. Cùng lúc, quân Anh kéo vào miền Nam cũng để tước vũ khí quân Nhật, song thực chất là bí mật tìm cách giúp quân Pháp trở lại xâm chiếm Việt Nam lần thứ 2.</p>
+                    <p>Ngoài ra còn có các thế lực thù địch, phản động ở trong nước, như “Việt Nam quốc dân đảng” (Việt Quốc) của Vũ Hồng Khanh, “Việt Nam cách mạng đồng chí hội” (Việt Cách) của Nguyễn Hải Thần, “Đại Việt quốc dân đảng”, “Đại Việt quốc gia xã hội đảng”… tìm mọi cách phá hoại thành quả của Đảng ta, nhân dân ta.</p>
+                    <p>Chủ động và bình tĩnh ứng phó với những thách thức nghiêm trọng trên, xuất phát từ cơ sở nghiên cứu, phân tích tình hình thế giới và hiện trạng đất nước, ngày 25-11-1945, Trung ương Đảng ra chỉ thị “Kháng chiến kiến quốc”, trong đó xác định rõ nhiệm vụ cấp bách trước mắt là củng cố chính quyền, chống thực dân Pháp xâm lược, bài trừ nội phản, cải thiện đời sống nhân dân.</p>
+                    <p>Xác định củng cố chính quyền là vấn đề cơ bản, hàng đầu của cách mạng, Đảng và Chủ tịch Hồ Chí Minh chủ trương tổ chức sớm cuộc Tổng tuyển cử phổ thông đầu phiếu, lập chính phủ và chấn chỉnh các cơ quan nhà nước. Đồng thời, các địa phương cũng bầu ra hội đồng nhân dân các cấp.</p>
+                    <div class=adbox>
+                        <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=9981845034 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                            <div overflow></div>
+                        </amp-ad>
+                    </div>
+                    <p>Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ nhưng đây là sự kiện khiến tôi tâm đắc và có ấn tượng sâu sắc vì kết quả cuộc bầu cử Quốc hội đầu tiên của nước Việt Nam (ngày 6/1/1946) và Quốc hội thông qua Hiến pháp (ngày 9/11/1946) biểu thị ý chí và sức mạnh của toàn dân trong bảo vệ thành quả cách mạng, khẳng định trên thực tế và về mặt pháp lý một chính quyền thực sự của dân, do dân và vì dân.</p>
+                    <h3 id=mcetoc_1e9njsm2q7>
+                        <strong>8. Dự đoán về Đại thắng mùa xuân 1975</strong>
+                    </h3>
+                    <p>Ngày 30/4/1975, sau hơn 20 năm kháng chiến gian khổ, non sông đất nước đã được thu về một mối. Trong ngày vui thống nhất, Người không còn nữa để nhìn thấy niềm vui ấy, nhưng cả dân tộc vẫn luôn hướng về người.</p>
+                    <p>Chủ tịch Hồ Chí Minh đã dự báo vệ đại thắng mùa xuân 1975 từ rất sớm. Điều đầu tiên, Người dự báo về hành động xâm lược trực tiếp của đế quốc Mỹ. Một ngày sau chiến thắng Điện Biên Phủ, nhắc nhở đồng chí Tố Hữu về công tác tư tưởng, Người chỉ rõ: “Chiến thắng Pháp rồi, phải nhớ trước mặt ta còn có kẻ địch mạnh hơn, hung ác hơn, đó là đế quốc Mỹ”.</p>
+                    <p>Có thời điểm, niềm Nam có tới hơn 60 vạn quân Mỹ và quân các nước phụ thuộc Mỹ, gần 1 triệu quân Ngụy được trang bị vũ khí hiện đại. Tuy nhiên, Người cũng dự báo cuộc kháng chiến chống Mỹ cứu nước sẽ đến ngày thắng lợi. Ngay cả khi chuẩn bị đi vào cõi vĩnh hằng, Người vẫn khẳng định: “Cuộc kháng chiến chống Mỹ có thể sẽ kéo dài mấy năm nữa. Đồng bào ta có thể phải hy sinh nhiều của nhiều người. Dù sao, chúng ta phải quyết tâm đánh giặc Mỹ đến thắng lợi hoàn toàn.</p>
+                    <p>Chủ tịch Hồ Chí Minh cũng nhìn thấy trước sự sụp đổ tất yếu của Đế quốc Mỹ, nhất là sau khi phong trào Đồng Khởi (1960) bùng bổ và giành được nhiều thắng lợi.</p>
+                    <p>Trong diễn văn bế mạc 15 năm ngày thành lập nước Việt Nam Dân chủ Cộng hòa, Người viết: “Trong lúc chúc mừng Ngày quốc khánh vĩ đại lần thứ 15, chúng ta càng nhớ đến đồng bào ta ở miền Nam đang anh dũng đấu tranh chống chế độ tàn bạo của Mỹ - Diệm. Chúng ta gửi đến đồng bào miền Nam tình ruột thịt và hứa với đồng báo rằng: Toàn dân ta đoàn kết nhất trí, bền bỉ đấu tranh, thì chậm lắm 15 năm nữa Tổ quốc ta nhất định sẽ thống nhất, Bắc Nam nhất định sẽ sum họp một nhà”.</p>
+                    <p>Sự kiện này để lại trong tôi ấn tượng sâu sắc bởi sự dự đoán về tương lai tươi sáng của cách mạng Việt Nam tạo sự quyết tâm đối với các chiến sĩ đang ngày đêm chiến đấu không ngừng nghỉ về nền độc lập dân tộc nước nhà.</p>
+                    <h3 id=mcetoc_1e9njsm2q8>
+                        <strong>9. Nhà tư tưởng lỗi lạc, nhà văn hóa kiệt xuất, tấm gương đạo đức sáng ngời</strong>
+                    </h3>
+                    <p>Luis Francisco Báez Hernández (1936-2015) là nhà báo, nhà văn Cuba chuyên viết về các hoạt động của lãnh tụ Fidel Castro huyền thoại. Ông viết rằng: “Tôi không bao giờ có thể quên được buổi sáng ngày 20/7/1965 đó và câu chuyện với Chủ tịch Hồ Chí Minh hôm ấy đã cho chúng tôi hiểu rõ: Hồ Chí Minh là một trong những nhân vật phi thường của thời đại mình. Hồ Chí Minh phi thường chính trong sự giản dị và trong sáng của Người.</p>
+                    <p>Những người nông dân Việt Nam bình dị nhìn thấy ở Người niềm hy vọng và tinh thần sẵn sàng hy sinh vì thắng lợi cuối cùng của dân tộc. Toàn thể nhân dân Việt Nam nhìn thấy ở Người phẩm chất của vị lãnh tụ có thể tập hợp và đoàn kết tất cả các tầng lớp: nông dân, công nhân, trí thức và mọi người Việt Nam yêu nước vì một mục tiêu chung là giành độc lập, tự do cho đất nước.</p>
+                    <p>Chính vì thế mà chúng ta hiểu vì sao Tổng thống Mỹ Eisenhower đã thú nhận trong hồi ký của mình rằng đích thân ông ta đã ra lệnh bằng mọi giá phải tìm cách ngăn chặn cuộc bầu cử tự do tại Việt Nam theo quy định của hội nghị Geneve, bởi vì người Mỹ biết chắc rằng 80% dân chúng nước này sẽ bỏ phiếu ủng hộ chính phủ của Hồ Chí Minh”.</p>
+                    <p>Bác của chúng ta cũng là một nhà văn hóa kiệt xuất của thế giới và là một tấm gương đạo đức sáng ngời.</p>
+                    <p>Ngay một người nông dân chân lấm, tay bùn, sống dưới đáy xã hội cũng có mảnh vườn, cái ao, hay chí ít là con gà, con lợn. Chỉ duy nhất một người dường như không có gì cả, đó chí là Bác. Tài sản của Bác chỉ là chiếc quạt bằng lá cọ, đôi dép cao su và bộ quần áo kaki… Và, ngay cả trong cõi riêng tư, Người cũng là người nghèo nhất. Một người nghèo nhất nước như Bác, nhưng để lại cho chúng ta một di sản đồ sộ - đó là một đất nước độc lập, toàn vẹn, một ý chí cách mạng chói ngời.</p>
+                    <p>Có nhiều sự kiện trong cuộc đời và sự nghiệp của Bác Hồ nhưng đây là sự kiện khiến tôi tâm đắc và có ấn tượng sâu sắc nhất bởi Bác Hồ chính là tấm gương lỗi lạc để người dân Việt Nam noi theo.</p>
+                    <div class=adbox>
+                        <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=5579203235 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                            <div overflow></div>
+                        </amp-ad>
+                    </div>
+                    <h2 id=mcetoc_1e9ng92nh1>II. Câu chuyện vui về Bác Hồ và bữa ăn thịt chó</h2>
+                    <p>Vào đầu năm 1946, khoảng thời gian mà chúng ta chuẩn bị cho phái đoàn đi dự Hội nghị hiệp thương với Pháp ở Đà Lạt. Có các đồng chí từ miền Nam được cử làm đại biểu ra Hà Nội họp để toàn đoàn thống nhất quan điểm, lập trường và hành động trong cuộc họp. Một hôm có mấy đồng chí quen biết đến thăm chúng tôi và yêu cầu phải tổ chức buổi liên hoan bằng thịt chó để chúc đoàn đi công tác thắng lợi. Chúng tôi vui vẻ nhận lời và hẹn đến 11 giờ trưa mời các đồng chí đến thưởng thức. Anh Hoàng Mỹ (Trần Hiệu) ra sức trổ tài nấu ăn. Đúng giờ đã hẹn nhưng không thấy ai đến. Tôi gọi điện ra Bắc Bộ phủ (nay là Nhà khách Chính Phủ) nơi Bác Hồ làm việc. Qua điện thoại, anh Vũ Đình Huỳnh nhỏ nhẹ trả lời: “Các anh ấy còn đang họp”. Sốt ruột, 15 phút tôi lại gọi điện hỏi và nghe tiếng anh Huỳnh. Anh Hoàng Mỹ băn khoăn vì sợ thức ăn nguội lạnh mất ngon. Sau lần gọi điện thoại thứ ba thì anh Huỳnh bỗng gọi điện báo: “Họp xong rồi, chúng mình sẽ đến ngay đây”</p>
+                    <p>Sau này tôi mới biết hôm ấy Bác định kéo dài thời gian họp bàn xong công việc nhưng cứ thấy chốc chốc lại có người gọi điện thoại và anh Vũ Đình Huỳnh (lúc ấy là thư ký của Bác) nhỏ nhẹ trả lời, Bác mới hỏi: “Có việc gì mà ai đó cứ gọi điện thoại liên tục như vậy?” Anh Huỳnh phải nói thật: “Dạ thưa Bác, có mấy anh em miền Nam hẹn với anh Lê (tức là tôi – Lê Giản) 11 giờ đến ăn thịt chó, mãi đến không thấy ai đến nên anh Lê gọi”. Bác cười vui vẻ, nói: “Có chuyện ấy à? Vậy thì để chiều họp tiếp, bây giờ nghỉ để các chú đi kẻo sai hẹn, Bác không được mời nhưng cũng sẽ đến.</p>
+                    <p>Thế rồi chúng tôi nghe tiếng còi xe và mở cổng. Bác đến thật, cùng đi với Bác có anh Kháng, tổ bảo vệ. Chúng tôi ra đón chào, Bác cười, gật gật đầu và tiến lên đi trước, vòng xung quanh ngắm cảnh nhà một lượt rồi mới vào tỏng. Cùng lúc ấy, mọi người đã đến đông đủ. Ngồi vào bàn ăn, mọi người nâng chén chúc Bác sức khỏe và ăn ngon miệng. Vui cười rạng rỡ, Bác nói: “Cảm ơn các chú đã chúc Bác những điều lành, Bác cũng xin các chú sau khi làm xong công việc thì tranh thủ tổ chức vui chơi cho thoải mái, cho đầu óc được thảnh thơi, con người được thư giãn. Các chú tưởng Bác chỉ biết vui đầu vào công việc hay sao. Tuy rất bận nhưng Bác vẫn dành thì giờ để tập thể dục, để ngắm cảnh làm thơ, để đánh cờ tiêu khiển”.</p>
+                    <p>Rồi Bác thân mật trách: “Các chú chỉ khi nào có công việc gì khó mới chạy đến Bác, còn có các cuộc vui lành mạnh ấm cúng như hôm nay thì các chú đâu nghĩ đến Bác, mời Bác cùng chung vui? Thịt chó là món ăn độc đáo của Việt Nam và nhiều nước châu Á, Bác lấy làm lạ thấy có người Việt Nam không biết ăn thịt chó”.</p>
+                    <p>Nghe Bác Hồ mà chúng tôi tỉnh cả người. Sự thực là chúng tôi chưa hiểu hết về Bác. Chúng tôi rất tôn kính Bác nhưng chưa biết yêu Bác, cứ tưởng Bác là con người khắc khổ, nghiêm nghị mà chưa thấy được Bác cũng chính là một con người bình dị, giàu tình cảm, xử sự rất thân mật với mọi người xung quanh, quan điểm quần chúng sâu sắc, dễ chinh phục lòng người.</p>
+                    <p>Bữa đó Bác chỉ ngồi nhâm nhi với chúng tôi có một lát thôi, uống cạn chén rượu, nếm một vài món, rồi nói là phải về, kẻo các chú bảo vệ ở nhà sốt ruột mong chờ. Anh em chúng tôi cố giữ Bác ở lại không được, biết rằng Bác ra về một phần vì ngại sự có mặt của Bác sẽ làm chúng tôi phải dè dặt, giữ ý tứ, mất tự nhiên. Tiễn Bác lên xe rồi, chúng tôi trở lại bàn ăn, mỗi người một lời, một ý, chuyện nở như ngô rang.</p>
+                    <p>(Theo Lê Giản, trong Những chuyện vui và cảm động về Hồ Chủ tịch, NXB Công an nhân dân, Hà Nội, 2000)</p>
+                    <p>
+                        <amp-img class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" height=259 i-amphtml-layout=responsive i-amphtml-ssr layout=responsive on=tap:lightbox role=button src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/06/01/bac-ho.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w470/s/o.vdoc.vn/data/image/2020/06/01/bac-ho.jpg 470w, https://o-vdoc-vn.cdn.ampproject.org/ii/w820/s/o.vdoc.vn/data/image/2020/06/01/bac-ho.jpg 820w" tabindex=0 width=450>
+                            <i-amphtml-sizer slot=i-amphtml-svc style=display:block;padding-top:57.5556%;></i-amphtml-sizer>
+                            <img class=i-amphtml-blurry-placeholder placeholder src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#39;http%3A//www.w3.org/2000/svg&#39; xmlns%3Axlink=&#39;http%3A//www.w3.org/1999/xlink&#39; viewBox=&#39;0 0 10 5&#39;%3E%3Cfilter id=&#39;b&#39; color-interpolation-filters=&#39;sRGB&#39;%3E%3CfeGaussianBlur stdDeviation=&#39;.5&#39;%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type=&#39;discrete&#39; tableValues=&#39;1 1&#39;%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter=&#39;url(%23b)&#39; x=&#39;0&#39; y=&#39;0&#39; height=&#39;100%25&#39; width=&#39;100%25&#39; xlink%3Ahref=&#39;data%3Aimage/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAFAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMG/8QAIBAAAgEEAQUAAAAAAAAAAAAAAQMCAAQRIRITIkGBwf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCXJlpFr+s1kmLE5CUtZOzr3WdNxk9xaT5wzHylKD//2Q==&#39;%3E%3C/image%3E%3C/svg%3E">
+                            <img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding=async src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/06/01/bac-ho.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w470/s/o.vdoc.vn/data/image/2020/06/01/bac-ho.jpg 470w, https://o-vdoc-vn.cdn.ampproject.org/ii/w820/s/o.vdoc.vn/data/image/2020/06/01/bac-ho.jpg 820w">
+                        </amp-img>
+                    </p>
+                    <p>
+                        <em>
+                            Mời bạn đọc cùng tham khảo thêm tại mục <a href=https://hoatieu.vn/bieu-mau/bieu-mau-giao-duc target=_top>Giáo dục - Đào tạo</a>
+                            trong mục 
+                            <a href=https://hoatieu.vn/bieu-mau target=_top>
+                                <u>biểu mẫu</u>
+                            </a>
+                            nhé.
+                        </em>
+                    </p>
+                </div>
+                <div class=adbox id=adunderarticle>
+                    <amp-ad class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=4761850510 data-auto-format=rspv data-full-width height=320 i-amphtml-layout=fixed style=width:100vw;height:320px; type=adsense width=100vw>
+                        <div overflow></div>
+                    </amp-ad>
+                </div>
+                <div class="toolbox topbox clearfix">
+                    <div class="summary clearfix">
+                        <span class=date>Cập nhật: 19/06/2020</span>
+                    </div>
+                    <div class=social-share>
+                        <amp-social-share class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=36 i-amphtml-layout=fixed style=width:76px;height:36px; type=system width=76>Chia sẻ</amp-social-share>
+                    </div>
+                </div>
+                <div class=adbox id=adspostunder>
+                    <amp-ad class="adbox i-amphtml-layout-responsive i-amphtml-layout-size-defined" data-ad-client=ca-pub-9275417305531302 data-ad-slot=9865460812 height=280 i-amphtml-layout=responsive layout=responsive type=adsense width=336>
+                        <i-amphtml-sizer slot=i-amphtml-svc style=display:block;padding-top:83.3333%;></i-amphtml-sizer>
+                    </amp-ad>
+                </div>
+                <div class=comments id=comments>
+                    <a class=input-post href="https://hoatieu.vn/bieu-mau/su-kien-trong-cuoc-doi-va-su-nghiep-cua-bac-ho-ban-tam-dac-nhat-la-su-kien-nao-vi-sao-200621?mode=mobile#comments" target=_top>Thêm bình luận...</a>
+                    <div class=items-comment></div>
+                </div>
+            </div>
+            <div class=aside>
+                <div class="listbox tiles">
+                    <div class=title>Bài liên quan</div>
+                    <ul>
+                        <li class=item>
+                            <a href=https://hoatieu.vn/bieu-mau/kich-ban-dai-hoi-chau-ngoan-bac-ho-134056 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=80 i-amphtml-layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/icon200/Bieu-mau-size-80x80-znd.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w82/s/o.vdoc.vn/data/image/Icon/icon200/Bieu-mau-size-80x80-znd.png 82w, https://o-vdoc-vn.cdn.ampproject.org/ii/w180/s/o.vdoc.vn/data/image/Icon/icon200/Bieu-mau-size-80x80-znd.png 180w, https://o-vdoc-vn.cdn.ampproject.org/ii/w270/s/o.vdoc.vn/data/image/Icon/icon200/Bieu-mau-size-80x80-znd.png 270w" style=width:80px;height:80px; width=80></amp-img>
+                                <span>Kịch bản Đại hội cháu ngoan Bác Hồ 2022</span>
+                            </a>
+                        </li>
+                        <li class=item>
+                            <a href=https://hoatieu.vn/tai-lieu/dap-an-bac-ho-voi-thieu-nhi-thcs-199911 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=80 i-amphtml-layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/05/19/dap-an-bac-ho-voi-thieu-nhi-thcs-200-size-80x80-znd.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w82/s/o.vdoc.vn/data/image/2020/05/19/dap-an-bac-ho-voi-thieu-nhi-thcs-200-size-80x80-znd.jpg 82w, https://o-vdoc-vn.cdn.ampproject.org/ii/w180/s/o.vdoc.vn/data/image/2020/05/19/dap-an-bac-ho-voi-thieu-nhi-thcs-200-size-80x80-znd.jpg 180w, https://o-vdoc-vn.cdn.ampproject.org/ii/w270/s/o.vdoc.vn/data/image/2020/05/19/dap-an-bac-ho-voi-thieu-nhi-thcs-200-size-80x80-znd.jpg 270w" style=width:80px;height:80px; width=80></amp-img>
+                                <span>Đáp án Bác Hồ với thiếu nhi THCS</span>
+                            </a>
+                        </li>
+                        <li class=item>
+                            <a href=https://hoatieu.vn/tai-lieu/the-le-cuoc-thi-bac-ho-voi-giai-cap-cong-nhan-199936 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=80 i-amphtml-layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/05/20/the-le-bac-ho-voi-giai-cap-cong-nhan-200-size-80x80-znd.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w82/s/o.vdoc.vn/data/image/2020/05/20/the-le-bac-ho-voi-giai-cap-cong-nhan-200-size-80x80-znd.jpg 82w, https://o-vdoc-vn.cdn.ampproject.org/ii/w180/s/o.vdoc.vn/data/image/2020/05/20/the-le-bac-ho-voi-giai-cap-cong-nhan-200-size-80x80-znd.jpg 180w, https://o-vdoc-vn.cdn.ampproject.org/ii/w270/s/o.vdoc.vn/data/image/2020/05/20/the-le-bac-ho-voi-giai-cap-cong-nhan-200-size-80x80-znd.jpg 270w" style=width:80px;height:80px; width=80></amp-img>
+                                <span>Thể lệ cuộc thi Bác Hồ với giai cấp công nhân 2020</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class=navbar>
+                    <ul class=listnav>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=24 i-amphtml-layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/11/16/documents-size-24x24-znd.svg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/11/16/documents-size-24x24-znd.svg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w56/s/o.vdoc.vn/data/image/2020/11/16/documents-size-24x24-znd.svg 56w, https://o-vdoc-vn.cdn.ampproject.org/ii/w82/s/o.vdoc.vn/data/image/2020/11/16/documents-size-24x24-znd.svg 82w" style=width:24px;height:24px; width=24></amp-img>
+                                Biểu mẫu 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-giao-duc target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=24 i-amphtml-layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/giao-duc-size-24x24-znd.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/giao-duc-size-24x24-znd.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w56/s/o.vdoc.vn/data/image/Icon/giao-duc-size-24x24-znd.png 56w, https://o-vdoc-vn.cdn.ampproject.org/ii/w82/s/o.vdoc.vn/data/image/Icon/giao-duc-size-24x24-znd.png 82w" style=width:24px;height:24px; width=24></amp-img>
+                                Giáo dục - Đào tạo 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section taxbox-five">
+                    <div class="container box-taxbox clearfix">
+                        <a class="title-header margin" href=https://hoatieu.vn/bieu-mau/bieu-mau-giao-duc target=_top>
+                            <amp-img alt="Giáo dục - Đào tạo" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=24 i-amphtml-layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/giao-duc.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/giao-duc.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w56/s/o.vdoc.vn/data/image/Icon/giao-duc.png 56w, https://o-vdoc-vn.cdn.ampproject.org/ii/w82/s/o.vdoc.vn/data/image/Icon/giao-duc.png 82w" style=width:24px;height:24px; width=24></amp-img>
+                            <span>Giáo dục - Đào tạo</span>
+                        </a>
+                        <div class=clearfix>
+                            <ul class="list-items view">
+                                <li>
+                                    <a href=https://hoatieu.vn/bieu-mau/bai-thu-hoach-boi-duong-thuong-xuyen-module-gvmn-12-200103 target=_top title="Bài thu hoạch bồi dưỡng thường xuyên module GVMN 12">
+                                        <span class=name>
+                                            Bài thu hoạch bồi dưỡng thường xuyên module GVMN 12 <i>Tổ chức các hoạt động phát triển nhận thức cho trẻ em theo quan điểm giáo dục lấy trẻ em làm trung tâm</i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=https://hoatieu.vn/bieu-mau/ke-hoach-tu-van-ho-tro-hoc-sinh-trong-hoat-dong-giao-duc-va-day-hoc-module-5-212052 target=_top title="Kế hoạch tư vấn, hỗ trợ học sinh trong hoạt động giáo dục và dạy học module 5">
+                                        <span class=name>
+                                            Kế hoạch tư vấn, hỗ trợ học sinh trong hoạt động giáo dục và dạy học module 5 <i>Đáp án mô đun 5</i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=https://hoatieu.vn/bieu-mau/phieu-tap-to-tu-1-den-10-206683 target=_top title="Phiếu tập tô từ 1 đến 10 cho bé mới nhất">
+                                        <span class=name>
+                                            Phiếu tập tô từ 1 đến 10 cho bé mới nhất <i>Tập viết số từ 1 đến 10</i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=https://hoatieu.vn/bieu-mau/bai-tuyen-truyen-phong-chong-tai-nan-duoi-nuoc-141139 target=_top title="8 Bài tuyên truyền phòng chống tai nạn đuối nước 2022">
+                                        <span class=name>
+                                            8 Bài tuyên truyền phòng chống tai nạn đuối nước 2022 <i>Bài tuyên truyền phòng chống tai nạn thương tích cho trẻ em</i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=https://hoatieu.vn/bieu-mau/cach-viet-ban-cam-ket-khong-su-dung-dien-thoai-138233 target=_top title="Cách viết bản cam kết không sử dụng điện thoại 2022 mới nhất">
+                                        <span class=name>
+                                            Cách viết bản cam kết không sử dụng điện thoại 2022 mới nhất <i>Hướng dẫn viết bản cam kết không sử dụng điện thoại</i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=https://hoatieu.vn/bieu-mau/cach-viet-ban-kiem-diem-hoc-sinh-danh-nhau-138190 target=_top title="Cách viết bản kiểm điểm học sinh đánh nhau 2022 mới nhất">
+                                        <span class=name>
+                                            Cách viết bản kiểm điểm học sinh đánh nhau 2022 mới nhất <i>Hướng dẫn viết bản kiểm điểm về hành vi đánh nhau trong trường, lớp</i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class=viewmore href=https://hoatieu.vn/bieu-mau/su-kien-trong-cuoc-doi-va-su-nghiep-cua-bac-ho-ban-tam-dac-nhat-la-su-kien-nao-vi-sao target=_top>
+                            <span>Xem thêm</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <amp-image-lightbox class=i-amphtml-layout-nodisplay hidden=hidden i-amphtml-layout=nodisplay id=lightbox layout=nodisplay></amp-image-lightbox>
+        <footer class="footer clearfix">
+            <div class=copyright>
+                <span>Giấy phép số 582/GP-BTTTT. Bộ Thông tin và Truyền thông cấp ngày 31/08/2021.</span>
+                <span>Cơ quan chủ quản: CÔNG TY CỔ PHẦN MẠNG TRỰC TUYẾN META.</span>
+                <span>
+                    Địa chỉ: 56 Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội. Điện thoại: <a>024 2242 6188</a>
+                    . Email: info@meta.vn.
+                </span>
+                <span>Bản quyền © 2022 hoatieu.vn.</span>
+            </div>
+        </footer>
+        <amp-sidebar class="navbox i-amphtml-layout-nodisplay" hidden=hidden i-amphtml-layout=nodisplay id=sidebar layout=nodisplay>
+            <amp-img alt=Đóng class="close i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=32 i-amphtml-layout=fixed on=tap:sidebar.close role=button srcset="https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/amp/ic_chevron_left_black_24dp_1x.png 1x, https://hoatieu-vn.cdn.ampproject.org/ii/AW/s/hoatieu.vn/themes/amp/ic_chevron_left_black_24dp_2x.png 2x" style=width:32px;height:32px; tabindex=0 width=32></amp-img>
+            <div class=head>Danh mục</div>
+            <amp-accordion class=i-amphtml-layout-container i-amphtml-layout=container>
+                <section>
+                    <h4 class=hdnav>Pháp luật</h4>
+                    <ul>
+                        <li>
+                            <a href=https://hoatieu.vn/phap-luat/van-ban-phap-luat target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/11/16/law.svg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/11/16/law.svg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/11/16/law.svg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/11/16/law.svg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Văn bản pháp luật 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/phap-luat/pho-bien-phap-luat target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/11/16/legal-paper.svg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/11/16/legal-paper.svg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/11/16/legal-paper.svg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/11/16/legal-paper.svg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Phổ biến Pháp luật 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/phap-luat/hoi-dap-phap-luat target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/11/16/ask.svg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/11/16/ask.svg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/11/16/ask.svg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/11/16/ask.svg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Hỏi đáp pháp luật 
+                            </a>
+                        </li>
+                        <li class="tax-phap-luat more">
+                            <a href=https://hoatieu.vn/phap-luat target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/27/phap-luat-700.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/27/phap-luat-700.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/27/phap-luat-700.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/27/phap-luat-700.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Xem thêm 
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 class=hdnav>Biểu mẫu</h4>
+                    <ul>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-thu-tuc-hanh-chinh target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/hanh-chinh.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/hanh-chinh.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/hanh-chinh.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/hanh-chinh.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Thủ tục hành chính 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-hon-nhan-gia-dinh target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/gia-dinh.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/gia-dinh.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/gia-dinh.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/gia-dinh.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Hôn nhân - Gia đình 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-giao-duc target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/giao-duc.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/giao-duc.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/giao-duc.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/giao-duc.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Giáo dục - Đào tạo 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-tin-dung-ngan-hang target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/tin-dung.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/tin-dung.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/tin-dung.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/tin-dung.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Tín dụng - Ngân hàng 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-giao-thong-vt target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/transportation.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/transportation.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/transportation.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/transportation.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Biểu mẫu Giao thông vận tải 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-khieu-nai-to-cao target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/to-cao.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/to-cao.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/to-cao.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/to-cao.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Khiếu nại - Tố cáo 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-hop-dong-thanh-ly target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/hd.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/hd.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/hd.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/hd.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Hợp đồng - Nghiệm thu - Thanh lý 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-thue-ke-kiem-toan target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/kiem-toan.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/kiem-toan.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/kiem-toan.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/kiem-toan.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Thuế - Kế toán - Kiểm toán 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-dau-tu-kinh-doanh target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/bat-tay.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/bat-tay.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/bat-tay.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/bat-tay.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Đầu tư - Kinh doanh 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-viec-lam-nhan-su target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/tuyen-dung.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/tuyen-dung.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/tuyen-dung.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/tuyen-dung.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Việc làm - Nhân sự 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bm-xuat-nhap-khau target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/xuat-nhap.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/xuat-nhap.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/xuat-nhap.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/xuat-nhap.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Biểu mẫu Xuất - Nhập khẩu 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-xay-dung-nha-dat target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/doanh-nghiep.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/doanh-nghiep.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/doanh-nghiep.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/doanh-nghiep.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Xây dựng - Nhà đất 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-van-hoa-du-lich target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/van-hoa.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/van-hoa.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/van-hoa.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/van-hoa.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Văn hóa - Du lịch - Thể thao 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-bo-doi-quoc-phong target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/an-ninh.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/an-ninh.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/an-ninh.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/an-ninh.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Bộ đội - Quốc phòng - Thương binh 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-bao-hiem target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/2015/Bao-hiem.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/2015/Bao-hiem.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/2015/Bao-hiem.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/2015/Bao-hiem.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Bảo hiểm 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/dich-vu-cong-truc-tuyen target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/Icon/2017/push-button.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/Icon/2017/push-button.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/Icon/2017/push-button.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/Icon/2017/push-button.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Dịch vụ công trực tuyến 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/mau-cv-xin-viec target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/06/30/mau-cv-xin-viec-64.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/06/30/mau-cv-xin-viec-64.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/06/30/mau-cv-xin-viec-64.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/06/30/mau-cv-xin-viec-64.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Mẫu CV xin việc 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bien-bao-giao-thong target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2019/03/25/throttle-plate.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2019/03/25/throttle-plate.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2019/03/25/throttle-plate.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2019/03/25/throttle-plate.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Biển báo giao thông 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/bieu-mau/bieu-mau-truc-tuyen target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2019/08/12/bieu-mau-truc-tuyen-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2019/08/12/bieu-mau-truc-tuyen-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2019/08/12/bieu-mau-truc-tuyen-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2019/08/12/bieu-mau-truc-tuyen-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Biểu mẫu trực tuyến 
+                            </a>
+                        </li>
+                        <li class="tax-bieu-mau more">
+                            <a href=https://hoatieu.vn/bieu-mau target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/blank.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/blank.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/blank.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/blank.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Xem thêm 
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 class=hdnav>Tài liệu</h4>
+                    <ul>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/van-hoa target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/07/11/van-hoa.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/07/11/van-hoa.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/07/11/van-hoa.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/07/11/van-hoa.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Văn hóa 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/le-tet-co-truyen target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2021/05/06/le-tet-co-truyen-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2021/05/06/le-tet-co-truyen-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2021/05/06/le-tet-co-truyen-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2021/05/06/le-tet-co-truyen-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lễ, Tết cổ truyền 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/giai-tri target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/11/16/icon-giai-tri.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/11/16/icon-giai-tri.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/11/16/icon-giai-tri.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/11/16/icon-giai-tri.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Giải trí 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/ky-nang target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/11/16/icon-ky-nang-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/11/16/icon-ky-nang-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/11/16/icon-ky-nang-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/11/16/icon-ky-nang-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Kỹ năng 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/co-the-ban-chua-biet target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/11/16/icon-co-the-ban-chua-biet-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/11/16/icon-co-the-ban-chua-biet-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/11/16/icon-co-the-ban-chua-biet-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/11/16/icon-co-the-ban-chua-biet-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Có thể bạn chưa biết? 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/bai-thu-hoach target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/07/11/Bai-thu-hoach-bai-du-thi.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/07/11/Bai-thu-hoach-bai-du-thi.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/07/11/Bai-thu-hoach-bai-du-thi.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/07/11/Bai-thu-hoach-bai-du-thi.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Bài thu hoạch, bài dự thi 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/danh-cho-giao-vien target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/07/11/danh-cho-giao-vien.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/07/11/danh-cho-giao-vien.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/07/11/danh-cho-giao-vien.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/07/11/danh-cho-giao-vien.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Dành cho giáo viên 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/loi-bai-hat target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/10/31/loi-bai-hat.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/10/31/loi-bai-hat.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/10/31/loi-bai-hat.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/10/31/loi-bai-hat.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lời bài hát 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/tai-lieu/van-hoc target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2020/11/05/van-hoc.svg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2020/11/05/van-hoc.svg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2020/11/05/van-hoc.svg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2020/11/05/van-hoc.svg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Văn học 
+                            </a>
+                        </li>
+                        <li class="tax-tai-lieu more">
+                            <a href=https://hoatieu.vn/tai-lieu target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/blank.png srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/blank.png 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/blank.png 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/blank.png 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Xem thêm 
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 class=hdnav>Học tập</h4>
+                    <ul>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop1 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-1-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-1-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-1-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-1-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 1 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop2 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-2-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-2-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-2-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-2-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 2 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop3 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-3-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-3-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-3-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-3-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 3 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop4 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-4-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-4-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-4-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-4-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 4 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop5 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-5-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-5-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-5-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-5-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 5 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop6 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-6-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-6-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-6-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-6-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 6 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop7 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-7-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-7-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-7-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-7-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 7 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop8 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-8-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-8-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-8-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-8-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 8 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop9 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-9-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-9-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-9-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-9-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 9 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop10 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-10-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-10-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-10-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-10-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 10 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop11 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-11-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-11-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-11-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-11-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 11 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/lop12 target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/lop-12-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/lop-12-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/lop-12-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/lop-12-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Lớp 12 
+                            </a>
+                        </li>
+                        <li>
+                            <a href=https://hoatieu.vn/hoc-tap/tuyen-sinh-tra-cuu-diem-thi target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/28/tuyen-sinh-tra-cuu-diem-thi-32.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/28/tuyen-sinh-tra-cuu-diem-thi-32.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/28/tuyen-sinh-tra-cuu-diem-thi-32.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/28/tuyen-sinh-tra-cuu-diem-thi-32.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Tuyển sinh - Tra cứu điểm thi 
+                            </a>
+                        </li>
+                        <li class="tax-hoc-tap more">
+                            <a href=https://hoatieu.vn/hoc-tap target=_top>
+                                <amp-img class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" height=20 i-amphtml-layout=fixed layout=fixed src=https://o-vdoc-vn.cdn.ampproject.org/ii/AW/s/o.vdoc.vn/data/image/2022/06/27/hoc-tap-700.jpg srcset="https://o-vdoc-vn.cdn.ampproject.org/ii/w39/s/o.vdoc.vn/data/image/2022/06/27/hoc-tap-700.jpg 39w, https://o-vdoc-vn.cdn.ampproject.org/ii/w47/s/o.vdoc.vn/data/image/2022/06/27/hoc-tap-700.jpg 47w, https://o-vdoc-vn.cdn.ampproject.org/ii/w68/s/o.vdoc.vn/data/image/2022/06/27/hoc-tap-700.jpg 68w" style=width:20px;height:20px; width=20></amp-img>
+                                Xem thêm 
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </amp-accordion>
+        </amp-sidebar>
+        <amp-analytics class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" data-credentials=include i-amphtml-layout=fixed style=width:1px;height:1px; type=gtag>
+            <script type=application/json>
+                {"vars":{"gtag_id":"UA-1035222-15","config":{"UA-1035222-15":{"groups":"default","page_location":"https://hoatieu.vn/bieu-mau/su-kien-trong-cuoc-doi-va-su-nghiep-cua-bac-ho-ban-tam-dac-nhat-la-su-kien-nao-vi-sao-200621?mode=amp"}}},"extraUrlParams":{"cd4":"bieu-mau.bieu-mau/bieu-mau-giao-duc"}}
+            </script>
+        </amp-analytics>
+        <amp-analytics class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" i-amphtml-layout=fixed id=trackviews style=width:1px;height:1px;>
+            <script type=application/json>
+                {"requests":{"pageview":"https://hoatieu.vn/service/track?postId=200621&type=Views&metadata=%7b%7d"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+            </script>
+        </amp-analytics>
+    </body>
 </html>
