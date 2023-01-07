@@ -1,0 +1,87 @@
+<body>
+<script>
+Math.Random = function(Min,Max) {
+ if (Min>Max) {return 'Brah'}
+ if (Max !== 0) {
+  Max += 1
+ }
+ return (Math.floor(Math.random()*(Max+(Min-Min*2)))+Min)
+}
+print = console.log
+function RemoveAll_Body(){
+for (var i in document.all) {
+ if (document.body.firstElementChild == undefined){break}
+ document.body.firstElementChild.remove()
+}
+}
+function RemoveAll_Head(){
+for (var i in document.all){
+ if (document.head.firstElementChild == undefined){break}
+ document.head.firstElementChild.remove()
+}
+}
+function Reset(){
+}
+
+function NewElement(){
+ var nill = undefined
+ var Yo
+ if (Parent == nill || Parent == null){Parent = document.body}
+ if (Window_Op !== nill) {
+  Yo = Window_Op.document.createElement(TagName)
+  Parent.appendChild(Yo)
+ } else {
+ Yo = document.createElement(TagName)
+ Parent.appendChild(Yo)
+ if (Protide_Op !== nill && Protide_Op !== {}){
+  for (var index in Protide_Op){
+   Yo[index] = Protide_Op[index]
+  }
+ }
+}
+}
+Reset()
+var _get = ''
+var InputUi = NewElement('textarea',document.body)
+var OutputUi = NewElement('textarea',document.body)
+NewElement('div')
+var TypeOut = NewElement('select')
+NewElement('option',TypeOut,{value:'Base64',innerText:'Base64'})
+
+function Go(){
+ var Inputting = String(InputUi.value)
+ var Output = Inputting
+ function RepeatMe(){
+  var data = Inputting.match('["\'\`]')
+  if (data == null || data == undefined) {
+  return OutputUi.value = Output
+} else {
+data = Inputting.match('.+([\"\'\`].+[\"\'\`])')
+ var ListType = {
+   Base64:function(){
+  print('Doing')
+  var Syntax = ''
+  var IsStarting = false
+  var LastString = ''
+  var _D = ''
+  for (var i = 1;i<=Inputting.length;i++){
+var letter = Inputting.substring(i-1,i)
+if (IsStarting == false){
+ if (letter == "'" || letter == '"' || letter == '`'){
+ Syntax = letter
+ _D = Syntax
+ IsStarting = true
+}
+}else if (IsStarting == true) {
+  var Add = function(){
+  LastString = letter
+  _D += letter
+ }
+print('Checking '+letter)
+}
+}
+  }
+ }
+ }
+ }
+}
