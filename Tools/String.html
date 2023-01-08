@@ -1,87 +1,174 @@
 <body>
 <script>
 Math.Random = function(Min,Max) {
- if (Min>Max) {return 'Brah'}
- if (Max !== 0) {
-  Max += 1
- }
- return (Math.floor(Math.random()*(Max+(Min-Min*2)))+Min)
+    if (Min>Max) {return Error('Min cannot lower than maximum')}
+    if (Max !== 0) {
+    Max +=1
+    }
+    return ( Math.floor(Math.random()*(Max+(Min-Min*2)))+Min )
 }
 print = console.log
 function RemoveAll_Body(){
 for (var i in document.all) {
- if (document.body.firstElementChild == undefined){break}
- document.body.firstElementChild.remove()
-}
-}
-function RemoveAll_Head(){
-for (var i in document.all){
- if (document.head.firstElementChild == undefined){break}
- document.head.firstElementChild.remove()
-}
-}
-function Reset(){
-}
-
-function NewElement(){
- var nill = undefined
- var Yo
- if (Parent == nill || Parent == null){Parent = document.body}
- if (Window_Op !== nill) {
-  Yo = Window_Op.document.createElement(TagName)
-  Parent.appendChild(Yo)
- } else {
- Yo = document.createElement(TagName)
- Parent.appendChild(Yo)
- if (Protide_Op !== nill && Protide_Op !== {}){
-  for (var index in Protide_Op){
-   Yo[index] = Protide_Op[index]
-  }
+   if (document.body.firstElementChild == undefined){break}
+      document.body.firstElementChild.remove()
  }
 }
+function RemoveAll_Head(){
+for (var i in document.all) {
+   if (document.head.firstElementChild == undefined){break}
+   document.head.firstElementChild.remove()
+   
+ }
+}
+function Reset(){
+  RemoveAll_Body()
+  RemoveAll_Head()
+}
+function NewElement(TagName,Parent,Window_Op,Proties_Op) {
+  var nill = undefined
+  var Yo
+  if (Parent == nill || Parent == null) {Parent = document.body}
+  if (Window_Op !== nill) {
+    Yo = Window_Op.document.createElement(TagName)
+    Parent.appendChild(Yo)
+  } else {
+    Yo = document.createElement(TagName)
+    Parent.appendChild(Yo)
+  }
+  if (Proties_Op !== nill && Proties_Op !== {}) {
+    for (var index in Proties_Op) {
+      Yo[index] = Proties_Op[index]
+    }
+  }
+  return Yo
 }
 Reset()
 var _get = ''
 var InputUi = NewElement('textarea',document.body)
 var OutputUi = NewElement('textarea',document.body)
-NewElement('div')
-var TypeOut = NewElement('select')
-NewElement('option',TypeOut,{value:'Base64',innerText:'Base64'})
+NewElement('div',document.body)
+var TypeOut = NewElement('select',document.body)
+NewElement('option',TypeOut,window,{value:"Base64",innerText:'Base64'})
 
-function Go(){
- var Inputting = String(InputUi.value)
- var Output = Inputting
- function RepeatMe(){
-  var data = Inputting.match('["\'\`]')
-  if (data == null || data == undefined) {
-  return OutputUi.value = Output
-} else {
-data = Inputting.match('.+([\"\'\`].+[\"\'\`])')
- var ListType = {
-   Base64:function(){
-  print('Doing')
-  var Syntax = ''
-  var IsStarting = false
-  var LastString = ''
-  var _D = ''
-  for (var i = 1;i<=Inputting.length;i++){
-var letter = Inputting.substring(i-1,i)
-if (IsStarting == false){
- if (letter == "'" || letter == '"' || letter == '`'){
- Syntax = letter
- _D = Syntax
- IsStarting = true
+function Go() {
+    var Inputting = String(InputUi.value)
+    var Output = String(InputUi.value)
+    function RepeatMe(){
+        var data = Inputting.match('["\'\`]')
+        if (data == null || data == undefined) {
+            return OutputUi.value = Output
+        } else {
+            data = Inputting.match('.+(["\'\`].+["\'\`])')
+            var ListType = {
+                    Base64:function() {
+                        console.log('Doing')
+                        var Syntax = ''
+                        var IsStarting = false
+                        
+                        var LastString = ''
+                        var _D = ''
+
+                        
+                        for (var i = 1;i<=Inputting.length;i++) {
+                            var letter = Inputting.substring(i-1,i)
+                            if (IsStarting == false) {
+                                if (letter == '"' || letter == "'" || letter == '`') {
+                                    Syntax = letter
+                                    _D = Syntax
+                                    IsStarting = true
+                                }
+                            } else if (IsStarting == true) {
+                                var Add = function () {
+                                    LastString = letter
+                                    _D += letter
+                                }
+                                print('Checking '+letter)
+                                if (letter == Syntax && LastString !== '\\') {
+                                    Add()
+                                    data = _D
+                                    print('Set as '+_D+'!')
+                                    break
+                                } else {
+                                    if (letter == '\\' && LastString == '\\') {
+                                        Add = function(){
+                                            LastString = ''
+                                            _D += letter
+                                        }
+                                    }
+                                    if (letter == '\n') {
+                                        if (Syntax == '`') {
+                                            alert('A!')
+                                            Add = function(){
+                                                LastString = letter
+                                                _D += '\n'
+                                            }
+                                        } else if (Syntax !== '`') {
+                                            IsStarting = false
+                                            return alert('Sorry something wrong with the new line in your string ;-;\n--> '+_D+'\n     ^^try to use "\\n"?')
+                                        }
+                                    }
+                                    Add()
+                                }
+                            }
+                            if (i == Inputting.length) {console.log('Done');return OutputUi.value = Output;break}
+                        }
+                        console.log(_D)
+                        console.log(Inputting)
+                        
+                        data = _D
+                        /*if (data == null) {
+                                console.log('Stopped for data not matching anything');
+                                return OutputUi.value = Output
+                            } else {data = data[1]
+                        } */
+                        
+                        //Filtering These String
+                        
+                        
+                        if (_D == Syntax+Syntax) {
+                            console.log('Empty String '+_D)
+                            Output = Output.replace(_D,_D)
+                            Inputting = Inputting.replace(_D,'_')
+                            return setTimeout(RepeatMe,10)
+                        }
+                        
+                        if (_D.match('[.]') || _D.match('[+]') || _D.match('[[]') || _D.match('[]]') || (_D.match('[$][{]') && Syntax == '`')) {
+                            if (confirm('Do you want to keep '+_D+'?')) {
+                                Output = Output.replace(data,data)
+                                Inputting = Inputting.replace(data,'_')
+                                return setTimeout(RepeatMe,10)
+                            }
+                        }
+                        console.log(Syntax)
+                        //Continue
+                       
+                        try {
+                            eval('_get = '+_D)
+                            console.log(_get)
+                        } catch (_E) {
+                            alert('While encoding '+_D+',\n Catch a error...\n'+_E)
+                            return _E
+                        }
+                        
+                        var SmallOutput = btoa(_get)
+                        
+                        console.log(SmallOutput)
+                        console.log(data)
+                        
+                        var Real = 'atob('+Syntax+SmallOutput+Syntax+')'
+                        Output = Output.replace(_D,Real)
+                        Inputting = Inputting.replace(_D,'_')
+                        console.log(Inputting)
+                        setTimeout(RepeatMe,10)
+                    }
+                }
+            ListType[TypeOut.value]()
+            
+        }
+    }
+    RepeatMe()
 }
-}else if (IsStarting == true) {
-  var Add = function(){
-  LastString = letter
-  _D += letter
- }
-print('Checking '+letter)
-}
-}
-  }
- }
- }
- }
-}
+var Convert = NewElement('input',document.body,window,{type:"submit",onclick:Go})
+</script>
+</body
