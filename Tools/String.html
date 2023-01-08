@@ -140,8 +140,13 @@ function Go() {
                 Inputting = Inputting.replace(_D, '_')
                 return setTimeout(RepeatMe, 10)
             }
-
-            if (_D.match('[.]') || _D.match('[+]') || _D.match('[[]') || _D.match('[]]') || (_D.match('[$][{]') && Syntax == '`') ||  Inputting.substring(i, i+1) == ':' ) {
+            
+            if (Inputting.substring(i, i+1) == ':') {
+                Output = Output.replace(data, data)
+                Inputting = Inputting.replace(data, '_')
+                return setTimeout(RepeatMe, 10)
+            }
+            if (_D.match('[.]') || _D.match('[+]') || _D.match('[[]') || _D.match('[]]') || (_D.match('[$][{]') && Syntax == '`') ) {
                 if (confirm('Do you want to keep ' + _D + Inputting.substring(i, i+1) + '?')) {
                     Output = Output.replace(data, data)
                     Inputting = Inputting.replace(data, '_')
@@ -178,7 +183,7 @@ function Go() {
     return newText;
 }
 `
-                    if (Output.startsWith(De) == false) {Output = De+Output}
+                    if (Output.startsWith('function decodeBinary(binary){') == false) {Output = De+Output}
                     
                     var input = _String
                     _String = ''
