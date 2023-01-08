@@ -50,6 +50,7 @@ var OutputUi = NewElement('textarea',document.body)
 NewElement('div',document.body)
 var TypeOut = NewElement('select',document.body)
 NewElement('option',TypeOut,window,{value:"Base64",innerText:'Base64'})
+NewElement('option',TypeOut,window,{value:"Binary",innerText:'Binary Code(High capacity)'})
 
 function Go() {
     var Inputting = String(InputUi.value)
@@ -62,14 +63,7 @@ function Go() {
         } else {
             data = Inputting.match('.+(["\'\`].+["\'\`])')
 
-            var ListType = {
-                Base64: function(String, _, __) {
-                    String = btoa(String)
-                    _ = 'atob('
-                    __ = ')'
-                    return {1: String,2: _,3: __}
-                }
-            }
+            
 
 
             console.log('Doing')
@@ -165,6 +159,39 @@ function Go() {
                 return _E
             }
 
+            
+            
+            
+            var ListType = {
+                Base64: function(String, _, __) {
+                    String = btoa(String)
+                    _ = 'atob('
+                    __ = ')'
+                    return {1: String,2: _,3: __}
+                },
+                Binary: function(_String) {
+                    var De = `function decodeBinary(binary){
+    binary = binary.split(' ');
+    binary = binary.map(elem => parseInt(elem,2));
+    binary = binary.map(elem => String.fromCharCode(elem));
+    let newText = binary.join("");
+    return newText;
+}
+`
+                    if (Output.startsWith(De) == false) {Output = De+Output}
+                    
+                    var input = _String
+                    _String = ''
+                    for (var i = 0; i < input.length; i++) {
+                        _String += input[i].charCodeAt(0).toString(2) + " ";
+                    }
+                    _String = btoa(String)
+                    _ = 'decodeBinary('
+                    __ = ')'
+                    return {1: String,2: _,3: __}
+                },
+            }
+            
             var All = ListType[TypeOut.value](_get)
             var SmallOutput = All[1]
 
