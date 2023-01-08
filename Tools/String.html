@@ -141,7 +141,7 @@ function Go() {
                 return setTimeout(RepeatMe, 10)
             }
 
-            if (_D.match('[.]') || _D.match('[+]') || _D.match('[[]') || _D.match('[]]') || (_D.match('[$][{]') && Syntax == '`') ||  Output.match(_D+atob('Og==')) ) {
+            if (_D.match('[.]') || _D.match('[+]') || _D.match('[[]') || _D.match('[]]') || (_D.match('[$][{]') && Syntax == '`') ||  Inputting.substring(i, i+1) == ':' ) {
                 if (confirm('Do you want to keep ' + _D + '?')) {
                     Output = Output.replace(data, data)
                     Inputting = Inputting.replace(data, '_')
