@@ -142,7 +142,7 @@ function Go() {
             }
 
             if (_D.match('[.]') || _D.match('[+]') || _D.match('[[]') || _D.match('[]]') || (_D.match('[$][{]') && Syntax == '`') ||  Inputting.substring(i, i+1) == ':' ) {
-                if (confirm('Do you want to keep ' + _D + '?')) {
+                if (confirm('Do you want to keep ' + _D + Inputting.substring(i, i+1) + '?')) {
                     Output = Output.replace(data, data)
                     Inputting = Inputting.replace(data, '_')
                     return setTimeout(RepeatMe, 10)
