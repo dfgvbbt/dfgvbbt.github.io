@@ -48,7 +48,29 @@ function NewElement(TagName,Parent,Window_Op,Proties_Op) {
   }
   return Yo
 }
-//Reset()
+function Add(Name,Time){
+    var This = NewElement('h1',document.body,window,{innerText:Name})
+    var H = (new Date()).getHours()
+    var M = (new Date()).getMinutes()
+    var Begin = Time.Begin
+    var h_b = Begin.h
+    var m_b = Begin.m
+    var End = Time.End
+    var h_e = End.h
+    var m_e = End.M
+    var Yellow = '#f6ff00'
+    var Green = '#00ff40'
+
+    if (h_b <= H && m_e > M && h_e > H) {
+        This.style.color = Yellow
+    }
+    if (h_b < H && h_e < H) {
+        This.style.color = Green
+    }
+    
+    return This
+}
+Reset()
 var Thu = ['Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy','Chủ nhật']
 var Ngay = Number((new Date()).getDay()-1)
 Thu = Thu[Ngay]
@@ -67,9 +89,35 @@ var MonVT = {
     MT:'Mĩ thuật',
     _:'Đi về nhà'
 }
-var TKB = [['NV','TA','TA','DL','SHDC'],['LS','CN','NV','LS','HDTN'],['KHTN','KHTN','AN','T','T']]
+var TKB = [
+    ['NV','TA','TA','DL','SHDC'],
+    ['LS','CN','NV','LS','HDTN'],
+    ['KHTN','KHTN','AN','T','T'],
+    ['T','GDTC','TA']
+]
 console.log(TKB[Ngay])
-
+var TG = [
+    {
+        Begin:{h:13,m:0},
+        End:{h:13,m:45}
+    },
+    {
+        Begin:{h:13,m:50},
+        End:{h:14,m:35}
+    },
+    {
+        Begin:{h:14,m:45},
+        End:{h:15,m:30}
+    },
+    {
+        Begin:{h:15,m:45},
+        End:{h:16,m:30}
+    },
+    {
+        Begin:{h:16,m:35},
+        End:{h:17,m:20}
+    }
+]
 var Time = NewElement('h1',document.body)
 Time.innerText = (new Date()).getDate() + '/' + Number((new Date()).getMonth()+1) + '/' + (new Date()).getFullYear() + ' | '+ Thu
 var TKBHN = NewElement('h1',document.body,window,{innerText:'Thời Khóa Biểu Hôm Nay:\n'})
@@ -77,6 +125,6 @@ var TKBHN = NewElement('h1',document.body,window,{innerText:'Thời Khóa Biểu
 
 for (i in TKB[Ngay]) {
     var v = TKB[Ngay][i]
-    TKBHN.innerText += MonVT[v]+'\n'
+    Add(MonVT[v],TG[i])
 }
 </script>
