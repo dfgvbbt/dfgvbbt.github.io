@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>Thời Khóa Biểu</title>
+</head>
+<body>
+<script>
+  Math.Random = function(Min,Max) {
+    if (Min>Max) {return Error('Min cannot lower than maximum')}
+    if (Max !== 0) {
+    Max +=1
+    }
+    return ( Math.floor(Math.random()*(Max+(Min-Min*2)))+Min )
+}
+print = console.log
+function RemoveAll_Body(){
+for (var i in document.all) {
+   if (document.body.firstElementChild == undefined){break}
+      document.body.firstElementChild.remove()
+ }
+}
+function RemoveAll_Head(){
+for (var i in document.all) {
+   if (document.head.firstElementChild == undefined){break}
+   document.head.firstElementChild.remove()
+   
+ }
+}
+function Reset(){
+  RemoveAll_Body()
+  RemoveAll_Head()
+}
+function NewElement(TagName,Parent,Window_Op,Proties_Op) {
+  var nill = undefined
+  var Yo
+  if (Parent == nill || Parent == null) {Parent = document.body}
+  if (Window_Op !== nill) {
+    Yo = Window_Op.document.createElement(TagName)
+    Parent.appendChild(Yo)
+  } else {
+    Yo = document.createElement(TagName)
+    Parent.appendChild(Yo)
+  }
+  if (Proties_Op !== nill && Proties_Op !== {}) {
+    for (var index in Proties_Op) {
+      Yo[index] = Proties_Op[index]
+    }
+  }
+  return Yo
+}
+Reset()
+var Thu = ['Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy','Chủ nhật']
+var Ngay = Number((new Date()).getDay()-1)
+Thu = Thu[Ngay]
+var MonVT = {
+    NV:'Ngữ văn',
+    CN:'Công nghệ',
+    TA:'Tiếng anh',
+    DL:'Địa lí',
+    SHDC:'Sinh hoạt dưới cờ',
+    LS:'Lịch sử',
+    HDTN:'Hoạt động trải nghiệm',
+    KHTN:'Khoa học tự nhiên',
+    AN:'Âm nhạc',
+    T:'Toán',
+    GDTC:'Giáo dục thể chất(Thể dục)',
+    MT:'Mĩ thuật',
+    _:'Đi về nhà'
+}
+var TKB = [['NV','TA','TA','DL','SHDC'],['LS','CN','NV','LS','HDTN'],['KHTN','KHTN','AN','T','T']]
+console.log(TKB[Ngay])
+
+var Time = NewElement('h1',document.body)
+Time.innerText = (new Date()).getDate() + '/' + Number((new Date()).getMonth()+1) + '/' + (new Date()).getFullYear() + ' | '+ Thu
+var TKBHN = NewElement('h1',document.body,window,{innerText:'Thời Khóa Biểu Hôm Nay:\n'})
+
+
+for (i in TKB[Ngay]) {
+    var v = TKB[Ngay][i]
+    TKBHN.innerText += MonVT[v]+'\n'
+}
