@@ -49,6 +49,7 @@ function NewElement(TagName,Parent,Window_Op,Proties_Op) {
   return Yo
 }
 function Add(Name,Time){
+    console.log(Name)
     var This = NewElement('h1',document.body,window,{innerText:Name})
     var H = (new Date()).getHours()
     var M = (new Date()).getMinutes()
@@ -57,13 +58,38 @@ function Add(Name,Time){
     var m_b = Begin.m
     var End = Time.End
     var h_e = End.h
-    var m_e = End.M
+    var m_e = End.m
     var Yellow = '#f6ff00'
     var Green = '#00ff40'
+    var IsSameH = false
+    
+    if (h_b == h_e) {
+        
+        IsSameH = true
+        
+    }
 
-    if (h_b <= H && m_e > M && h_e > H) {
+    function SetYellow(){
+        console.log('Yellow!')
         This.style.color = Yellow
     }
+    
+    if (H >= h_b) {
+        if (IsSameH == true) {
+            if (H == h_b && M < m_e) {
+                SetYellow()
+            }
+        } else {
+            if (H == h_b && (M >= m_b || M < m_e)) {
+                SetYellow()
+            }
+            if (H == h_e && M < m_e) {
+                SetYellow()
+            }
+        }
+    }
+
+    
     if (h_b < H && h_e < H) {
         This.style.color = Green
     }
@@ -80,11 +106,13 @@ var MonVT = {
     TA:'Tiếng anh',
     DL:'Địa lí',
     SHDC:'Sinh hoạt dưới cờ',
+    SHCN:'Sinh hoạt chủ nhiệm',
     LS:'Lịch sử',
     HDTN:'Hoạt động trải nghiệm',
     KHTN:'Khoa học tự nhiên',
     AN:'Âm nhạc',
     T:'Toán',
+    TH:'Tin Học',
     GDTC:'Giáo dục thể chất(Thể dục)',
     MT:'Mĩ thuật',
     _:'Đi về nhà'
@@ -93,7 +121,9 @@ var TKB = [
     ['NV','TA','TA','DL','SHDC'],
     ['LS','CN','NV','LS','HDTN'],
     ['KHTN','KHTN','AN','T','T'],
-    ['T','GDTC','TA']
+    ['T','GDTC','TA'],
+    ['TH','T','GDTC','KHTN','KHTN'],
+    ['NV','NV','GDCD','MT','SHCN']
 ]
 console.log(TKB[Ngay])
 var TG = [
@@ -107,7 +137,7 @@ var TG = [
     },
     {
         Begin:{h:14,m:45},
-        End:{h:15,m:30}
+        End:{h:15,m:40}
     },
     {
         Begin:{h:15,m:45},
