@@ -5,7 +5,7 @@
 </head>
 <body>
 <script>
-  Math.Random = function(Min,Max) {
+Math.Random = function(Min,Max) {
     if (Min>Max) {return Error('Min cannot lower than maximum')}
     if (Max !== 0) {
     Max +=1
@@ -149,8 +149,10 @@ var TG = [
         End:{h:17,m:20}
     }
 ]
+var _Tuan = Math.floor((((new Date()) - (new Date(2023, 1, 6))) / (1000 * 60 * 60 * 24))/7)+21
 var Time = NewElement('h1',document.body)
-Time.innerText = (new Date()).getDate() + '/' + Number((new Date()).getMonth()+1) + '/' + (new Date()).getFullYear() + ' | '+ Thu
+Time.innerText = (new Date()).getDate() + '/' + Number((new Date()).getMonth()+1) + '/' + (new Date()).getFullYear() + ' | '+ Thu + ' | Tuần '+_Tuan
+
 var TKBHN = NewElement('h1',document.body,window,{innerText:'Thời Khóa Biểu Hôm Nay:\n'})
 
 
