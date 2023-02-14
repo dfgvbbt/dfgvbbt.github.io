@@ -2,7 +2,6 @@
 <html>
  <head>
  <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/t360RfY/image-removebg-preview.png" />
-  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 <body>
 Pass will here => <input type="text" id="Password">
@@ -25,7 +24,7 @@ var Lowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 var Number = ["0","1","2","3","4","5","6","7","8","9"]
 var Symbol = ["~","!","@","#","$","%","^","&","*","(",")"]
 var Epik = eval("function lo(){"+httpGet('https://raw.githubusercontent.com/dfgvbbt/My-Game/main/Random%20Strings/Epik%20Texts').replace("{","[").replace("}","]")+"} lo()")
-
+var Glitch =  JSON.parse(httpGet('https://raw.githubusercontent.com/dfgvbbt/My-Game/main/Random%20Strings/Glitch%20Text') .replace("{","[") .replace("}","]") .replace("return ","") )
 
 
 var IsUppercase = false
@@ -33,6 +32,7 @@ var IsLowercase = false
 var IsNumber = false
 var IsSymbol = false
 var IsEpik = false
+var IsGlitch = false
 
 function Main() {
      result = ''
@@ -52,11 +52,14 @@ function Main() {
     if (IsEpik) {
       characters = characters.concat(Epik)
     }
+    if (IsGlitch) {
+      characters = characters.concat(Glitch)
+    }
     
     var charactersLength = characters.length;
     var textbox = document.getElementById("Password")
     for ( var i = 0; i < document.getElementById("length").value; i++ ) {
-      result += characters[Math.floor(Math.random() * charactersLength)];
+      result += characters[Math.round(Math.random() * charactersLength)];
    }
   textbox.value = result
    return result;
@@ -121,6 +124,17 @@ function ToggleSymbol() {
     }
 }
  
+ function ToggleGlitch() {
+    var box = document.getElementById("Glitch")
+    if (IsGlitch) {
+      IsEpik = false
+      box.textContent = "Glitch:false"
+    } else {
+      IsEpik = true
+     box.textContent = "Glitch:true"
+    }
+}
+ 
 </script>
  
 
@@ -137,6 +151,7 @@ function ToggleSymbol() {
 <button id="Number" onclick="ToggleNumber()">Number:false</button>
 <button id="Symbol" onclick="ToggleSymbol()">Symbol:false</button>
 <button id="Epik" onclick="ToggleEpik()">Epik:false</button>
+ <button id="Glitch" onclick="ToggleGlitch()">Glitch:false</button>
 
  
 
