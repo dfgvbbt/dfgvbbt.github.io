@@ -14,10 +14,12 @@
 document.getElementById("html").addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13 && event.ctrlKey) {
-      var iframe = document.createElement('iframe');
-      var html = document.getElementById("html").value;
+      var _ = open()
+      
+      var iframe = _.document.createElement('iframe');
+      var html = _.document.getElementById("html").value;
       iframe.width="100%"
-      iframe.height="100%"
+      iframe.height="100vh"
       iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
       document.body.appendChild(iframe);
       console.log('iframe.contentWindow =', iframe.contentWindow);
