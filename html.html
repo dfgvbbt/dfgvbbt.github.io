@@ -14,15 +14,30 @@
 document.getElementById("html").addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13 && event.ctrlKey) {
+     function RemoveAll_Body(){
+         for (var i in document.all) {
+             if (document.body.firstElementChild == undefined){break}
+             document.body.firstElementChild.remove()
+         }
+     }
+    function RemoveAll_Head(){
+        for (var i in document.all) {
+            if (document.head.firstElementChild == undefined){break}
+            document.head.firstElementChild.remove()
+        }
+    }
+        function Reset(){
+            RemoveAll_Body()
+                RemoveAll_Head()
+        }
+        
       var _ = open()
-      
-      var iframe = _.document.createElement('iframe');
+      var Real = document.write
+      var Real1 = document.writeln
       var html = document.getElementById("html").value;
-      iframe.width="100%"
-      iframe.height="100vh"
-      iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
-      _.document.body.appendChild(iframe);
-      console.log('iframe.contentWindow =', iframe.contentWindow);
+      _.document.write(html)
+      _.document.write = Real
+        _.document.writeln = Real1
     }
 });
 
