@@ -17,7 +17,7 @@ document.getElementById("html").addEventListener("keyup", function(event) {
       var _ = open()
       
       var iframe = _.document.createElement('iframe');
-      var html = _.document.getElementById("html").value;
+      var html = document.getElementById("html").value;
       iframe.width="100%"
       iframe.height="100vh"
       iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
