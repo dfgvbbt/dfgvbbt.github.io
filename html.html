@@ -32,12 +32,17 @@ document.getElementById("html").addEventListener("keyup", function(event) {
         }
         
       var _ = open()
-      var Real = document.write
-      var Real1 = document.writeln
+      var Real = _.document.write
+      var Real1 = _.document.writeln
       var html = document.getElementById("html").value;
       _.document.write(html)
-      _.document.write = Real
-        _.document.writeln = Real1
+      _.document.write = function(This) {
+        Reset()
+        _.document.write = Real
+       _.document.writeln = Real1
+       _.document.write(This)
+      }
+        _.document.writeln = _.document.write
     }
 });
 
