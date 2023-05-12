@@ -149,9 +149,33 @@ var TG = [
         End:{h:17,m:20}
     }
 ]
+
+var Buoi = ''
+(()=> {
+    _ = new Date()
+    Itr = (S,E)=>{return _.getHours() >= S && _.getHours() <= E && (_.getHours() <= E && _.getMinutes() <= 59 && _.getSeconds() <= 59)}
+    //Is time around
+    if (Itr(1,10)) {
+        Buoi = 'Sáng'
+        console.log(Buoi)
+    } else if (Itr(11,12)) {
+        Buoi = 'Trưa'
+        console.log(Buoi)
+    } else if (Itr(13,18)) {
+        Buoi = 'Chiều'
+        console.log(Buoi)
+    } else if (Itr(19,21)) {
+        Buoi = 'Tối'
+        console.log(Buoi)
+    } else if (Itr(22,24)) {
+        Buoi = 'Đêm'
+        console.log(Buoi)
+    }
+})()
+
 var _Tuan = Math.floor((((new Date()) - (new Date(2023, 1, 6))) / (1000 * 60 * 60 * 24))/7)+21
 var Time = NewElement('h1',document.body)
-Time.innerText = (new Date()).getDate() + '/' + Number((new Date()).getMonth()+1) + '/' + (new Date()).getFullYear() + ' | '+ Thu + ' | Tuần '+_Tuan
+Time.innerText = (new Date()).getDate() + '/' + Number((new Date()).getMonth()+1) + '/' + (new Date()).getFullYear() + ' | '+Buoi+' | '+ Thu + ' | Tuần '+_Tuan
 
 var TKBHN = NewElement('h1',document.body,window,{innerText:'Thời Khóa Biểu Hôm Nay:\n'})
 
