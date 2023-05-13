@@ -151,9 +151,9 @@ var TG = [
 ]
 
 var Buoi = ''
-(function hi() {
+function check() {
     _ = new Date()
-    Itr = (S,E)=>{return _.getHours() >= S && _.getHours() <= E && (_.getHours() <= E && _.getMinutes() <= 59 && _.getSeconds() <= 59)}
+    function Itr(S,E) {return _.getHours() >= S && _.getHours() <= E && (_.getHours() <= E && _.getMinutes() <= 59 && _.getSeconds() <= 59)}
     //Is time around
     if (Itr(1,10)) {
         Buoi = 'Sáng'
@@ -171,7 +171,8 @@ var Buoi = ''
         Buoi = 'Đêm'
         console.log(Buoi)
     }
-})()
+}
+check();
 
 var _Tuan = Math.floor((((new Date()) - (new Date(2023, 1, 6))) / (1000 * 60 * 60 * 24))/7)+21
 var Time = NewElement('h1',document.body)
