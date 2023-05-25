@@ -90,7 +90,7 @@ function Add(Name,Time){
     }
 
     
-    if (h_b < H && h_e < H) {
+    if ((IsSameH && h_b == H && m_b < M && m_e <= M) || (!IsSameH && h_b < H && h_e <= H && m_e <= M)) {
         This.style.color = Green
     }
     
