@@ -81,8 +81,10 @@ function Show(data,popup) {
             //href: '#',
             title:'click to show!',
             onclick:function(e){
+                parent = e.srcElement.parentElement
                 e.srcElement.remove()
-                setInnerHTML(Oh,Oh.innerHTML+data[1])
+                setInnerHTML(parent,parent.innerHTML+data[1])
+                delete parent
             },
             innerText:'Specical Content'
         })
