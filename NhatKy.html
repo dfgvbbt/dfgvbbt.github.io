@@ -63,6 +63,7 @@ function setInnerHTML(elm, html) {
       oldScriptEl.parentNode.replaceChild(newScriptEl, oldScriptEl);
   });
 }
+DateShowing = ''
 function Show(data,popup) {
     if (typeof(data) == 'string') {
         data = JSON.parse(data)
@@ -75,7 +76,14 @@ function Show(data,popup) {
     Time1 = Time.getDate()+'/'+(Time.getMonth()+1)+'/'+Time.getFullYear()
     Time2 = Time.getHours().toString().padStart(2,'0') + ':' + Time.getMinutes().toString().padStart(2, '0') + ':' + Time.getSeconds().toString().padStart(2, '0');
     //Oh.title = Time
-    Oh.innerHTML = '<div title="'+Time1+'('+Time2+')">'+Time1+'</div>'
+    if (DateShowing == Time1) {
+        Oh.innerHTML = '<div title="'+Time1+' ('+Time2+')">'+Time2+'</div>'
+    } else {
+        Oh.innerHTML = '<div title="'+Time1+' ('+Time2+')">'+Time1+'</div>'
+        if (!popup) {
+            DateShowing = Time1
+        }
+    }
     if (data[1].match('<.+>.+<.+>') || data[1].match('<.+><.+>')) {
         NewElement('a',Oh,window,{
             //href: '#',
@@ -105,12 +113,14 @@ Create = NewElement('button',document.body,window,{
     innerText:'Tạo một cái',
     onclick:function(e) {
         Popup = open('about:blank','','directories=no,titlebar=no,toolbar=no,status=no,menubar=no,scrollbars=no')
-        if (Popup !== null) {
-            Create.hidden = true
-            Popup.onclose = function() {
+        Create.hidden = true
+        Timer = setInterval(function(){
+            if (Popup.closed) {
+                clearInterval(Timer)
+                delete Timer
                 Create.hidden = false
             }
-        }
+        },1000)
         Time = Number(new Date())
         This = NewElement('textarea',Popup.document.body,Popup)
         _3 = NewElement('div',Popup.document.body)
