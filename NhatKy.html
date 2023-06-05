@@ -77,7 +77,7 @@ function Show(data,popup) {
     Time2 = Time.getHours().toString().padStart(2,'0') + ':' + Time.getMinutes().toString().padStart(2, '0') + ':' + Time.getSeconds().toString().padStart(2, '0');
     //Oh.title = Time
     if (DateShowing == Time1) {
-        Oh.innerHTML = '<div title="'+Time1+' ('+Time2+')">'+Time2+'</div>'
+        Oh.innerHTML = '<div title="'+Time1+' ('+Time2+')">'+Time2.substring(0,5)+'</div>'
     } else {
         Oh.innerHTML = '<div title="'+Time1+' ('+Time2+')">'+Time1+'</div>'
         if (!popup) {
