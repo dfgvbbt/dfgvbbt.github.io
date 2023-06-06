@@ -162,4 +162,27 @@ Create = NewElement('button',document.body,window,{
         })
     }
 })
+Sync = NewElement('button',document.body,window,{
+    innerText:'Sync',
+    onclick:function(_) {
+        Popup = open('about:blank','','directories=no,titlebar=no,toolbar=no,status=no,menubar=no,scrollbars=no')
+        _.srcElement.hidden = true
+        Timer = setInterval(function(){
+            if (Popup.closed) {
+                clearInterval(Timer)
+                delete Timer
+                _.srcElement.hidden = false
+            }
+        },1000)
+        Code = NewElement('input',NewElement('p',Popup.document.body,Popup,{
+            innerText:'Mã sync của bạn là: '
+        }),Popup)
+        NewElement('button',Popup.document.body,Popup,{
+            innerText:'Lưu'
+        })
+        NewElement('button',Popup.document.body,Popup,{
+            innerText:'Tải'
+        })
+    }
+})
 </script>
