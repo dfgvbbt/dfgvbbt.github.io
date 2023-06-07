@@ -174,14 +174,63 @@ Sync = NewElement('button',document.body,window,{
                 _.srcElement.hidden = false
             }
         },1000)
+        NewElement('font',Popup.document.body,Popup,{
+            innerText:'Không chia sẽ mã vì mọi người đều có thể đổi nó và cũng như nó sẽ không được lưu vĩnh viễn!'
+        }).style.color = '#f79797'
         Code = NewElement('input',NewElement('p',Popup.document.body,Popup,{
             innerText:'Mã sync của bạn là: '
-        }),Popup)
-        NewElement('button',Popup.document.body,Popup,{
-            innerText:'Lưu'
+        }),Popup,{
+            value:localStorage.CodeNhatKy?localStorage.CodeNhatKy:''
         })
-        NewElement('button',Popup.document.body,Popup,{
-            innerText:'Tải'
+        L = NewElement('button',Popup.document.body,Popup,{
+            innerText:'Lưu',
+            onclick:function() {
+                if (Code.value == '') {return}
+                L.hidden = true
+                T.hidden = true
+                fetch("https://site.dfgvbbt.repl.co/storage",{
+                    method:'POST',
+                    body:JSON.stringify({
+                        name:Code.value,
+                        content:getCookie('NhatKy')
+                    })
+                }).then(e=>e.text()).then((e)=>{
+                    if (e !== getCookie('NhatKy')) {
+                        L.hidden = false
+                        T.hidden = false
+                        return Popup.alert('mã không hợp lệ!')
+                    }
+                    localStorage.CodeNhatKy = Code.value
+                    Popup.alert('thành công lưu nhật ký trên mã này!')
+                    Popup.close()
+                }).catch((e)=>{
+                    alert(String(e))
+                    L.hidden = false
+                    T.hidden = false
+                })
+            }
+        })
+        T = NewElement('button',Popup.document.body,Popup,{
+            innerText:'Tải',
+            onclick:function() {
+                if (Code.value == '') {return}
+                if (!Popup.confirm('điều này sẽ xóa thay thế nhật ký hiện tại của bạn,chắc chứ?')) {return}
+                L.hidden = true
+                T.hidden = true
+                fetch('https://site.dfgvbbt.repl.co/storage?'+Code.value).then(
+                    e=>e.text()
+                ).then((e)=>{
+                    setCookie('NhatKy',e)
+                    localStorage.CodeNhatKy = Code.value
+                    Popup.alert('tải mã "'+Code.value+'" thành công!')
+                    Popup.close()
+                    location.reload()
+                }).catch((e)=>{
+                    alert(String(e))
+                    L.hidden = false
+                    T.hidden = false
+                })
+            }
         })
     }
 })
