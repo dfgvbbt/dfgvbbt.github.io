@@ -22,27 +22,12 @@ function NewElement(TagName,Parent,Window_Op,Proties_Op) {
   return Yo
 }
 
-function setCookie(cname, cvalue/*, exdays*/) {
-  /*const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();*/
-  document.cookie = cname + "=" + cvalue +/* ";" + expires + */";path=/";
+function set(name,value) {
+    localStorage[name] = value
 }
 
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
+function get(name) {
+  return localStorage[name]?localStorage[name]:''
 }
 
 
@@ -103,10 +88,10 @@ function Show(data,popup) {
     return Oh
 }
 //Show([Number(new Date()),'Oh!<script>alert("Baka!")</s\cript>'])
-if (getCookie('NhatKy') == '') {
-    setCookie('NhatKy','[]')
+if (get('NhatKy') == '') {
+    set('NhatKy','[]')
 }
-Showing = JSON.parse(getCookie('NhatKy'))
+Showing = JSON.parse(get('NhatKy'))
 for (i in Showing) {
     Show(Showing[i])
 }
@@ -140,11 +125,11 @@ Create = NewElement('button',document.body,window,{
                     onclick:function(){
                         Popup.close()
                         Show([Time,This.value])
-                        stor = JSON.parse(getCookie('NhatKy'))
+                        stor = JSON.parse(get('NhatKy'))
                         console.log(stor)
                         stor[stor.length] = [Number(Time),This.value]
                         console.log(stor)
-                        setCookie('NhatKy',JSON.stringify(stor))
+                        set('NhatKy',JSON.stringify(stor))
                         location.reload()
                     }
                 })
@@ -193,10 +178,10 @@ Sync = NewElement('button',document.body,window,{
                     method:'POST',
                     body:JSON.stringify({
                         name:Code.value,
-                        content:getCookie('NhatKy')
+                        content:get('NhatKy')
                     })
                 }).then(e=>e.text()).then((e)=>{
-                    if (e !== getCookie('NhatKy')) {
+                    if (e !== get('NhatKy')) {
                         L.hidden = false
                         T.hidden = false
                         return Popup.alert('mã không hợp lệ!')
@@ -221,7 +206,7 @@ Sync = NewElement('button',document.body,window,{
                 fetch('https://site.dfgvbbt.repl.co/storage?'+Code.value).then(
                     e=>e.text()
                 ).then((e)=>{
-                    setCookie('NhatKy',e)
+                    set('NhatKy',e)
                     localStorage.CodeNhatKy = Code.value
                     Popup.alert('tải mã "'+Code.value+'" thành công!')
                     Popup.close()
