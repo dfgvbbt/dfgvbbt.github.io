@@ -54,7 +54,7 @@ function Show(data,popup) {
         data = JSON.parse(data)
     }
     if (data[1] == '') {return alert('empty!')}
-    data[1] = data[1].replaceAll('\n','<br>')
+    //data[1] = data[1].replaceAll('\n','<br>')
     var body = document.body
     if (popup) {body = popup.document.body}
     Oh = NewElement('div',body)
