@@ -1,0 +1,20 @@
+<body>
+  <h1 id="Num"></h1>
+  <script>
+    num = 0
+    addEventListener("keydown", (event) => {
+      if (Number(event.key)) {
+        document.getElementById('Num').innerText = 
+          num+=Number(event.key)
+      } else if (event.key=='r') {
+        document.getElementById('Num').innerText = 
+          num=0
+      } else if (event.key=='Backspace') {
+        document.getElementById('Num').innerText = 
+          num-=1
+      } else {
+        console.log(event.key)
+      }
+    });
+  </script>
+</body>
