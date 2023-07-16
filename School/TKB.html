@@ -5,14 +5,6 @@
 </head>
 <body>
 <script>
-Math.Random = function(Min,Max) {
-    if (Min>Max) {return Error('Min cannot lower than maximum')}
-    if (Max !== 0) {
-    Max +=1
-    }
-    return ( Math.floor(Math.random()*(Max+(Min-Min*2)))+Min )
-}
-print = console.log
 function RemoveAll_Body(){
 for (var i in document.all) {
    if (document.body.firstElementChild == undefined){break}
@@ -54,50 +46,24 @@ function Add(Name,Time){
     var H = (new Date()).getHours()
     var M = (new Date()).getMinutes()
     var Begin = Time.Begin
-    var h_b = Begin.h
-    var m_b = Begin.m
     var End = Time.End
-    var h_e = End.h
-    var m_e = End.m
-    var Yellow = '#f6ff00'
-    var Green = '#00ff40'
-    var IsSameH = false
-    
-    if (h_b == h_e) {
-        
-        IsSameH = true
-        
-    }
-
-    function SetYellow(){
-        console.log('Yellow!')
-        This.style.color = Yellow
-    }
-    
-    if (H >= h_b) {
-        if (IsSameH == true) {
-            if (H == h_b && M < m_e) {
-                SetYellow()
-            }
-        } else {
-            if (H == h_b && (M >= m_b || M < m_e)) {
-                SetYellow()
-            }
-            if (H == h_e && M < m_e) {
-                SetYellow()
-            }
-        }
-    }
+    x = H*60+M
+    y = Begin.h*60+Begin.m
+    z = End.h*60+End.m
+    var Yellow = '#f6ff00' //going
+    var Green = '#00ff40' //Passed
 
     
-    if ((IsSameH && h_b == H && m_b < M && m_e <= M) || (!IsSameH && h_b < H && h_e <= H && m_e <= M)) {
-        This.style.color = Green
-    }
+    This.style.color = x<y?'':( //future
+        (x>=y&&x<z)?Yellow:Green
+    )
+    
     
     return This
 }
 Reset()
-var Thu = ['Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy','Chủ nhật']
+var Thu = ['Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy']
+Thu[-1] = 'Chủ nhật'
 var Ngay = Number((new Date()).getDay()-1)
 Thu = Thu[Ngay]
 var MonVT = {
@@ -124,7 +90,8 @@ var TKB = [
     ['T','T','GDCD','KHTN','KHTN'],
     ['GDTC','TA','TA'],
     ['KHTN','KHTN','MT','GDTC','AN'],
-    ['T','T','NV','NV','SHCN']
+    ['T','T','NV','NV','SHCN'],
+    ['_']
 ]
 console.log(TKB[Ngay])
 var TG = [
