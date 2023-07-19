@@ -84,7 +84,7 @@
             document.getElementById('Author').href = (creatorIsPlayer==true)?'https://www.roblox.com/users/'+details.Creator.Id+'/profile/':'https://www.roblox.com/groups/'+details.Creator.CreatorTargetId
             document.getElementById('Description').innerText = details.Description?details.Description:'No description yet'
             document.getElementById('VerifiedBadgeIcon').hidden = !details.Creator.HasVerifiedBadge
-            document.getElementById('Thumbnail').src = '/Rblx/ImgAsset?'+details.IconImageAssetId
+            document.getElementById('Thumbnail').src = 'https://site.dfgvbbt.repl.co/Rblx/ImgAsset?'+details.IconImageAssetId
             if (!localStorage.No) {
                 document.getElementById('button').hidden = false
                 document.getElementById('button').onclick = function(){
