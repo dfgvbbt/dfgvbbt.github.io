@@ -65,6 +65,11 @@ Reset()
 var Thu = ['Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy']
 Thu[-1] = 'Chủ nhật'
 var Ngay = Number((new Date()).getDay()-1)
+if (Number(location.hash.substring(1)) && Number(location.hash.substring(1)) <= 5 && Number(location.hash.substring(1)) >= -1) {
+    if (confirm('Bạn có muốn xem TKB của ngày ' + Thu[Number(location.hash.substring(1))].toLocaleLowerCase() + ' không?')) {
+        Ngay = Number(location.hash.substring(1))
+    }
+}
 Thu = Thu[Ngay]
 var MonVT = {
     NV:'Ngữ văn',
