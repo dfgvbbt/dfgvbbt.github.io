@@ -1,0 +1,54 @@
+<input placeholder="Send something"/><button disabled>send</button>
+<script>
+var wsUri = '';
+var log;
+
+function init() {
+  log = document.createElement("span");
+  document.body.appendChild(log)
+  testWebSocket();
+}
+
+function testWebSocket() {
+    wsUri = prompt('enter your websocket!') || localStorage.ws || ''
+    if (wsUri) localStorage.ws = wsUri
+    websocket = new WebSocket(wsUri);
+    websocket.onopen    = function(evt) { onOpen(evt)    };
+    websocket.onclose   = function(evt) { onClose(evt)   };
+    websocket.onmessage = function(evt) { onMessage(evt) };
+    websocket.onerror   = function(evt) { onError(evt)   };
+}
+
+function onOpen(evt)  {
+  writeLog("CONNECTED");
+  document.querySelector('button').disabled = false
+  document.querySelector('button').onclick = () => {
+    sendMessage(document.querySelector('input').value)
+  }
+}
+
+function onClose(evt)  {
+  writeLog("Websocket DISCONNECTED");
+}
+
+function onMessage(evt)  {
+  writeLog('<span style="color: blue;">RESPONSE: ' + evt.data+'</span>');
+  //websocket.close();
+}
+
+function onError(evt)  {
+    writeLog('<span style="color: red;">ERROR:</span> ' + evt.data);
+}
+
+function sendMessage(message)  {
+  writeLog("SENT: " + message);
+  websocket.send(message);
+}
+
+function writeLog(message)  {
+  var pre = document.createElement("p");
+  pre.innerHTML = message;
+  log.appendChild(pre);
+}
+window.addEventListener("load", init, false);
+</script>
