@@ -11,7 +11,6 @@ function init() {
 
 function testWebSocket() {
     wsUri = prompt('enter your websocket!') || localStorage.ws || ''
-    if (wsUri) localStorage.ws = wsUri
     websocket = new WebSocket(wsUri);
     websocket.onopen    = function(evt) { onOpen(evt)    };
     websocket.onclose   = function(evt) { onClose(evt)   };
@@ -21,6 +20,7 @@ function testWebSocket() {
 
 function onOpen(evt)  {
   writeLog("CONNECTED");
+  if (wsUri) localStorage.ws = wsUri
   document.querySelector('button').disabled = false
   document.querySelector('button').onclick = () => {
     sendMessage(document.querySelector('input').value)
