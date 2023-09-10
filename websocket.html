@@ -1,21 +1,44 @@
+<span>Websocket Uri: </span><span contenteditable style="color: aqua"></span><br>
 <input placeholder="Send something"/><button disabled>send</button>
 <script>
-var wsUri = '';
+var wsUri = ''
 var log;
 
 function init() {
   log = document.createElement("span");
   document.body.appendChild(log)
+  document.querySelector('[contenteditable]').textContent =
+    wsUri = (localStorage.ws || prompt('enter your websocket!') || '')
+  document.querySelector('[contenteditable]').addEventListener('keydown',(e) => {
+    e.srcElement.textContent = e.srcElement.textContent.replaceAll('\n','')
+    wsUri = e.srcElement.textContent
+  })
   testWebSocket();
 }
 
 function testWebSocket() {
-    wsUri = prompt('enter your websocket!') || localStorage.ws || ''
-    websocket = new WebSocket(wsUri);
-    websocket.onopen    = function(evt) { onOpen(evt)    };
-    websocket.onclose   = function(evt) { onClose(evt)   };
-    websocket.onmessage = function(evt) { onMessage(evt) };
-    websocket.onerror   = function(evt) { onError(evt)   };
+    try {
+        document.querySelector('span').style.cursor = ""
+        document.querySelector('span').onclick      = null
+        document.querySelector('span').title        = ''
+
+        websocket = new WebSocket(wsUri);
+        websocket.onopen    = function(evt) { onOpen(evt)    };
+        websocket.onclose   = function(evt) { onClose(evt)   };
+        websocket.onmessage = function(evt) { onMessage(evt) };
+        websocket.onerror   = function(evt) { onError(evt)   };
+    } catch(e) {
+        if (wsUri) {
+            alert(e.toString().replace("Failed to construct 'WebSocket':",''));
+            console.log(e)
+        } else {
+            alert('websocket uri cannot be empty!')
+        }
+
+        document.querySelector('span').style.cursor = "pointer"
+        document.querySelector('span').onclick      = testWebSocket
+        document.querySelector('span').title        = 'click to connect!'
+    }
 }
 
 function onOpen(evt)  {
@@ -25,10 +48,15 @@ function onOpen(evt)  {
   document.querySelector('button').onclick = () => {
     sendMessage(document.querySelector('input').value)
   }
+  document.querySelector('span').style.cursor = "pointer"
+  document.querySelector('span').onclick      = () => {websocket.close()}
+  document.querySelector('span').title        = 'click to disconnect...'
 }
 
 function onClose(evt)  {
   writeLog("Websocket DISCONNECTED");
+  document.querySelector('span').onclick = testWebSocket
+  document.querySelector('span').title   = 'click to connect!'
 }
 
 function onMessage(evt)  {
