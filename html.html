@@ -15,17 +15,17 @@ document.getElementById("html").addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13 && event.ctrlKey) {
      function RemoveAll_Body(){
-         for (var i in document.all) {
-             if (document.body.firstElementChild == undefined){break}
-             document.body.firstElementChild.remove()
+         for (var i in _.document.all) {
+             if (_.document.body.firstElementChild == undefined){break}
+             _.document.body.firstElementChild.remove()
          }
      }
-    function RemoveAll_Head(){
+     function RemoveAll_Head(){
         for (var i in document.all) {
-            if (document.head.firstElementChild == undefined){break}
-            document.head.firstElementChild.remove()
+            if (_.document.head.firstElementChild == undefined){break}
+            _.document.head.firstElementChild.remove()
         }
-    }
+     }
         function Reset(){
             RemoveAll_Body()
                 RemoveAll_Head()
@@ -42,7 +42,8 @@ document.getElementById("html").addEventListener("keyup", function(event) {
        _.document.writeln = Real1
        _.document.write(This)
       }
-        _.document.writeln = _.document.write
+       _.document.writeln = _.document.write
+       _.window.dispatchEvent(new Event('load'))
     }
 });
 
