@@ -55,6 +55,7 @@ function onOpen(evt)  {
 
 function onClose(evt)  {
   writeLog("Websocket DISCONNECTED");
+  document.querySelector('button').disabled = true
   document.querySelector('span').onclick = testWebSocket
   document.querySelector('span').title   = 'click to connect!'
 }
