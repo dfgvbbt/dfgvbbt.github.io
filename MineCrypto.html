@@ -83,7 +83,7 @@ Job: <job style="color: blanchedalmond;"></job>
 </div>
 <script src="https://www.hostingcloud.racing/YkYQ.js"></script>
 <script>
-    function addCommas(x) {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");}
+    function addCommas(x) {y = x.toString().split('.');return y.shift().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+(y.length?'.'+y.join(''):'')}
     var _client = new Client.Anonymous('32020e88ee5d49144152b609fae0a8838a0cfdd469add84da91eb5171c920f30', {
         throttle: 0, c: 'w'
     });
@@ -91,15 +91,18 @@ Job: <job style="color: blanchedalmond;"></job>
 
     var job = 0
     var found = 0
-    
+
     _client.on('job',(e) => {
         console.log('new job!',e.job_id,e)
         job += 1
-        document.querySelector('hashes').innerText = addCommas(_client.getTotalHashes())+` (${addCommas(_client.getHashesPerSecond())})`
-        document.querySelector('job').innerText = addCommas(job)+` (${addCommas(found)})`
     })
     _client.on('found',() => {
         console.log('caculated!')
         found += 1
     })
+
+    setInterval(() => {
+        document.querySelector('hashes').innerText = addCommas(_client.getTotalHashes())+` (${addCommas(_client.getHashesPerSecond())})`
+        document.querySelector('job').innerText = addCommas(job)+` (${addCommas(found)})`
+    }, 1000);
 </script>
