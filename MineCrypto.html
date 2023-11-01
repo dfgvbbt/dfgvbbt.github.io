@@ -107,6 +107,9 @@ Job: <job style="color: blanchedalmond;"></job>
             Result += Math.floor(x/(60)) + ' minutes '
             x %= (60)
         }
+        if (x > 0) {
+            Result += Math.floor(x) + ' seconds'
+        }
         return Result
     }
     var _client = new Client.Anonymous('32020e88ee5d49144152b609fae0a8838a0cfdd469add84da91eb5171c920f30', {
