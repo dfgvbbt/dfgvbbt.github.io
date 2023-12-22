@@ -1,0 +1,81 @@
+<head>
+    <style>
+        body {
+            transition: all 1s;
+            background: rgb(27, 27, 27);
+            color: white;
+        }
+        [a] {
+            text-align: center;
+            z-index: 1;
+        }
+        input {
+            transition: all 1s;
+            position: fixed;
+
+            overflow-wrap: break-word;
+            font-size: 25;
+            color: white;
+
+            background: transparent;
+            
+            min-width: 200px;
+            width: 75%;
+
+            height: fit-content;
+            min-height: 50px;
+            
+            bottom: 50%;
+            right: 12.5%;
+
+            box-shadow: 0px 0px 6px 0px white;
+            border: none;
+            border-radius: 10px;
+
+            z-index: 1;
+        }
+        input:focus,input:hover {
+            box-shadow: 0px 0px 15px 0px wheat;    
+        }
+
+        span {
+            position: fixed;
+            bottom: 58.2%;
+            right: 12%;
+            width: 75%;
+            transition: all .35s;
+            z-index: 1;
+        }
+        input:hover + span,input:focus + span {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /*Unrelated*/
+        iframe:hover {
+            z-index: 10000;
+        }
+    </style>
+</head>
+<h1 a>Hello!</h1>
+<input>
+<span></span>
+<script>
+    var input = document.querySelector('input'),
+        span = document.querySelector('span'),dunno = ['Sussy baka :3','Wan wan!','Bau bau!',
+    ,'Where\'s my hug?','Guraaaaaaaaa','Nya~','Ohayo~','Nachoneko~']
+    //I'm straight,i promise
+    span.innerText = dunno[Math.floor(Math.random()*dunno.length)] || 'Can you help me?'
+
+
+    input.addEventListener('keydown',(e) => {
+        console.log(e)
+        if (e.key == 'Enter' || e.keyCode == 13) {
+            if (input.value.startsWith('>')) {
+                alert('hola')
+            } else {//it will redirect you to bing.com
+                open('https://api.origano.xyz/search?q='+encodeURI(input.value)+'&uuid=6d509468-045d-4dfe-bb60-2f12d5531118&v=1.0.13&p=ICO-b202e91a20e68b7a')
+            }
+        }
+    })
+</script>
