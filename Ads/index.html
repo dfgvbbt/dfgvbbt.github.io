@@ -26,7 +26,7 @@ function getCookie(cname) {
 }
 if (getCookie('Ads')) {
     console.log('yeah')
-    if (Number(getCookie('Ads'))>=6){
+    if (Number(getCookie('Ads'))>=8){
         alert('you are done!')
         setCookie('Ads','',0)
         location.reload()
@@ -34,6 +34,10 @@ if (getCookie('Ads')) {
     setCookie('Ads',Number(getCookie('Ads'))+1,10)
     open('/Ads/'+getCookie('Ads'))
 } else {
+    if (Number(document.location.search.slice(1))) {
+      setCookie('Ads',document.location.search.slice(1),10)
+      return
+    }
     console.log('nah')
     setCookie('Ads',1,10)
     open('/Ads/1')
