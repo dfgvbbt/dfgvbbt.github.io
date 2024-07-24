@@ -36,6 +36,7 @@ if (getCookie('Ads')) {
 } else {
     if (Number(document.location.search.slice(1))) {
       setCookie('Ads',document.location.search.slice(1),10)
+      open('/Ads/'+document.location.search.slice(1))
       return
     }
     console.log('nah')
