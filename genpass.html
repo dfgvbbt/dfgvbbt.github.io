@@ -63,7 +63,7 @@ function Main() {
     var charactersLength = characters.length;
     var textbox = document.getElementById("Password")
     for ( var i = 0; i < document.getElementById("length").value; i++ ) {
-      result += characters[Math.round(Math.random() * charactersLength)];
+      result += characters[Math.floor(Math.random() * charactersLength)];
    }
   textbox.value = result
    return result;
