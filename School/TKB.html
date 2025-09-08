@@ -5,26 +5,8 @@
 </head>
 <body>
 <script>
-function RemoveAll_Body(){
-for (var i in document.all) {
-   if (document.body.firstElementChild == undefined){break}
-      document.body.firstElementChild.remove()
- }
-}
-function RemoveAll_Head(){
-for (var i in document.all) {
-   if (document.head.firstElementChild == undefined){break}
-   document.head.firstElementChild.remove()
-   
- }
-}
-function Reset(){
-  RemoveAll_Body()
-  RemoveAll_Head()
-}
 function NewElement(TagName,Parent,Window_Op,Proties_Op) {
-  var nill = undefined
-  var Yo
+  var nill,Yo
   if (Parent == nill || Parent == null) {Parent = document.body}
   if (Window_Op !== nill) {
     Yo = Window_Op.document.createElement(TagName)
@@ -40,38 +22,17 @@ function NewElement(TagName,Parent,Window_Op,Proties_Op) {
   }
   return Yo
 }
-function Add(Name,Time){
-    console.log(Name)
-    var This = NewElement('h1',document.body,window,{innerText:Name})
-    var H = (new Date()).getHours()
-    var M = (new Date()).getMinutes()
-    var Begin = Time.Begin
-    var End = Time.End
-    x = H*60+M
-    y = Begin.h*60+Begin.m
-    z = End.h*60+End.m
-    var Yellow = '#f6ff00' //going
-    var Green = '#00ff40' //Passed
-
-    
-    This.style.color = x<y?'':( //future
-        (x>=y&&x<z)?Yellow:Green
-    )
-    
-    
-    return This
-}
-Reset()
-var Thu = ['Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy']
-Thu[-1] = 'Chủ nhật'
-var Ngay = Number((new Date()).getDay()-1)
-if (Number(location.hash.substring(1)) && Number(location.hash.substring(1)) <= 5 && Number(location.hash.substring(1)) >= -1) {
-    if (confirm('Bạn có muốn xem TKB của ngày ' + Thu[Number(location.hash.substring(1))].toLocaleLowerCase() + ' không?')) {
-        Ngay = Number(location.hash.substring(1))
+var Thu = ['Chủ nhật','Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy']
+var Ngay = new Date().getDay()
+if ((Number(location.hash.substring(1)) && Number(location.hash.substring(1)) <= 7 && Number(location.hash.substring(1) >= 0)) ||
+   location.hash.length==3 && location.hash[2] <= 7 && (location.hash[1] == '+'|| location.hash[1] == '-')) {
+    var nill = location.hash.length==3?Ngay+location.hash[2]*(location.hash[1]=='+'?1:-1):location.hash[1]
+    if (confirm('Bạn có muốn xem TKB của ngày ' + Thu[nill].toLocaleLowerCase() + ' không?')) {
+        Ngay = nill
     }
 }
 Thu = Thu[Ngay]
-var MonVT = {
+var MonVT = { // Viết Tắt
     NV:'Ngữ văn',
     CN:'Công nghệ',
     TA:'Tiếng anh',
@@ -80,16 +41,19 @@ var MonVT = {
     LSDL:'Lịch sử/Địa lí',
     SHDC:'Sinh hoạt dưới cờ',
     SHCN:'Sinh hoạt chủ nhiệm',
+    SHTT:'Sinh hoạt tập thể',
     HDTN:'Hoạt động trải nghiệm',
     KHTN:'Khoa học tự nhiên',
+    VL:'Vật lí',
     AN:'Âm nhạc',
     T:'Toán',
     TH:'Tin Học',
     GDTC:'Giáo dục thể chất(Thể dục)',
     TD:'Thể dục',
+    KTPL:'Giáo dục kinh tế - pháp luật',
+    QPAN:'Giáo dục quốc phòng - an ninh',
     GDCD:'Giáo dục công dân',
     MT:'Mĩ thuật',
-    _:'Đi về nhà'
 }
 var TKB = [
     ['SHDC','KHTN','KHTN','GDTC','CN'],
@@ -100,62 +64,90 @@ var TKB = [
     ['LS','T','TH','HDTN','SHCN'],
 ]
 console.log(TKB[Ngay])
-var TG = [
+var TGtN = [
+    //có thể sai số ở đây, không chắc nữa
     {
-        Begin:{h:7,m:0},
-        End:{h:7,m:45}
-    },
-    {
-        Begin:{h:7,m:50},
-        End:{h:8,m:35}
-    },
-    {
-        Begin:{h:8,m:55},
-        End:{h:9,m:40}
-    },
-    {
-        Begin:{h:9,m:45},
-        End:{h:10,m:30}
-    },
-    {
-        Begin:{h:10,m:40},
-        End:{h:11,m:25}
-    }
+        Buoi: "Sáng",
+        start: 1, // một giờ... "sáng"?
+        TGB: [
+            ["6:55","7:40"], ["8:0","8:45"], ["8:50","9:35"], ["9:45","10:30"], ["10:35","11:20"]
+        ]
+    },{Buoi: "Trưa",start:11},{ //thời gian nghỉ
+        Buoi: "Chiều",
+        start: 12.5, // 12:30
+        TGB: [
+            ["12:40","13:25"], ["13:30","14:15"], ["14:35","15:20"], ["15:25","16:10"], ["16:20","17:05"]
+        ]
+    },{Buoi: "Tối",start:19},
+    {Buoi:"Đêm",start:22}
 ]
 
-var Buoi = ''
-function check() {
-    _ = new Date()
-    function Itr(S,E) {return _.getHours() >= S && _.getHours() <= E && (_.getHours() <= E && _.getMinutes() <= 59 && _.getSeconds() <= 59)}
-    //Is time around
-    if (Itr(1,10)) {
-        Buoi = 'Sáng'
-        console.log(Buoi)
-    } else if (Itr(11,12)) {
-        Buoi = 'Trưa'
-        console.log(Buoi)
-    } else if (Itr(13,18)) {
-        Buoi = 'Chiều'
-        console.log(Buoi)
-    } else if (Itr(19,21)) {
-        Buoi = 'Tối'
-        console.log(Buoi)
-    } else if (Itr(22,24)) {
-        Buoi = 'Đêm'
-        console.log(Buoi)
-    }
-}
-check();
+var TKB = [
+    [], //bỏ chủ nhật
+    [,,["VL","TH","HDTN","HDTN","SHTT"]], // 2 dấu "," là để bỏ qua buổi sáng và trưa
+    [[,,"GDTC","GDTC"],,["NV","NV","CN","KTPL","TA"]],
+    [,,["GDDP","LS","NV","VL","VL"]],
+    [["HDTN","HDTN","HDTN","HDTN"],,["TA","TA","KTPL"]],
+    [,,["TH","TH","T","T","QPAN"]],
+    [,["T","T","CN","LS","SHTT"]]
+]
 
-var _Tuan = Math.floor((((new Date()) - (new Date(2023, 8, 4))) / (1000 * 60 * 60 * 24))/7) + 1
+var Buoi = TGtN.reduce((p, c) => (c.start <= new Date().getHours()+new Date().getMinutes()/60 && c.start > (p.start || 0) ? c : p), 0).Buoi;
+
+function Add(Name,Time){
+    console.log(Name)
+    var This = NewElement('h2',document.body,window,{innerText:Name})
+    var Begin = Time[0].split(':')
+    var End = Time[1].split(':')
+    x = (new Date()).getHours()*60+(new Date()).getMinutes()
+    y = Begin[0]*60+Begin[1]
+    z = End[0]*60+End[1]
+    var Yellow = '#f6ff00' //going
+    var Green = '#00ff40' //Passed
+
+    This.title = `[${Time[0]} - ${Time[1]}] ` //định thêm thông tin môn học (như tên GV), nhma để sau
+    This.style.color = x<y?'':( //future
+        (x>=y&&x<z)?Yellow:Green
+    )
+    
+    
+    return This
+}
+
+var _Tuan = Math.floor((((new Date()) - (new Date(2025, 8, 8))) / (1000 * 60 * 60 * 24))/7) + 1
 var Time = NewElement('h1',document.body)
 Time.innerText = (new Date()).getDate() + '/' + Number((new Date()).getMonth()+1) + '/' + (new Date()).getFullYear() + ' | '+Buoi+' | '+ Thu + ' | Tuần '+_Tuan
 
-var TKBHN = NewElement('h1',document.body,window,{innerText:'Thời Khóa Biểu Hôm Nay:\n'})
+var TKBHN = NewElement('h1',document.body,window,{innerText:'Thời Khóa Biểu Hôm Nay\n'})
 
 
-for (i in TKB[Ngay]) {
-    var v = TKB[Ngay][i]
-    Add(MonVT[v],TG[i])
+if (!TKB[Ngay].length) TKBHN.innerText+= 'Không học hôm nay';
+else {
+    for (i in TKB[Ngay]) { //buổi
+        if (!TKB[Ngay][i]?.length) continue;
+        var TG = TGtN[i]
+        if (!TG?.TGB) {
+            alert("Lỗi: không có thời gian biểu vào ngày "+Thu+' buổi '+(TG?.Buoi||"<lỗi>"));
+            continue
+        }
+        
+        Buoi = NewElement('h1',document.body,window,{innerText:'Buổi '+TGtN[i].Buoi})
+        let start,end //bằng cách nào đó, việc chỉnh start/end trong này thì trong loop lại ko biết chúng, khiến cho chúng nó thành global chứ không phải trong block của for parent?
+        for (i2 in TKB[Ngay][i]) { //môn
+            if (!TG.TGB[i2]) alert("Thiếu thời gian cho môn thứ "+(i2+1)+" của buổi "+TG.Buoi);
+            if (TKB[Ngay][i][i2]) {
+                console.log(TG.TGB[i2])
+                Add(MonVT[TKB[Ngay][i][i2]],TG.TGB[i2]);
+                start = start || TG.TGB[i2][0]
+                end = TG.TGB[i2][1]
+            }
+        }
+        Buoi = NewElement('span',Buoi,window,{innerText:` (${start} - ${end})`})
+        console.log(TG)
+        Buoi.style.fontSize = 'small';
+        Buoi.style.position = 'absolute'
+        NewElement('span',Buoi.parentElement,window,{innerText:':'})
+        if (start !== TG.TGB[0][0] || end !== TG.TGB[TG.TGB.length-1][1]) Buoi.style.color = 'aqua' //highlight về sớm/đi trễ
+    }
 }
 </script>
